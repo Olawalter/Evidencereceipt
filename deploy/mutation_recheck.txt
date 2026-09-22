@@ -1,0 +1,25 @@
+# targeted sweep after the audit fixes (15 guards): 12 killed, 3 survived - the evasion tests carried a second marker
+killed:   markup and attributes are not scanned
+killed:   the title is not scanned
+killed:   a date's day is not checked
+killed:   a spliced quote is accepted
+killed:   a STABLE source's raw hash and title are not compared
+killed:   non-decisive component readings are stored
+killed:   a DYNAMIC source's uncompared record is stored
+killed:   re-verification ignores the open-request limit
+killed:   max_age false passes
+SURVIVED: the marker scan does not remove invisible word-splitters
+SURVIVED: numeric entities are not decoded for the scan
+SURVIVED: tags that split a word are not joined for the scan
+killed:   a stable source's digest is not compared
+killed:   the gate does not re-ground quotes
+killed:   the open-request limit does not hold
+
+# after the evasion tests were made single-marker and the contradiction comparison refined
+killed:   the marker scan does not remove invisible word-splitters
+killed:   numeric entities are not decoded for the scan
+killed:   tags that split a word are not joined for the scan
+killed:   every required component is compared under a contradiction
+killed:   the contradicted components are not compared
+killed:   evidence found is compared when components were not
+SURVIVED: uncompared required readings are stored under a contradiction  (then pinned by test_a_contradiction_stores_no_optional_reading: killed)

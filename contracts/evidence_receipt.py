@@ -1372,15 +1372,21 @@ def _derive(ctx: dict, payload: dict) -> dict:
         NOT_REQUIRED if not ctx["policy"]["freshness_required"] else UNDATED, "")
     freshness_decides = reason in ("EVIDENCE_STALE", "FRESHNESS_UNVERIFIABLE") \
         or (reason in COMPONENT_DECIDED and reason != "COMPONENT_CONTRADICTED")
+    # every required component matters when the outcome rests on all of them; a
+    # contradiction rests only on which components are contradicted
+    all_compared = reason in COMPONENT_DECIDED and reason != "COMPONENT_CONTRADICTED"
     consequence = {
         "final_result": final, "support_level": support, "reason_code": reason,
         "source_status": payload["source"]["status"],
-        "evidence_found": assessed and any(_collapse(s) == PRESENT for s in states.values()),
+        "evidence_found": all_compared and any(_collapse(s) == PRESENT
+                                               for s in states.values()),
         "provenance_match": ctx["provenance_match"],
         "content_digest": payload["source"]["content_digest"]
         if ctx["stability"] == "STABLE" else "",
         "required_components": {c: _collapse(s) for c, s in states.items()}
-        if reason in COMPONENT_DECIDED else {},
+        if all_compared else {},
+        "contradicted_components": sorted(c for c, s in states.items() if s == CONTRADICTED)
+        if reason == "COMPONENT_CONTRADICTED" else [],
         "freshness": outcome if freshness_decides else "",
     }
     return {"consequence": consequence, "freshness_outcome": outcome, "stated_date": stated,
@@ -1607,18 +1613,24 @@ class EvidenceReceipt(gl.Contract):
         outcome = _derive(ctx, payload)
         c = outcome["consequence"]
         policy = ctx["policy"]
-        # component readings are consensus-backed only when they decided the outcome;
-        # otherwise the leader's readings are not stored as if they were
+        # a component reading is stored only when validators compared it: every
+        # required one when the outcome rested on all of them, the contradicted ones
+        # when a contradiction decided it; optional readings, never compared, are
+        # stored with compared false when the components decided the outcome
         decisive = c["reason_code"] in COMPONENT_DECIDED
+        compared = set(c["required_components"].keys()) | set(c["contradicted_components"])
         components = []
         for comp in policy["components"]:
             f = _finding_of(payload, comp["component_id"])
-            components.append({"component_id": comp["component_id"],
-                               "required": comp["required"],
-                               "state": f["state"] if decisive else "",
-                               "by": f["by"] if decisive else "",
-                               "quotes": f["quotes"] if decisive else [],
-                               "note": f["note"] if decisive else ""})
+            cid = comp["component_id"]
+            keep = decisive and (cid in compared or not comp["required"]) \
+                and not (c["reason_code"] == "COMPONENT_CONTRADICTED" and cid not in compared)
+            components.append({"component_id": cid, "required": comp["required"],
+                               "compared": cid in compared,
+                               "state": f["state"] if keep else "",
+                               "by": f["by"] if keep else "",
+                               "quotes": f["quotes"] if keep else [],
+                               "note": f["note"] if keep else ""})
         # a DYNAMIC source's record beyond its status was not compared: it is not stored
         source = dict(payload["source"])
         if ctx["stability"] == "DYNAMIC":

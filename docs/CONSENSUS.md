@@ -72,9 +72,11 @@ side's findings:
 | Field | Compared |
 |---|---|
 | `final_result`, `support_level`, `reason_code` | always |
-| `source_status`, `evidence_found`, `provenance_match` | always |
+| `source_status`, `provenance_match` | always |
+| `evidence_found` | when every required component is compared |
 | `content_digest` | for a STABLE source |
-| `required_components` (each collapsed to PRESENT, ABSENT, CONTRADICTED, UNCLEAR) | when the outcome was decided at the component step (`COMPONENT_DECIDED`) |
+| `required_components` (each collapsed to PRESENT, ABSENT, CONTRADICTED, UNCLEAR) | when the outcome rests on all of them: absent, missing, unclear, below the minimum, met |
+| `contradicted_components` | when a contradiction decided the outcome |
 | `freshness` (CURRENT, STALE, UNDATED) | when freshness or the components decided the outcome |
 
 ## Allowed nondeterminism, and what the receipt stores
@@ -89,10 +91,12 @@ The receipt stores only what the validators agreed on or could check:
 
 - for a DYNAMIC source the digest, raw hash, byte count, title and content
   type are left empty - nothing about them was agreed;
-- component readings, their quotes and the excerpt are stored only when the
-  components decided the outcome (`components_decisive`); after an earlier
-  reason decided it - the wrong kind of source, stale evidence - they are left
-  empty rather than stored as if validators had agreed on them;
+- a component reading and its quotes are stored only when validators compared
+  it (`compared`): every required one when the outcome rested on all of them,
+  the contradicted ones when a contradiction decided it; optional readings,
+  never compared, are stored with `compared` false; after an earlier reason
+  decided the outcome - the wrong kind of source, stale evidence - no reading
+  is stored (`components_decisive` false);
 - the freshness outcome and stated date are stored only when freshness was
   compared.
 
@@ -129,4 +133,41 @@ freshness could not be established.
 
 ## Live diagnostic findings
 
-DIAGNOSTIC_PENDING
+One disposable deployment, never the deployment of record, carried the
+diagnostic pass (`deploy/diagnostics/`).
+
+**Pass 1** - `0x0C001C39156FE013bcAb3681cA6fF782B9461421`, sources served from
+commit `138c1d3`, 43 transactions from 2026-09-22T08:52:19Z to
+2026-09-22T09:35:25Z (`cases_0x0c001c39.json`, `.log`). All 20 catalogue cases
+requested and verified once: 19 held. Every code-decided outcome held on real
+retrieval - five injections (HTML body, JSON field, title, hidden attribute,
+Markdown) caught in code, and the missing source read `NOT_FOUND` from a real
+404, never negative. Live retrieval, the normaliser and the `re` module all ran
+under GenVM.
+
+| Case | Expected | Observed | Cause | Change |
+|---|---|---|---|---|
+| AP04 | SUPPORTED / STRONG | SUPPORTED / DIRECT | the source's last sentence restated the claim nearly word for word, so EXPLICIT was the right reading | the sentence was removed so the documentation only describes the behaviour; re-run on the same deployment (`cases_0x0c001c39_ap04.json`), the panel still read the feature EXPLICIT, 3 to 1 - whether "a repeated key returns the original response" states "safe to retry" outright is a judgement models make differently. The final result was right both times; the STRONG path and a policy requiring DIRECT are pinned by the Direct Mode suite |
+
+One round (AD08) did not reach a majority on its first attempt: the validators
+agreed on the contradiction and split on `evidence_found` and on whether the
+certifier line counted as present - states that cannot change a contradicted
+outcome. The comparison changed in response: a contradiction now compares
+which required components are contradicted (`contradicted_components`), every
+required component is compared only when the outcome rests on all of them, and
+`evidence_found` is compared and stored only then.
+
+**Fresh-reader audit** - after the pass, an independent read of the contract
+found seven defects, all fixed before the deployment of record and pinned by
+tests and mutations: receipt fields no validator compared (the raw hash, title
+and content type of a STABLE source; the whole source record of a DYNAMIC one;
+component readings after an earlier reason decided) are now compared or not
+stored; a quote spliced with an ellipsis is no longer evidence; markup is
+stripped in linear time, where hostile HTML had cost quadratic time; the marker
+scan undoes soft hyphens, zero-width joiners, split tags and numeric entities;
+re-verification respects the open-request limit; `max_age_seconds` must be the
+integer 0 when freshness is off.
+
+The comparison refinement and the audit fixes came after pass 1 and are
+exercised by the Direct Mode suite; the live run of record exercises them on
+the deployment of record.
