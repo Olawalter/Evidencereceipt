@@ -1,0 +1,273 @@
+wallets: owner 0x07eb0954225ea66260f14803a25e452c96dfebfe, alice 0x17fc8f04f34de1ccf2396462a65a2c789039bfe3, bob 0x7e2d53dc05c2c8ef9c10685dd1e4a83f676be379, carol 0xef98f9adac750a24684e21a9c16365a5840b93e8, stranger 0x2364f34d7b82d5395f785361b0c8c94585f7ba1f
+  verified 19 source locations against local bytes
+  owner.create_policy tx 0xa4b986f69660938384a7c2d9ad332dc64f34ca8a466f807084282d84467a9448
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'IDLE', 'AGREE']
+  owner.create_policy tx 0xa6f926023a0e27de9bc005f28310b26eb7bdb6fa7690610a4b0a8756bd609ed3
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  owner.create_policy tx 0x7cf4c770a2b7f179e74f7f2b2073eb10bd835362c1e7f23e8656efe0abeb2d90
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'IDLE', 'AGREE', 'AGREE']
+  bob.request_verification tx 0xb53baaa15dcfa65d4fb31200469388cbfbf76e2112b7be88e0a6e9145418aa78
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  bob.verify tx 0xce6c928436b9c719515ffb6df4bc3d30266653de23a8631d9091fcbce54b4195
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+    rpc transient on gen_call (1/8): Request to https://studio.genlayer.com/api failed: HTTPSConnectionPool(host='studio.genlay; retry in 5s
+  AD01: INCONCLUSIVE / INCONCLUSIVE / SOURCE_ADDRESSES_VERIFIER (CODE) held=True
+  bob.request_verification tx 0xcee3343eed733a9ac7219820b6bfd21f256b902ef556f06fdc6da22a73b74e57
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'AGREE', 'IDLE']
+  bob.verify tx 0xe4e53b395914fcd833466f0ab645e2379a564928a441bf59925326353bd74e07
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+  AD02: INCONCLUSIVE / INCONCLUSIVE / SOURCE_ADDRESSES_VERIFIER (CODE) held=True
+  alice.request_verification tx 0x17ad0af2651b5cb2daa6437d18527599583be58d578a59cc0959209cd1d1e1e8
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'IDLE']
+  alice.verify tx 0xb404031cee6c71b14d823ce8d1a37cb752a6c14b2469a74e12eac40131499933
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'AGREE', 'IDLE']
+  AD03: INCONCLUSIVE / INCONCLUSIVE / SOURCE_ADDRESSES_VERIFIER (CODE) held=True
+  carol.request_verification tx 0xf0b7c8ba17c7e5f06cb9270cda4a4fc5087fa72cfcfda149a651b506313cce6b
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'IDLE', 'AGREE']
+  carol.verify tx 0x738110a7a327f46e5688451c176455255f76e9782cf59d7b41b64032f95f5e15
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+  AD04: INCONCLUSIVE / INCONCLUSIVE / SOURCE_ADDRESSES_VERIFIER (CODE) held=True
+  carol.request_verification tx 0x6539350d22af03fac1e77f31e6d39be4522a1eb7623e5f092f0a5b347cb12929
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'IDLE', 'AGREE']
+  carol.verify tx 0xe781ee7e9211150ea0cef8a43f8dc7ea29b7fe8f5e51f5d1c2e98f8b8deed714
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'AGREE', 'IDLE']
+  AD05: INCONCLUSIVE / INCONCLUSIVE / SOURCE_ADDRESSES_VERIFIER (CODE) held=True
+  carol.request_verification tx 0x937d2e867ed5f7709f2b021238cfd81af6c2dba2bdf39904aa819f315870238d
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'IDLE', 'AGREE', 'AGREE']
+  carol.verify tx 0x0ff2c21d007247b76e2a0f5c29e8f6542729b6b81142ee17530bcef3e4787383
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'IDLE', 'AGREE', 'AGREE']
+  AD06: SUPPORTED / DIRECT / SUPPORT_MET (PANEL) held=True
+  alice.request_verification tx 0x95f700c04d915b95a354c5dbbbd1830f08de332d5db1528ae608e4f701a06c58
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'IDLE', 'AGREE', 'AGREE']
+  alice.verify tx 0x4f73644cf9c426baf46a50f9a72b9038204a97424744d088e464a061ef83ba2d
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+  AD07: NOT_SUPPORTED / INSUFFICIENT / WRONG_SOURCE_TYPE (PANEL) held=True
+  carol.request_verification tx 0x481a41a0a24793464d2c47bc1bdf13bd9d62d7f8fff3c051826a355cfc0ce9fc
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'IDLE', 'AGREE']
+  carol.verify tx 0x96b79ad6626f2f4f29a0873894059d67c74b3775b439a4012243e185c7f2c394
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'IDLE', 'AGREE']
+  AD08: CONTRADICTED / CONTRADICTED / COMPONENT_CONTRADICTED (PANEL) held=True
+  alice.request_verification tx 0xbddfd081af20df91e5cafcc1385e8b1f83e40c75aacdd18f42598fb3493679f3
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+  alice.verify tx 0x977f300930d8e8d462d50b2bf4113e9d24af0293fef9820e1230c118715ed8f0
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'AGREE', 'IDLE']
+  AP01: SUPPORTED / DIRECT / SUPPORT_MET (PANEL) held=True
+  bob.request_verification tx 0xf0fae4eb00cc07df2ac7bbf20711b831ecf05cf5b77b73f0f34f728c6a593638
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  bob.verify tx 0x9f56b61c2e857d15a152ee77e16dafa3e5c7c37ecaf7807c90f9639e2dcc9dcb
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'AGREE', 'IDLE']
+  AP02: CONTRADICTED / CONTRADICTED / COMPONENT_CONTRADICTED (PANEL) held=True
+  alice.request_verification tx 0xbd4fa90f4664dad3dcf4c8ffe9819337daa0cb92ee1823c5783b5692581deccb
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'IDLE', 'AGREE']
+  alice.verify tx 0xe2b5e577e67cbfafc674a0b63bdd46accb5f7330cd5b0cf05da4d52bdbb640f5
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'AGREE', 'IDLE']
+  AP03: SUPPORTED / DIRECT / SUPPORT_MET (PANEL) held=True
+  bob.request_verification tx 0x1187e159dc7dd23c2588074609fa7e19be687761e045cd875b7f6089c9b37b13
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  bob.verify tx 0xd13e6d6ba40b811d467d2dc79b0f54a1dfffc4474b3c22d8409142669a582957
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'IDLE', 'AGREE', 'AGREE']
+  AP04: SUPPORTED / DIRECT / SUPPORT_MET (PANEL) held=False
+  alice.request_verification tx 0xc96b7960215b2ad7193ef1d301fbf52e0706de48feeaca020e324c1de7803884
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+  alice.verify tx 0xa14d420836c5c749c0a68a06cceb75be027d4a21b3ed91aa66a11716c93426dc
+    FINALIZED leader SUCCESS votes ['IDLE', 'IDLE', 'AGREE', 'AGREE', 'AGREE']
+  CE01: SUPPORTED / DIRECT / SUPPORT_MET (PANEL) held=True
+  bob.request_verification tx 0x35f1826257bfa3f75aa36dd8745d6677d6472d0b5a3ac1e1cad91c25f7e6d2c9
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'IDLE', 'AGREE']
+  bob.verify tx 0x88f6335765e7b5a35d32eb39b634d636d548a38cd1559d368169480d58096b56
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'IDLE', 'AGREE']
+  CE02: CONTRADICTED / CONTRADICTED / COMPONENT_CONTRADICTED (PANEL) held=True
+  alice.request_verification tx 0xbfc78d04c3c5fa8c178a0a9081277aaae987ae27624e88280e9cb78bfc317b37
+    rpc transient on eth_getTransactionByHash (1/8): Request to https://studio.genlayer.com/api failed: HTTPSConnectionPool(host='studio.genlay; retry in 5s
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'IDLE', 'AGREE', 'AGREE']
+  alice.verify tx 0xbb506620cd962c36282879cbe45e54c7da8470113a95e93407dfec750b1c1c8a
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+  CE03: CONTRADICTED / CONTRADICTED / COMPONENT_CONTRADICTED (PANEL) held=True
+  bob.request_verification tx 0x57f76578deea4caaecabae36e1a7f23ceb1c0afaac35cbbc4a74ebb9969d15f2
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'IDLE', 'AGREE']
+  bob.verify tx 0xf3f46b4097a92a68c59fbb8388f8dda09e2a2efb04ae20a50685c3a16863b58b
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'IDLE', 'AGREE']
+  CE04: NOT_SUPPORTED / INSUFFICIENT / WRONG_SOURCE_TYPE (PANEL) held=True
+  alice.request_verification tx 0x4cfebf42a49d75df252e0b6194c92dfdcd48ee29c65f796091a30f5405e8c8f4
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'IDLE', 'AGREE', 'AGREE']
+  alice.verify tx 0xad7a1f22d73b5073eceeda4fd9c0ccb385679e910d12cb18a613c2be38570583
+    rpc transient on eth_getTransactionByHash (1/8): Request to https://studio.genlayer.com/api failed: HTTPSConnectionPool(host='studio.genlay; retry in 5s
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'AGREE', 'IDLE']
+  LI01: SUPPORTED / DIRECT / SUPPORT_MET (PANEL) held=True
+  bob.request_verification tx 0x752f384949b23a713b08085cb9a75c78296ec5cbcb76024af68f6f4747eb15ca
+    FINALIZED leader SUCCESS votes ['IDLE', 'IDLE', 'AGREE', 'AGREE', 'AGREE']
+  bob.verify tx 0xcf1a7ba904a7ab22a08bd0ca887c5d384cef57e5806db1f49af3f3df913836c6
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'AGREE', 'IDLE']
+  LI02: INCONCLUSIVE / INSUFFICIENT / EVIDENCE_STALE (PANEL) held=True
+  alice.request_verification tx 0xb3bc6e31d733ab9f0492fd125faaa71891a694b0dba6de0543b2258057c2d30e
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'IDLE', 'AGREE']
+  alice.verify tx 0xfe3793ea2889fabb02694076cddfc17a40cfe67b4c2b372ae3094c90b4c327bc
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+  LI03: PARTIALLY_SUPPORTED / PARTIAL / COMPONENTS_MISSING (PANEL) held=True
+  bob.request_verification tx 0x8c167bb3b6cbfe405bd50babc19d9467247d0341803f4d127e0fe21cf5296241
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  bob.verify tx 0x5c47b60e6f020e7e36a37efda98f6ee97cd8f9b329b5b6bf1d43385cf6e98201
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'IDLE', 'AGREE', 'AGREE']
+  LI04: UNAVAILABLE / UNAVAILABLE / SOURCE_NOT_FOUND (CODE) held=True
+  alice.request_verification tx 0xb969c245fb3e70af3ff18182f09bf755e5fdaa0e4ca6afd06f082816b96cc326
+    FINALIZED leader SUCCESS votes ['IDLE', 'IDLE', 'AGREE', 'AGREE', 'AGREE']
+  alice.verify tx 0x72e15c1c2bfb5e228ec272a42d6aeeabcc00cb7ec87355902701924873266f60
+    rpc transient on eth_getTransactionByHash (1/8): Request to https://studio.genlayer.com/api failed: HTTPSConnectionPool(host='studio.genlay; retry in 5s
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'IDLE', 'AGREE']
+  CE01:dynamic: SUPPORTED / DIRECT / SUPPORT_MET (PANEL) held=True
+    rpc transient on eth_getTransactionCount (1/8): Request to https://studio.genlayer.com/api failed: HTTPSConnectionPool(host='studio.genlay; retry in 5s
+  bob.recheck tx 0x78132730c5f89118de2104c21f1688b5a7c6202631f4eae9afaf622f11c78152
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'IDLE', 'AGREE', 'AGREE']
+  LI04:recheck: UNAVAILABLE / UNAVAILABLE / SOURCE_NOT_FOUND (CODE) held=True
+  bob.recheck tx 0x9d237aa970aad000781168c26362fa4bda02f18a01d0c42dffbc3c9b0e147893
+    FINALIZED leader ERROR votes ['AGREE', 'AGREE', 'IDLE', 'AGREE', 'IDLE']
+  stranger.verify tx 0x09012e60fa6e7bf57ff21155c2120d307d8f7e9ed0381fc9bcd0e3e422c063cc
+    FINALIZED leader ERROR votes ['AGREE', 'IDLE', 'IDLE', 'AGREE', 'AGREE']
+  alice.verify tx 0x1a2189b6760d7fc2d11628ccbb7551082e724ff911c13a8e5505c6ae69df4ebd
+    FINALIZED leader ERROR votes ['IDLE', 'AGREE', 'IDLE', 'AGREE', 'AGREE']
+  bob.request_verification tx 0xb41db6da00a009816ea35d5013fc7e2407d547075f593db183d2547f8149964d
+    FINALIZED leader ERROR votes ['AGREE', 'AGREE', 'IDLE', 'AGREE', 'AGREE']
+  bob.request_verification tx 0xe7e2e04c4ea301e7af0837f86a57606efe71d1c16649c86c378b005328ac00f1
+    FINALIZED leader ERROR votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  bob.request_verification tx 0xcbc9f465225e1af59ffd0f2c81ff260bd17caf0c397437f95f854de0db3e1113
+    FINALIZED leader ERROR votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+  bob.request_verification tx 0x4f8c51cfd14c2d0538b55bdd6b66234de21e9aa2859e3b3f0a9afb3b9caecefb
+    FINALIZED leader ERROR votes ['IDLE', 'AGREE', 'IDLE', 'AGREE', 'AGREE']
+  stranger.finalize tx 0xbd1f42e57894cafea8b1cb2eff248ea7ff680762f74c8437d6958f5b6ead2821
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'IDLE', 'AGREE']
+FATAL: refuse:finalize_inside_window: leader execution SUCCESS, expected ERROR
+wallets: owner 0x07eb0954225ea66260f14803a25e452c96dfebfe, alice 0x17fc8f04f34de1ccf2396462a65a2c789039bfe3, bob 0x7e2d53dc05c2c8ef9c10685dd1e4a83f676be379, carol 0xef98f9adac750a24684e21a9c16365a5840b93e8, stranger 0x2364f34d7b82d5395f785361b0c8c94585f7ba1f
+  verified 19 source locations against local bytes
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 30 requests per minute; retry in 5s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 30 requests per minute; retry in 5s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 30 requests per minute; retry in 5s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 30 requests per minute; retry in 5s
+    rpc transient on gen_call (1/8): Request to https://studio.genlayer.com/api failed: HTTPSConnectionPool(host='studio.genlay; retry in 5s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 30 requests per minute; retry in 5s
+FATAL: the rechecked receipt was not kept as superseded
+wallets: owner 0x07eb0954225ea66260f14803a25e452c96dfebfe, alice 0x17fc8f04f34de1ccf2396462a65a2c789039bfe3, bob 0x7e2d53dc05c2c8ef9c10685dd1e4a83f676be379, carol 0xef98f9adac750a24684e21a9c16365a5840b93e8, stranger 0x2364f34d7b82d5395f785361b0c8c94585f7ba1f
+  verified 19 source locations against local bytes
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 30 requests per minute; retry in 5s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 30 requests per minute; retry in 5s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 30 requests per minute; retry in 5s
+    rpc transient on gen_call (1/8): Request to https://studio.genlayer.com/api failed: ('Connection aborted.', RemoteDisconnec; retry in 5s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 30 requests per minute; retry in 5s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 30 requests per minute; retry in 5s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 5s
+    rpc transient on gen_call (2/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 10s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 5s
+    rpc transient on gen_call (2/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 10s
+    rpc transient on gen_call (3/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 20s
+    rpc transient on gen_call (4/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 40s
+    rpc transient on gen_call (1/8): Request to https://studio.genlayer.com/api failed: HTTPSConnectionPool(host='studio.genlay; retry in 5s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 5s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 5s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 5s
+    rpc transient on gen_call (2/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 10s
+    rpc transient on gen_call (3/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 20s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 5s
+    rpc transient on gen_call (2/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 10s
+    rpc transient on gen_call (3/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 20s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 5s
+    rpc transient on gen_call (2/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 10s
+    rpc transient on gen_call (3/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 20s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 5s
+    rpc transient on gen_call (2/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 10s
+    rpc transient on gen_call (3/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 20s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 5s
+    rpc transient on gen_call (2/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 10s
+    rpc transient on gen_call (3/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 20s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 5s
+    rpc transient on gen_call (2/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 10s
+    rpc transient on gen_call (3/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 20s
+    rpc transient on gen_call (4/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 40s
+  stranger.retire_policy tx 0x30a1ec1debc08f224f66a7432c7cc114d2495b6ec3402e8da450d67cc2a6d194
+    FINALIZED leader ERROR votes ['IDLE', 'IDLE', 'AGREE', 'AGREE', 'AGREE']
+  7 refusals held
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 5s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 5s
+    rpc transient on gen_call (2/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 10s
+    rpc transient on gen_call (3/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 20s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 5s
+    rpc transient on gen_call (2/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 10s
+    rpc transient on gen_call (3/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 20s
+    rpc transient on gen_call (4/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 40s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 5s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 5s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 5s
+    rpc transient on gen_call (2/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 10s
+    rpc transient on gen_call (3/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 20s
+    rpc transient on gen_call (4/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 40s
+    rpc transient on eth_sendRawTransaction (1/8): eth_sendRawTransaction failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 5s
+    rpc transient on eth_sendRawTransaction (2/8): eth_sendRawTransaction failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 10s
+  stranger.finalize tx 0x7c17f18fde64c7bc904792b311c3d9a400db0ba21189c4e96299ea83cdf74e76
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'IDLE', 'AGREE']
+    rpc transient on eth_sendRawTransaction (1/8): eth_sendRawTransaction failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 5s
+    rpc transient on eth_sendRawTransaction (2/8): eth_sendRawTransaction failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 10s
+    rpc transient on eth_sendRawTransaction (3/8): eth_sendRawTransaction failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 20s
+    rpc transient on eth_sendRawTransaction (4/8): eth_sendRawTransaction failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 40s
+  stranger.finalize tx 0x235eb1ef8cbb5e3b8eeb397f65401e574a3a65624d81bc8eea142d662e9852f8
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'AGREE', 'IDLE']
+  stranger.finalize tx 0x54a7495b24849194d7e0dec3bbbdb1a4a3d5a7bd1ce26e189f1452d8695c18be
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  stranger.finalize tx 0x1e63acf9970f575cd77cc4c407b1e150195ab013b556ea011433a465245a22f6
+    FINALIZED leader SUCCESS votes ['IDLE', 'IDLE', 'AGREE', 'AGREE', 'AGREE']
+  stranger.finalize tx 0xf5b404e7779545872e1a7ac7d78ca41fd453cf3235c865918588ed00221e9cb7
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'AGREE', 'IDLE']
+  stranger.finalize tx 0xeafa314302abc7743ff90b70ad8a791526ef28c9a54c545f98f87cd9859e3a7b
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'AGREE', 'AGREE']
+  stranger.finalize tx 0x9d840de3a339d2ae5398be1015d3fdc82bed89844d119d66922556d3e68d561b
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  stranger.finalize tx 0x7a5a1bcbe17c5bcfaf9d9befd9777a307ec2201038e1a21f3d0bef637fb98588
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+    rpc transient on eth_sendRawTransaction (1/8): eth_sendRawTransaction failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 5s
+    rpc transient on eth_sendRawTransaction (2/8): eth_sendRawTransaction failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 10s
+    rpc transient on eth_sendRawTransaction (3/8): eth_sendRawTransaction failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 20s
+  stranger.finalize tx 0xf91575e5bd6d0c3b4b1a8db15ab6ad823a31d6eab854ae3a023b05695419331e
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+  stranger.finalize tx 0xd6ea7f1a289e7faf05779a308749bb5ef6b7e66f7e994db91095fe68fab43667
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  stranger.finalize tx 0xc2a78ddf1fffd6969117b7f32db99250be1e9f9c8c11020eba3c47c94925f461
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  stranger.finalize tx 0x2ba5e79e101fbe77c80980135fb75823efe6b3722d7f06f096662bdcaf610d99
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+  stranger.finalize tx 0xcbba0bac8facc4c4a4932beaa40c9736dac235cb3fa6a77aa7e15a8aac7d3b61
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'IDLE', 'AGREE']
+  stranger.finalize tx 0x485fb2a95f60faf19dacdad04bfb2df2d65cf67bf5c5472927cd6aac65409e97
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  stranger.finalize tx 0xbd316b9789375134c37e517760107c4e5d068d06b083c15089d1585882cc86be
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  stranger.finalize tx 0x1c7ff4b3aac5d4351cfac9f6c06ffb6bbfc175df5b085dc09c5be31c43379d61
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'AGREE', 'IDLE']
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 5s
+  stranger.finalize tx 0x98cc1bb69ce3ccb19df7f343fffb9fe19ba67ccbcbe99b5e0c5b2e98e7c38228
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 5s
+    rpc transient on gen_call (2/8): gen_call failed (code=-32029): Rate limit exceeded: 500 requests per hour; retry in 10s
+  stranger.finalize tx 0xe4d439b38b48dcf90b0b2a93e850b13b80a3d500400664c4bf1cc203611f6e6a
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'AGREE', 'IDLE']
+  stranger.finalize tx 0x20da0e2b1a1bb99422acf863dc1c3b0df12af23d5807df198fbb3da062142403
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'IDLE', 'AGREE', 'AGREE']
+  stranger.finalize tx 0xd20a84fa2f3cc5ad6f05cdf338c96bceb678e663b0342c40a5a4672fe716f8cb
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  alice.request_reverification tx 0xc70023f5917cb7cbc37aa9f1f7e39a43a55c8c1f4a4a1e08e8358003e9871c42
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'IDLE', 'AGREE']
+  alice.verify tx 0x48961102dcc37b58b1e1cb1c44bba940afdf184ace5ab5bf7c57cc64d9f71332
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'AGREE', 'IDLE']
+  CE01:v2: SUPPORTED / DIRECT / SUPPORT_MET (PANEL) held=True
+  waiting 875s for every recheck window to close
+FATAL: history after re-verification: [{'content_digest': '0b501c5ca8e6b988ca2b4e2bc7ab53e41d9f10e013b29c41dcd82378924d176d', 'final_result': 'SUPPORTED', 'mode': 'VERIFY', 'recheck_of': '', 'retrieval_timestamp': '2026-09-22T10:58:09Z', 'state': 'FINALIZED', 'support_level': 'DIRECT', 'verification_id': 'VE-000013', 'version': 1}, {'content_digest': '0b501c5ca8e6b988ca2b4e2bc7ab53e41d9f10e013b29c41dcd82378924d176d', 'final_result': 'SUPPORTED', 'mode': 'VERIFY', 'recheck_of': '', 'retrieval_timestamp': '2026-09-22T12:05:50Z', 'state': 'EVALUATED', 'support_level': 'DIRECT', 'verification_id': 'VE-000023', 'version': 2}]
+wallets: owner 0x07eb0954225ea66260f14803a25e452c96dfebfe, alice 0x17fc8f04f34de1ccf2396462a65a2c789039bfe3, bob 0x7e2d53dc05c2c8ef9c10685dd1e4a83f676be379, carol 0xef98f9adac750a24684e21a9c16365a5840b93e8, stranger 0x2364f34d7b82d5395f785361b0c8c94585f7ba1f
+  verified 19 source locations against local bytes
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 30 requests per minute; retry in 5s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 30 requests per minute; retry in 5s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 30 requests per minute; retry in 5s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 30 requests per minute; retry in 5s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 30 requests per minute; retry in 5s
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 30 requests per minute; retry in 5s
+  7 refusals held
+    rpc transient on gen_call (1/8): gen_call failed (code=-32029): Rate limit exceeded: 30 requests per minute; retry in 5s
+    rpc transient on gen_call (1/8): gen_call returned invalid JSON: Expecting value: line 1 column 1 (char 0). Response conten; retry in 5s
+  stranger.finalize tx 0x189baef27de0e824c1b296c8b5c61c4ad4a9b27835f16efbf4dc9a97fb18b6e5
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'AGREE', 'AGREE']
+DONE {"held": ["AD01", "AD02", "AD03", "AD04", "AD05", "AD06", "AD07", "AD08", "AP01", "AP02", "AP03", "CE01", "CE01:dynamic", "CE01:v2", "CE02", "CE03", "CE04", "LI01", "LI02", "LI03", "LI04", "LI04:recheck"], "not_held": ["AP04"]}

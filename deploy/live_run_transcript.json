@@ -77,7 +77,7 @@
       "final_result": "SUPPORTED",
       "found": true,
       "state": "FINALIZED",
-      "verification_id": "VE-000013"
+      "verification_id": "VE-000023"
     },
     "CE01:dynamic": {
       "final_result": "SUPPORTED",
@@ -128,9 +128,11 @@
       "verification_id": "VE-000022"
     }
   },
+  "finished_at": "2026-09-22T12:33:27Z",
   "network": "studionet",
   "notes": [
     "the first attempt at the finalize-inside-window refusal went to CE02 after its window had closed; the contract finalized CE02 correctly and the run stopped on the script's own check. The step is kept under its true name (finalize:CE02); the script now picks a request whose window is open.",
+    "no request had an open recheck window when the refusals ran; the finalize-inside-window refusal is covered by the Direct Mode suite only",
     "no request had an open recheck window when the refusals ran; the finalize-inside-window refusal is covered by the Direct Mode suite only"
   ],
   "outcomes": {
@@ -1526,6 +1528,30 @@
     "LI03": "VR-000019",
     "LI04": "VR-000020"
   },
+  "reverification": [
+    {
+      "content_digest": "0b501c5ca8e6b988ca2b4e2bc7ab53e41d9f10e013b29c41dcd82378924d176d",
+      "final_result": "SUPPORTED",
+      "mode": "VERIFY",
+      "recheck_of": "",
+      "retrieval_timestamp": "2026-09-22T10:58:09Z",
+      "state": "FINALIZED",
+      "support_level": "DIRECT",
+      "verification_id": "VE-000013",
+      "version": 1
+    },
+    {
+      "content_digest": "0b501c5ca8e6b988ca2b4e2bc7ab53e41d9f10e013b29c41dcd82378924d176d",
+      "final_result": "SUPPORTED",
+      "mode": "VERIFY",
+      "recheck_of": "",
+      "retrieval_timestamp": "2026-09-22T12:05:50Z",
+      "state": "FINALIZED",
+      "support_level": "DIRECT",
+      "verification_id": "VE-000023",
+      "version": 2
+    }
+  ],
   "started_at": "2026-09-22T10:32:48Z",
   "steps": {
     "create:api": {
@@ -1813,6 +1839,23 @@
         "AGREE",
         "AGREE",
         "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "finalize:CE01:v2": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "finalize",
+      "returned": "{'readable': '\"VE-000023\"'}",
+      "status": "FINALIZED",
+      "step": "finalize:CE01:v2",
+      "tx": "0x189baef27de0e824c1b296c8b5c61c4ad4a9b27835f16efbf4dc9a97fb18b6e5",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
         "AGREE",
         "AGREE"
       ]
@@ -2838,5 +2881,34 @@
         "AGREE"
       ]
     }
+  },
+  "summary": {
+    "held": [
+      "AD01",
+      "AD02",
+      "AD03",
+      "AD04",
+      "AD05",
+      "AD06",
+      "AD07",
+      "AD08",
+      "AP01",
+      "AP02",
+      "AP03",
+      "CE01",
+      "CE01:dynamic",
+      "CE01:v2",
+      "CE02",
+      "CE03",
+      "CE04",
+      "LI01",
+      "LI02",
+      "LI03",
+      "LI04",
+      "LI04:recheck"
+    ],
+    "not_held": [
+      "AP04"
+    ]
   }
 }

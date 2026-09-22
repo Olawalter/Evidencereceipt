@@ -111,4 +111,17 @@ It is never the deployment of record. What it showed and what changed in respons
 
 ## Live run
 
-LIVE_FACTS_PENDING
+| Item | Value |
+|---|---|
+| Transcript | `deploy/live_run_transcript.json`, log `deploy/live_run.log` |
+| Transactions | 78, no rejected round |
+| Window | 2026-09-22T10:32:48Z to 2026-09-22T12:33:27Z |
+| Sources served from | `https://raw.githubusercontent.com/Olawalter/Evidencereceipt/de4dda6/fixtures/` |
+| Outcomes held | 22 of 23 |
+| Re-verification | VE-000013 v1 FINALIZED, VE-000023 v2 FINALIZED |
+
+Integration against the deployment (`python -m pytest tests/integration -q`): 6 passed, 1 skipped (the opt-in live write).
+
+The superseded first deployment of record, `0x304678dc938eb0c0b3FC98026422ca4f89f0fBc1`, is kept with its partial transcript under `deploy/superseded/0x304678dc/`; why it was replaced is in [`CONSENSUS.md`](CONSENSUS.md#live-diagnostic-findings).
+
+Results, and the plain statement of what did not hold: [`../README.md`](../README.md#verified).
