@@ -1,0 +1,297 @@
+{
+ "cases": [
+  {
+   "answer": {
+    "subjects": {
+     "FRESHNESS": {
+      "date": "2026-08-14",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Last updated: 2026-08-14"
+       }
+      ],
+      "state": "DATED"
+     },
+     "SOURCE_SHAPE": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Public Register of licensed firms"
+       }
+      ],
+      "state": "MATCHES"
+     },
+     "authority": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Financial Services Authority of Arcadia"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "entity": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Firm BrightPay Ltd"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "licence": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Licence type Electronic money institution"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "service_scope": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Issuing electronic money and providing payment services"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "status": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Status Active"
+       }
+      ],
+      "state": "EXPLICIT"
+     }
+    }
+   },
+   "case_id": "LI01",
+   "claim": "BrightPay Ltd holds an active electronic money licence to issue electronic money.",
+   "claim_context": "",
+   "expected": [
+    "SUPPORTED",
+    "DIRECT",
+    "SUPPORT_MET"
+   ],
+   "notes": "the regulator's register, recently updated, states every component",
+   "policy": "license",
+   "requester": "alice",
+   "source": "license/register-brightpay.html",
+   "source_type": "text",
+   "stability": "STABLE"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "FRESHNESS": {
+      "date": "2022-03-02",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Last updated: 2022-03-02"
+       }
+      ],
+      "state": "DATED"
+     },
+     "SOURCE_SHAPE": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Public Register of licensed firms"
+       }
+      ],
+      "state": "MATCHES"
+     },
+     "authority": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Financial Services Authority of Arcadia"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "entity": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Firm CoinVault Exchange Ltd"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "licence": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Licence type Virtual asset service provider"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "service_scope": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Operating a virtual asset exchange"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "status": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Status Active"
+       }
+      ],
+      "state": "EXPLICIT"
+     }
+    }
+   },
+   "case_id": "LI02",
+   "claim": "CoinVault Exchange Ltd is licensed to operate a virtual asset exchange.",
+   "claim_context": "",
+   "expected": [
+    "INCONCLUSIVE",
+    "INSUFFICIENT",
+    "EVIDENCE_STALE"
+   ],
+   "notes": "the register says active, but its last update is years older than the policy allows",
+   "policy": "license",
+   "requester": "bob",
+   "source": "license/register-coinvault-old.html",
+   "source_type": "text",
+   "stability": "STABLE"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "FRESHNESS": {
+      "date": "2026-07-30",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Last updated: 2026-07-30"
+       }
+      ],
+      "state": "DATED"
+     },
+     "SOURCE_SHAPE": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Public Register - firm details"
+       }
+      ],
+      "state": "MATCHES"
+     },
+     "authority": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Financial Services Authority of Arcadia"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "entity": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Firm QuickLoan Services Ltd"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "licence": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ABSENT"
+     },
+     "service_scope": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ABSENT"
+     },
+     "status": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ABSENT"
+     }
+    }
+   },
+   "case_id": "LI03",
+   "claim": "QuickLoan Services Ltd holds an active consumer credit licence.",
+   "claim_context": "",
+   "expected": [
+    "PARTIALLY_SUPPORTED",
+    "PARTIAL",
+    "COMPONENTS_MISSING"
+   ],
+   "notes": "the entity is on the register, but no licence is recorded for it",
+   "policy": "license",
+   "requester": "alice",
+   "source": "license/register-quickloan.html",
+   "source_type": "text",
+   "stability": "STABLE"
+  },
+  {
+   "answer": null,
+   "case_id": "LI04",
+   "claim": "Meadow Bank plc holds an active deposit-taking licence.",
+   "claim_context": "",
+   "expected": [
+    "UNAVAILABLE",
+    "UNAVAILABLE",
+    "SOURCE_NOT_FOUND"
+   ],
+   "notes": "the declared source does not exist: unavailable, never negative",
+   "policy": "license",
+   "requester": "bob",
+   "source": "missing/register-meadow-bank.html",
+   "source_type": "text",
+   "stability": "STABLE"
+  }
+ ]
+}

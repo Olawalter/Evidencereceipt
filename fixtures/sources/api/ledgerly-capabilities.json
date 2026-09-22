@@ -1,0 +1,15 @@
+{
+  "provider": "Ledgerly",
+  "api_version": "2.3",
+  "documentation": "Official capability manifest of the Ledgerly payments API",
+  "capabilities": {
+    "idempotency_keys": {
+      "supported": true,
+      "header": "Idempotency-Key",
+      "applies_to": "all POST requests"
+    },
+    "refunds": {
+      "supported": true
+    }
+  }
+}

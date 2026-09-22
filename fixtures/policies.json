@@ -1,0 +1,149 @@
+{
+ "hashes": {
+  "sources/adversarial/capabilities-injected.json": "b5df69e2805e0ba8cb2da7866c6c785c354e5e2c6e0e2b5af253f2b553e09eca",
+  "sources/adversarial/docs-injected.md": "81bd5dd3b7a32644657eea32f37555e5f5dc3b15fb7624b490f38e104f955da8",
+  "sources/adversarial/recipe-blog.html": "c6c122a09d4b257ede0f82fa9fc739e0089835f64a74e4e9ce468426196b5d62",
+  "sources/adversarial/registry-control.html": "02f5b14bb31add38d22cb4a2c44f3ac4599196d109da9b9581662019877fb774",
+  "sources/adversarial/registry-injected.html": "3aa89cd2f600bb191ee7148a13b3ad5de66b4843974216f277fc25d75fae2b3e",
+  "sources/adversarial/registry-meta-injected.html": "634f2bf2b817d960968397f95cf04d4a0b6f7c66078ba6277151c2276238eed1",
+  "sources/adversarial/registry-misleading.html": "b91aca275de3b2281c05c9f4e4fb8aa16b5a596a439186f8fd121e7464c290c0",
+  "sources/adversarial/registry-title-injected.html": "aa96597cb6d00ef8a95577fad152810b0b8fc6a42abc333691c4706aafe10517",
+  "sources/api/ledgerly-capabilities.json": "f6ee72abb29b0db64ff68f7ebc71c96dd513fb8165b4eee63e009cf1bb748423",
+  "sources/api/ledgerly-retries.md": "1b362c19cb65758d77eeb68be6d537d16664eb5626593b40efdc24e7d2761657",
+  "sources/api/ledgerly-roadmap.md": "2a3ef9ed683c19a935be533aa87c8588280b319f789c680a2db443e330fe6942",
+  "sources/api/ledgerly-webhooks.md": "120547cd80b2736bdef3c4c60fc5d5792441ae7eb6435dd05a412a7da44854cf",
+  "sources/cert/northwind-marketing.html": "7cd328ba42a49d57364f69bc52c2fd6efaf537e8c251028d0f208ec22132de20",
+  "sources/cert/registry-harbor-expired.html": "28b19aad989a24d1e3811c8de963ce12f12d6400766603fbee9abe83a35821e0",
+  "sources/cert/registry-northwind.html": "bf3b942853fb68d01a6966335433c8460963cad03a5290aba0b9edf9e2584643",
+  "sources/cert/registry-orchid-scope.html": "9dece31f76a3dac63a93421818d3fba48dfa23dbfd5ca31a537533bec3b77463",
+  "sources/license/register-brightpay.html": "63f6a828e4be55f9c3a86b2551e6988beaca133a20f5e162d5580a1179e79415",
+  "sources/license/register-coinvault-old.html": "c6ca98bb17cd49f6bcc5aff1a111dcbad6fd01296b09e3efe3020fb30dfb232b",
+  "sources/license/register-quickloan.html": "3e2e29373a3b9d13a19f84859abbb05e02fffb751382ded73cd9342e00c788ac"
+ },
+ "policies": {
+  "api": {
+   "authority_domains": [],
+   "claim_type": "API_CAPABILITY",
+   "components": [
+    {
+     "component_id": "provider",
+     "description": "The source is the provider's own documentation or manifest.",
+     "required": true
+    },
+    {
+     "component_id": "feature",
+     "description": "The claimed feature is supported in the current version.",
+     "required": true
+    },
+    {
+     "component_id": "behaviour",
+     "description": "The source describes the behaviour the claim relies on.",
+     "required": true
+    },
+    {
+     "component_id": "version",
+     "description": "The source names the version the support applies to.",
+     "required": false
+    }
+   ],
+   "expected_evidence": "The provider's official documentation or capability manifest stating that the current version supports the feature and describing its behaviour.",
+   "expected_source": "Official documentation or a machine-readable capability manifest published by the API provider.",
+   "finality_delay_seconds": 3600,
+   "freshness_required": false,
+   "insufficient_support": "Roadmaps, announcements of future versions, third-party blog posts, or documentation of a different product.",
+   "max_age_seconds": 0,
+   "minimum_support_level": "STRONG",
+   "name": "API capability in the provider's official documentation",
+   "policy_version": 1,
+   "sufficient_support": "The documentation of the current version states or clearly describes the claimed feature as supported.",
+   "supersedes": "",
+   "verification_window_seconds": 259200
+  },
+  "certification": {
+   "authority_domains": [],
+   "claim_type": "CERTIFICATION",
+   "components": [
+    {
+     "component_id": "certifier",
+     "description": "The source is published by the certification body that issued the certificate.",
+     "required": true
+    },
+    {
+     "component_id": "entity",
+     "description": "The claimed organisation is named as the holder.",
+     "required": true
+    },
+    {
+     "component_id": "standard",
+     "description": "The certificate is to the standard the claim names.",
+     "required": true
+    },
+    {
+     "component_id": "scope",
+     "description": "The certificate's scope covers the activity the claim names.",
+     "required": true
+    },
+    {
+     "component_id": "validity",
+     "description": "The certificate is currently valid - not expired, suspended or withdrawn.",
+     "required": true
+    }
+   ],
+   "expected_evidence": "The certification body's public register entry naming the organisation, the certificate, the standard, the scope and the current status.",
+   "expected_source": "A public register or directory published by the certification body that issued the certificate.",
+   "finality_delay_seconds": 3600,
+   "freshness_required": false,
+   "insufficient_support": "Marketing copy, a company's own website, a news article, an unrelated directory, or a register entry for a different organisation, standard or scope.",
+   "max_age_seconds": 0,
+   "minimum_support_level": "STRONG",
+   "name": "Accredited certification on the certifier's own register",
+   "policy_version": 1,
+   "sufficient_support": "The register identifies the claimed organisation and a certificate to the claimed standard whose scope covers the claim and which is currently valid.",
+   "supersedes": "",
+   "verification_window_seconds": 259200
+  },
+  "license": {
+   "authority_domains": [],
+   "claim_type": "LICENSE",
+   "components": [
+    {
+     "component_id": "authority",
+     "description": "The source is published by the regulator or licensing authority.",
+     "required": true
+    },
+    {
+     "component_id": "entity",
+     "description": "The claimed company is named.",
+     "required": true
+    },
+    {
+     "component_id": "licence",
+     "description": "A licence of the claimed kind is recorded for the company.",
+     "required": true
+    },
+    {
+     "component_id": "service_scope",
+     "description": "The licence covers the service the claim names.",
+     "required": true
+    },
+    {
+     "component_id": "status",
+     "description": "The licence is currently active.",
+     "required": true
+    }
+   ],
+   "expected_evidence": "A public regulator or licensing authority page identifying the company, the relevant licence, the service category and its current status.",
+   "expected_source": "The public register of the regulator or licensing authority.",
+   "finality_delay_seconds": 3600,
+   "freshness_required": true,
+   "insufficient_support": "Marketing copy, an unrelated directory, an old cached article, or a page that mentions the company without establishing the licence.",
+   "max_age_seconds": 31536000,
+   "minimum_support_level": "DIRECT",
+   "name": "Active licence on the regulator's public register",
+   "policy_version": 1,
+   "sufficient_support": "The source identifies the claimed entity and licence and shows that the licence is currently active for the claimed service.",
+   "supersedes": "",
+   "verification_window_seconds": 259200
+  }
+ }
+}

@@ -1,0 +1,299 @@
+{
+ "cases": [
+  {
+   "answer": {
+    "subjects": {
+     "SOURCE_SHAPE": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Official documentation for the Ledgerly payments API"
+       }
+      ],
+      "state": "MATCHES"
+     },
+     "behaviour": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Ledgerly sends a signed webhook for every settled payment"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "feature": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Signed settlement webhooks are supported since v2.1"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "provider": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Official documentation for the Ledgerly payments API"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "version": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Ledgerly API reference - v2.3"
+       }
+      ],
+      "state": "EXPLICIT"
+     }
+    }
+   },
+   "case_id": "AP01",
+   "claim": "The Ledgerly API sends signed webhooks for settled payments.",
+   "claim_context": "",
+   "expected": [
+    "SUPPORTED",
+    "DIRECT",
+    "SUPPORT_MET"
+   ],
+   "notes": "the provider's documentation states the feature for the current version",
+   "policy": "api",
+   "requester": "alice",
+   "source": "api/ledgerly-webhooks.md",
+   "source_type": "text",
+   "stability": "STABLE"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "SOURCE_SHAPE": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Official documentation for the Ledgerly payments API"
+       }
+      ],
+      "state": "MATCHES"
+     },
+     "behaviour": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ABSENT"
+     },
+     "feature": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Streaming exports are planned for v3.0 and are not available in the current release"
+       }
+      ],
+      "state": "CONTRADICTED"
+     },
+     "provider": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Official documentation for the Ledgerly payments API"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "version": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "The current release (v2.3)"
+       }
+      ],
+      "state": "EXPLICIT"
+     }
+    }
+   },
+   "case_id": "AP02",
+   "claim": "The Ledgerly API supports streaming exports.",
+   "claim_context": "",
+   "expected": [
+    "CONTRADICTED",
+    "CONTRADICTED",
+    "COMPONENT_CONTRADICTED"
+   ],
+   "notes": "the feature is mentioned only for a future version",
+   "policy": "api",
+   "requester": "bob",
+   "source": "api/ledgerly-roadmap.md",
+   "source_type": "text",
+   "stability": "STABLE"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "SOURCE_SHAPE": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Official capability manifest of the Ledgerly payments API"
+       }
+      ],
+      "state": "MATCHES"
+     },
+     "behaviour": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "\"applies_to\": \"all POST requests\""
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "feature": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "\"idempotency_keys\": { \"supported\": true"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "provider": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "\"provider\": \"Ledgerly\""
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "version": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "\"api_version\": \"2.3\""
+       }
+      ],
+      "state": "EXPLICIT"
+     }
+    }
+   },
+   "case_id": "AP03",
+   "claim": "The Ledgerly API supports idempotency keys on POST requests.",
+   "claim_context": "",
+   "expected": [
+    "SUPPORTED",
+    "DIRECT",
+    "SUPPORT_MET"
+   ],
+   "notes": "a machine-readable capability manifest: the API-response path",
+   "policy": "api",
+   "requester": "alice",
+   "source": "api/ledgerly-capabilities.json",
+   "source_type": "json",
+   "stability": "STABLE"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "SOURCE_SHAPE": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Official documentation for the Ledgerly payments API"
+       }
+      ],
+      "state": "MATCHES"
+     },
+     "behaviour": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "send the same request again without charging the customer twice"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "feature": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Ledgerly does not repeat the operation: it returns the response of the original request"
+       }
+      ],
+      "state": "IMPLIED"
+     },
+     "provider": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Official documentation for the Ledgerly payments API"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "version": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Ledgerly API reference - v2.3"
+       }
+      ],
+      "state": "EXPLICIT"
+     }
+    }
+   },
+   "case_id": "AP04",
+   "claim": "The Ledgerly API lets clients retry a payment request safely without charging twice.",
+   "claim_context": "",
+   "expected": [
+    "SUPPORTED",
+    "STRONG",
+    "SUPPORT_MET"
+   ],
+   "notes": "strong semantic support: the behaviour is described without the claim's words",
+   "policy": "api",
+   "requester": "bob",
+   "source": "api/ledgerly-retries.md",
+   "source_type": "text",
+   "stability": "STABLE"
+  }
+ ]
+}

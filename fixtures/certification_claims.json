@@ -1,0 +1,328 @@
+{
+ "cases": [
+  {
+   "answer": {
+    "subjects": {
+     "SOURCE_SHAPE": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "This register lists every certificate it has issued"
+       }
+      ],
+      "state": "MATCHES"
+     },
+     "certifier": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Meridian Certification is an accredited certification body"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "entity": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Organisation Northwind Analytics Ltd"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "scope": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Design and operation of cloud data analytics services"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "standard": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "ISO/IEC 27001:2022 information security management"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "validity": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Status Valid until 2027-06-30"
+       }
+      ],
+      "state": "EXPLICIT"
+     }
+    }
+   },
+   "case_id": "CE01",
+   "claim": "Northwind Analytics Ltd holds ISO/IEC 27001 certification for its cloud data analytics services.",
+   "claim_context": "",
+   "expected": [
+    "SUPPORTED",
+    "DIRECT",
+    "SUPPORT_MET"
+   ],
+   "notes": "the certifier's own register states every component",
+   "policy": "certification",
+   "requester": "alice",
+   "source": "cert/registry-northwind.html",
+   "source_type": "text",
+   "stability": "STABLE"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "SOURCE_SHAPE": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "This register lists every certificate it has issued"
+       }
+      ],
+      "state": "MATCHES"
+     },
+     "certifier": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Meridian Certification is an accredited certification body"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "entity": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Organisation Harbor Logistics GmbH"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "scope": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Freight forwarding and warehousing"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "standard": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "ISO 9001:2015 quality management"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "validity": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "The certificate was withdrawn and is no longer valid"
+       }
+      ],
+      "state": "CONTRADICTED"
+     }
+    }
+   },
+   "case_id": "CE02",
+   "claim": "Harbor Logistics GmbH is certified to ISO 9001.",
+   "claim_context": "",
+   "expected": [
+    "CONTRADICTED",
+    "CONTRADICTED",
+    "COMPONENT_CONTRADICTED"
+   ],
+   "notes": "the certificate exists and expired: the register contradicts current validity",
+   "policy": "certification",
+   "requester": "bob",
+   "source": "cert/registry-harbor-expired.html",
+   "source_type": "text",
+   "stability": "STABLE"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "SOURCE_SHAPE": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "This register lists every certificate it has issued"
+       }
+      ],
+      "state": "MATCHES"
+     },
+     "certifier": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Meridian Certification is an accredited certification body"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "entity": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Organisation Orchid Foods BV"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "scope": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Frozen meal production is excluded from the scope of this certificate"
+       }
+      ],
+      "state": "CONTRADICTED"
+     },
+     "standard": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "ISO 22000:2018 food safety management"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "validity": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Status Valid until 2027-02-28"
+       }
+      ],
+      "state": "EXPLICIT"
+     }
+    }
+   },
+   "case_id": "CE03",
+   "claim": "Orchid Foods BV is ISO 22000 certified for the production of frozen meals.",
+   "claim_context": "",
+   "expected": [
+    "CONTRADICTED",
+    "CONTRADICTED",
+    "COMPONENT_CONTRADICTED"
+   ],
+   "notes": "the credential exists but its scope excludes the claimed activity",
+   "policy": "certification",
+   "requester": "alice",
+   "source": "cert/registry-orchid-scope.html",
+   "source_type": "text",
+   "stability": "STABLE"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "SOURCE_SHAPE": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "MISMATCH"
+     },
+     "certifier": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ABSENT"
+     },
+     "entity": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "Why teams trust Northwind Analytics"
+       }
+      ],
+      "state": "EXPLICIT"
+     },
+     "scope": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ABSENT"
+     },
+     "standard": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "S1",
+        "text": "We are proud to be ISO 27001 certified"
+       }
+      ],
+      "state": "IMPLIED"
+     },
+     "validity": {
+      "date": "",
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ABSENT"
+     }
+    }
+   },
+   "case_id": "CE04",
+   "claim": "Northwind Analytics Ltd holds ISO/IEC 27001 certification.",
+   "claim_context": "",
+   "expected": [
+    "NOT_SUPPORTED",
+    "INSUFFICIENT",
+    "WRONG_SOURCE_TYPE"
+   ],
+   "notes": "the company's own marketing page is not the certifier's register",
+   "policy": "certification",
+   "requester": "bob",
+   "source": "cert/northwind-marketing.html",
+   "source_type": "text",
+   "stability": "STABLE"
+  }
+ ]
+}
