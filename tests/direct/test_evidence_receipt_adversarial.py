@@ -152,7 +152,7 @@ def test_a_leader_payload_that_is_not_an_object_is_refused(court, direct_vm, mod
 
 def test_a_validator_rereads_the_source_rather_than_checking_the_shape(court, direct_vm, mod):
     """The leader's receipt is well-formed and grounded; this validator's own
-    model reads the source as contradicting validity. The vote is no."""
+    model does not find validity in the source. The vote is no."""
     ce01(court, direct_vm)
     leader = captured_payload(direct_vm)
     answer = answer_for("CE01")
