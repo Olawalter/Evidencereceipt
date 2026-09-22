@@ -19,6 +19,5 @@ venv/
 .gltest_cache/
 artifacts/
 
-# scratch logs of long runs (the transcript JSON is the evidence of record)
-deploy/*.log
+# stderr of long runs; the run logs and transcripts under deploy/ are evidence and are committed
 deploy/*.err

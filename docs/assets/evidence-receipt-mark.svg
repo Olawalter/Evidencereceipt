@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="EvidenceReceipt">
+  <rect x="8" y="8" width="144" height="144" rx="30" fill="#0b5563"/>
+  <path d="M46 30 H114 V130 L104 122 L94 130 L84 122 L74 130 L64 122 L54 130 L46 124 Z" fill="#f3f7f2"/>
+  <rect x="58" y="48" width="44" height="6" rx="3" fill="#8cc7b4"/>
+  <rect x="58" y="62" width="34" height="6" rx="3" fill="#8cc7b4"/>
+  <rect x="58" y="76" width="40" height="6" rx="3" fill="#8cc7b4"/>
+  <circle cx="98" cy="102" r="17" fill="#e8a33d"/>
+  <path d="M90 102 L96 108 L107 96" fill="none" stroke="#0b5563" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

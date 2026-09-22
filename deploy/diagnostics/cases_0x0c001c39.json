@@ -1,8 +1,246 @@
 {
   "address": "0x0C001C39156FE013bcAb3681cA6fF782B9461421",
   "network": "studionet",
+  "outcomes": {
+    "AD01": {
+      "components": [
+        [
+          "certifier",
+          "UNCLEAR",
+          "CODE"
+        ],
+        [
+          "entity",
+          "UNCLEAR",
+          "CODE"
+        ],
+        [
+          "standard",
+          "UNCLEAR",
+          "CODE"
+        ],
+        [
+          "scope",
+          "UNCLEAR",
+          "CODE"
+        ],
+        [
+          "validity",
+          "UNCLEAR",
+          "CODE"
+        ]
+      ],
+      "content_digest": "c59497fd1ce89757f522d7d565c2cd6892ba0e7f334858f4c63bc16a479ff2a6",
+      "decided_by": "CODE",
+      "evidence_found": false,
+      "expected": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "SOURCE_ADDRESSES_VERIFIER"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "NOT_REQUIRED",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [
+        "BODY"
+      ],
+      "observed": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "SOURCE_ADDRESSES_VERIFIER"
+      ],
+      "record_digest": "9c04883d3dc86c55a557bdb063fc5ab6153d64c7a2fa0c9881ec955508b48fe7",
+      "relevant_excerpt": "",
+      "request_id": "VR-000001",
+      "source_shape": "UNCLEAR",
+      "source_status": "RETRIEVED",
+      "tx": "0x0de7e42a7fb29c91356d73da8393cfd3e51dd372459296de079575bcdc0dfa14",
+      "verification_id": "VE-000001"
+    },
+    "AD02": {
+      "components": [
+        [
+          "provider",
+          "UNCLEAR",
+          "CODE"
+        ],
+        [
+          "feature",
+          "UNCLEAR",
+          "CODE"
+        ],
+        [
+          "behaviour",
+          "UNCLEAR",
+          "CODE"
+        ],
+        [
+          "version",
+          "UNCLEAR",
+          "CODE"
+        ]
+      ],
+      "content_digest": "acca2b4caae0970687ad0579db8f625d28f75c9eb42bb48828a523eb218a0682",
+      "decided_by": "CODE",
+      "evidence_found": false,
+      "expected": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "SOURCE_ADDRESSES_VERIFIER"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "NOT_REQUIRED",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [
+        "BODY"
+      ],
+      "observed": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "SOURCE_ADDRESSES_VERIFIER"
+      ],
+      "record_digest": "62d7df23feb54860f66dafeac56675fd1d438b62f822b129f41fdbac24d6a56c",
+      "relevant_excerpt": "",
+      "request_id": "VR-000002",
+      "source_shape": "UNCLEAR",
+      "source_status": "RETRIEVED",
+      "tx": "0x10ad097e7ef357a0fdc5bcc8b04958f4d9bc3806e90a099caf0825304c2b623f",
+      "verification_id": "VE-000002"
+    },
+    "AD03": {
+      "components": [
+        [
+          "certifier",
+          "UNCLEAR",
+          "CODE"
+        ],
+        [
+          "entity",
+          "UNCLEAR",
+          "CODE"
+        ],
+        [
+          "standard",
+          "UNCLEAR",
+          "CODE"
+        ],
+        [
+          "scope",
+          "UNCLEAR",
+          "CODE"
+        ],
+        [
+          "validity",
+          "UNCLEAR",
+          "CODE"
+        ]
+      ],
+      "content_digest": "3a451f9035b53db474d9df5ab32a0c68e01c8e5e47022e4ea867dae6f05bee1a",
+      "decided_by": "CODE",
+      "evidence_found": false,
+      "expected": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "SOURCE_ADDRESSES_VERIFIER"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "NOT_REQUIRED",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [
+        "BODY",
+        "TITLE"
+      ],
+      "observed": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "SOURCE_ADDRESSES_VERIFIER"
+      ],
+      "record_digest": "f1c753132f0a95ec5c626ade3c241a8409f8ab3d5247ca79d9dde9af393f2524",
+      "relevant_excerpt": "",
+      "request_id": "VR-000003",
+      "source_shape": "UNCLEAR",
+      "source_status": "RETRIEVED",
+      "tx": "0x645bc5f4d44994ea666bfb2d33aec56c342fd8a1618bfa873efd2d580df93936",
+      "verification_id": "VE-000003"
+    },
+    "AD04": {
+      "components": [
+        [
+          "certifier",
+          "UNCLEAR",
+          "CODE"
+        ],
+        [
+          "entity",
+          "UNCLEAR",
+          "CODE"
+        ],
+        [
+          "standard",
+          "UNCLEAR",
+          "CODE"
+        ],
+        [
+          "scope",
+          "UNCLEAR",
+          "CODE"
+        ],
+        [
+          "validity",
+          "UNCLEAR",
+          "CODE"
+        ]
+      ],
+      "content_digest": "61e64e4b7b331491696184993dbb02e256e575e8e7343a635fa3b44b968bba94",
+      "decided_by": "CODE",
+      "evidence_found": false,
+      "expected": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "SOURCE_ADDRESSES_VERIFIER"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "NOT_REQUIRED",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [
+        "META"
+      ],
+      "observed": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "SOURCE_ADDRESSES_VERIFIER"
+      ],
+      "record_digest": "b96953f94c6d719b83f6da5312b0d6448ece0f1437f2e44326d2161677b0b934",
+      "relevant_excerpt": "",
+      "request_id": "VR-000004",
+      "source_shape": "UNCLEAR",
+      "source_status": "RETRIEVED",
+      "tx": "0x2e1dbe7104dffd4d4e6a20b5dd474400fb8bc322eb92663e365f8c82a6428d00",
+      "verification_id": "VE-000004"
+    }
+  },
   "pending": {
-    "request:AD01": "0xb9b41e8f4990d8d4fac4bd1b6f16521ca54c4ea2e5406a646e65046194813017"
+    "request:AD05": "0xeb71d82621ce6192735a0c7a3064701d41a4291a48335506f16a17792d79fe92"
   },
   "phase": "cases",
   "policies": {
@@ -11,6 +249,12 @@
     "license": "EP-000003"
   },
   "raw_base": "https://raw.githubusercontent.com/Olawalter/Evidencereceipt/138c1d3/fixtures/",
+  "requests": {
+    "AD01": "VR-000001",
+    "AD02": "VR-000002",
+    "AD03": "VR-000003",
+    "AD04": "VR-000004"
+  },
   "started_at": "2026-09-22T08:52:19Z",
   "steps": {
     "create:api": {
@@ -62,6 +306,142 @@
         "AGREE",
         "AGREE",
         "IDLE"
+      ]
+    },
+    "request:AD01": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000001\"'}",
+      "status": "FINALIZED",
+      "step": "request:AD01",
+      "tx": "0xb9b41e8f4990d8d4fac4bd1b6f16521ca54c4ea2e5406a646e65046194813017",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "request:AD02": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000002\"'}",
+      "status": "FINALIZED",
+      "step": "request:AD02",
+      "tx": "0xe1af6745ecb373dbc469f47bce292b52649b894ef9d93279dacc5e5f65db6260",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "request:AD03": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000003\"'}",
+      "status": "FINALIZED",
+      "step": "request:AD03",
+      "tx": "0x8c0ae49eacb300ef8209747485890d1831f54544c1da7e1239f1d9c3d9d11d28",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "request:AD04": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000004\"'}",
+      "status": "FINALIZED",
+      "step": "request:AD04",
+      "tx": "0xc7abb556474731ad0f2a6211fc40bdcd056ce455bd0c0352e34683af84ad1400",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "verify:AD01": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000001\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AD01",
+      "tx": "0x0de7e42a7fb29c91356d73da8393cfd3e51dd372459296de079575bcdc0dfa14",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "verify:AD02": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000002\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AD02",
+      "tx": "0x10ad097e7ef357a0fdc5bcc8b04958f4d9bc3806e90a099caf0825304c2b623f",
+      "votes": [
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "verify:AD03": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000003\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AD03",
+      "tx": "0x645bc5f4d44994ea666bfb2d33aec56c342fd8a1618bfa873efd2d580df93936",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "verify:AD04": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000004\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AD04",
+      "tx": "0x2e1dbe7104dffd4d4e6a20b5dd474400fb8bc322eb92663e365f8c82a6428d00",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE"
       ]
     }
   }

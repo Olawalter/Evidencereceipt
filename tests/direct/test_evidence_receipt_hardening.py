@@ -463,3 +463,17 @@ def test_views_are_paginated_and_actions_reported(court, direct_vm):
     assert court.get_config()["limits"]["text_cap"] == 12000
     assert court.get_stats()["requests"] == 3
 
+
+
+@pytest.mark.parametrize("claimed", ["2026-08-15", "2025-08-14"])
+def test_a_date_must_match_its_quote_to_the_day_and_year(court, direct_vm, claimed):
+    answer = with_state("LI01", FRESHNESS=("DATED", ["Last updated: 2026-08-14"], claimed))
+    receipt = li(court, direct_vm, answer)
+    assert receipt["freshness"]["outcome"] == "UNDATED"
+
+
+def test_a_date_written_in_words_is_recognised(mod):
+    quotes = [{"evidence_id": "S1", "text": "Status as of 14 August 2026"}]
+    assert mod._date_in_quotes("2026-08-14", quotes) is True
+    assert mod._date_in_quotes("2026-09-14", quotes) is False
+    assert mod._date_in_quotes("2026-08-04", quotes) is False

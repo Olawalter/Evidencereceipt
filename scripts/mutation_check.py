@@ -52,7 +52,8 @@ MUTATIONS = [
     m("a 404 is a generic failure", "    if code in (404, 410):"),
     m("a forbidden source is a generic failure", "    if code in (401, 403):"),
     m("a server error is a generic failure", "    if code >= 500:"),
-    m("an empty body is read", "    if body is None or len(body) == 0:"),
+    # an empty body with its guard removed still decodes to empty text and meets the
+    # "no visible text" branch: the same INVALID_CONTENT record - an equivalent mutant
     m("a binary content type is read",
       '    if content_type != "" and not any(t in content_type for t in TEXT_TYPES):'),
     m("an undecodable body is read",
