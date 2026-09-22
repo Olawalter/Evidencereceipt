@@ -360,11 +360,20 @@ def refusals(ac: dict, raw: str):
         ("refuse:non_https_url", ac["bob"], "request_verification",
          [cert, phash, "A claim about a register.", "", "http://example.org/register",
           "STABLE"], "url must use https"),
-        ("refuse:finalize_inside_window", stranger, "finalize", [reqs["CE02"]],
-         "the recheck window is open until"),
         ("refuse:stranger_retires_policy", stranger, "retire_policy", [cert],
          "only the policy owner retires it"),
     ]
+    # the finalize refusal needs a request whose recheck window is still open now
+    open_now = [rid for rid in reqs.values()
+                if stranger.read("get_request", [rid])["status"] == "EVALUATED"
+                and epoch(stranger.read("get_request", [rid])["settle_at"]) > time.time() + 180]
+    if open_now:
+        tries.append(("refuse:finalize_inside_window", stranger, "finalize", [open_now[-1]],
+                      "the recheck window is open until"))
+    else:
+        T.setdefault("notes", []).append("no request had an open recheck window when the "
+                                         "refusals ran; the finalize-inside-window refusal is "
+                                         "covered by the Direct Mode suite only")
     held = []
     for step, who, fn, args, sentence in tries:
         record = who.write(step, fn, args, expect="ERROR")

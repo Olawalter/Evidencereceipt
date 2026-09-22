@@ -1,0 +1,157 @@
+75 mutations, 0 anchor problems
+accept-control: unmodified copy must pass ...
+control green; 75 mutations over 3 job(s)
+
+  [1/75] killed  : a 404 is a generic failure
+  [2/75] killed  : a redirect is read as a retrieved source
+  [3/75] killed  : a forbidden source is a generic failure
+  [4/75] killed  : a server error is a generic failure
+  [5/75] killed  : a binary content type is read
+  [6/75] killed  : scripts and styles count as text
+  [7/75] killed  : an undecodable body is read
+  [8/75] killed  : a page with no visible text is read
+  [9/75] killed  : an unreadable source is judged anyway
+  [10/75] killed  : a source addressing the verifier is judged anyway
+  [11/75] killed  : an oversized source is not marked partial
+  [12/75] killed  : text in the visible body is not scanned
+  [13/75] killed  : markup and attributes are not scanned
+  [14/75] killed  : the title is not scanned
+  [15/75] killed  : a matching source type needs no quote
+  [16/75] killed  : a component finding needs no quote
+  [17/75] killed  : a stated date need not appear in its quote
+  [18/75] killed  : a date's month is not checked
+  [19/75] killed  : a date's day is not checked
+  [20/75] killed  : a non-freshness finding may carry a date
+  [21/75] killed  : the wrong kind of source is judged anyway
+  [22/75] killed  : a contradicted component does not contradict
+  [23/75] killed  : an unusable model answer is judged anyway
+  [24/75] killed  : stale evidence is current
+  [25/75] killed  : an unclear source type is judged anyway
+  [26/75] killed  : an undated source meets a freshness policy
+  [27/75] killed  : an unclear component is support
+  [28/75] killed  : the age limit is off by a day
+  [29/75] killed  : a future date vouches for freshness
+  [30/75] killed  : a missing component is full support
+  [31/75] killed  : implied evidence is direct
+  [32/75] killed  : absent evidence is partial support
+  [33/75] killed  : an optional component decides
+  [34/75] killed  : the minimum support level is ignored
+  [35/75] killed  : a spliced quote is accepted
+  [36/75] killed  : non-decisive component readings are stored
+  [37/75] killed  : a STABLE source's raw hash and title are not compared
+  [38/75] killed  : a DYNAMIC source's uncompared record is stored
+  [39/75] killed  : the marker scan does not remove invisible word-splitters
+  [40/75] killed  : re-verification ignores the open-request limit
+  [41/75] killed  : max_age false passes
+  [42/75] killed  : numeric entities are not decoded for the scan
+  [43/75] killed  : tags that split a word are not joined for the scan
+  [44/75] killed  : every required component is compared under a contradiction
+  [45/75] killed  : evidence found is compared when components were not
+  [46/75] killed  : a contradiction keeps readings that are not contradicted
+  [47/75] killed  : a contradicted receipt stores no reading
+  [48/75] killed  : what each node retrieved is not compared
+  [49/75] killed  : the consequence is not compared
+  [50/75] killed  : a stable source's digest is not compared
+  [51/75] killed  : a dynamic source's digest is compared
+  [52/75] killed  : required components are compared after an earlier reason decided
+  [53/75] killed  : the gate trusts the leader's code reason
+  [54/75] killed  : the gate does not re-ground quotes
+  [55/75] killed  : the gate accepts an inconsistent source record
+  [56/75] killed  : a model failure is ratified
+  [57/75] killed  : a stale policy version is accepted
+  [58/75] killed  : a retired policy takes requests
+  [59/75] killed  : a non-canonical URL is accepted
+  [60/75] killed  : authority domains are not enforced
+  [61/75] killed  : a lookalike domain passes
+  [62/75] killed  : a duplicate request is accepted
+  [63/75] killed  : a verification may run after its window
+  [64/75] killed  : the open-request limit does not hold
+  [65/75] killed  : anyone may verify
+  [66/75] killed  : a request may be finalized inside its recheck window
+  [67/75] killed  : a request may be rechecked twice
+  [68/75] killed  : a recheck may run after its window
+  [69/75] killed  : a closed request keeps its duplicate key
+  [70/75] killed  : a request may expire before its deadline
+  [71/75] killed  : an expired re-verification loses the last final receipt
+  [72/75] killed  : a policy id may shadow a built-in subject
+  [73/75] killed  : applicant text may address the verifier
+  [74/75] killed  : an IP literal is a host
+  [75/75] killed  : a superseding policy may keep the old version
+
+killed:   a redirect is read as a retrieved source
+killed:   a 404 is a generic failure
+killed:   a forbidden source is a generic failure
+killed:   a server error is a generic failure
+killed:   a binary content type is read
+killed:   an undecodable body is read
+killed:   a page with no visible text is read
+killed:   scripts and styles count as text
+killed:   an oversized source is not marked partial
+killed:   an unreadable source is judged anyway
+killed:   a source addressing the verifier is judged anyway
+killed:   text in the visible body is not scanned
+killed:   markup and attributes are not scanned
+killed:   the title is not scanned
+killed:   a matching source type needs no quote
+killed:   a component finding needs no quote
+killed:   a stated date need not appear in its quote
+killed:   a date's month is not checked
+killed:   a date's day is not checked
+killed:   a non-freshness finding may carry a date
+killed:   an unusable model answer is judged anyway
+killed:   the wrong kind of source is judged anyway
+killed:   an unclear source type is judged anyway
+killed:   a contradicted component does not contradict
+killed:   an undated source meets a freshness policy
+killed:   stale evidence is current
+killed:   the age limit is off by a day
+killed:   a future date vouches for freshness
+killed:   an unclear component is support
+killed:   absent evidence is partial support
+killed:   a missing component is full support
+killed:   implied evidence is direct
+killed:   the minimum support level is ignored
+killed:   an optional component decides
+killed:   a spliced quote is accepted
+killed:   a STABLE source's raw hash and title are not compared
+killed:   non-decisive component readings are stored
+killed:   a DYNAMIC source's uncompared record is stored
+killed:   re-verification ignores the open-request limit
+killed:   max_age false passes
+killed:   the marker scan does not remove invisible word-splitters
+killed:   numeric entities are not decoded for the scan
+killed:   tags that split a word are not joined for the scan
+killed:   every required component is compared under a contradiction
+killed:   evidence found is compared when components were not
+killed:   a contradiction keeps readings that are not contradicted
+killed:   a contradicted receipt stores no reading
+killed:   the consequence is not compared
+killed:   what each node retrieved is not compared
+killed:   a stable source's digest is not compared
+killed:   a dynamic source's digest is compared
+killed:   required components are compared after an earlier reason decided
+killed:   the gate trusts the leader's code reason
+killed:   the gate does not re-ground quotes
+killed:   the gate accepts an inconsistent source record
+killed:   a model failure is ratified
+killed:   a stale policy version is accepted
+killed:   a retired policy takes requests
+killed:   a non-canonical URL is accepted
+killed:   authority domains are not enforced
+killed:   a lookalike domain passes
+killed:   a duplicate request is accepted
+killed:   the open-request limit does not hold
+killed:   anyone may verify
+killed:   a verification may run after its window
+killed:   a request may be rechecked twice
+killed:   a recheck may run after its window
+killed:   a request may be finalized inside its recheck window
+killed:   a request may expire before its deadline
+killed:   an expired re-verification loses the last final receipt
+killed:   a closed request keeps its duplicate key
+killed:   a policy id may shadow a built-in subject
+killed:   applicant text may address the verifier
+killed:   an IP literal is a host
+killed:   a superseding policy may keep the old version
+
+mutations: 75 killed, 0 survived, 0 anchor missing
