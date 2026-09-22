@@ -12,7 +12,7 @@ A policy owner fixes a verification policy: the kind of source expected (a certi
 
 No model output ever reaches a support level, a final result or a date calculation.
 
-DEPLOYMENT_PENDING
+Deployment of record: [`0x304678dc938eb0c0b3FC98026422ca4f89f0fBc1`](https://explorer-studio.genlayer.com/address/0x304678dc938eb0c0b3FC98026422ca4f89f0fBc1) on GenLayer StudioNet (chain 61999), from commit `168192e`, byte-identical to `contracts/evidence_receipt.py`.
 
 ## At a glance
 

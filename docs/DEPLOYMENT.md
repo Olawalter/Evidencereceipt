@@ -72,4 +72,43 @@ and `verify(request_id)` again, then `get_history(request_id)`.
 
 ## Deployment of record
 
-DEPLOY_RECORD_PENDING
+| Item | Value |
+|---|---|
+| Network | GenLayer StudioNet, chain id 61999 |
+| RPC | `https://studio.genlayer.com/api` |
+| Contract | `0x304678dc938eb0c0b3FC98026422ca4f89f0fBc1` |
+| Explorer | https://explorer-studio.genlayer.com/address/0x304678dc938eb0c0b3FC98026422ca4f89f0fBc1 |
+| Deployment transaction | `0xa957b233268e5b3ed39e2c3c7bf0476fcccf0330946750f039aa789a3d59616a` |
+| Deployed at | 2026-09-22T09:57:56Z |
+| Receipt | status FINALIZED, leader execution SUCCESS, votes AGREE, AGREE, AGREE, AGREE, AGREE |
+| Source commit | `168192e6d449d41cc7d522f947fc5593a0e0ac87` |
+| Source blob | `50ae5563bee388b7a28ef9fb1a65290547e582a0` |
+| Source sha256 | `2181846c160d0a9c11b1e2ad9a379d35d8216c0d71476515bf538c96b4b99ede` |
+| Deployed source sha256 (`gen_getContractCode`) | `2181846c160d0a9c11b1e2ad9a379d35d8216c0d71476515bf538c96b4b99ede` - byte-identical |
+| Deployer (public address) | `0x1d9bc5438Add9e713224051CE27BE620Fb1FFdE7` |
+| Runner | `py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6` |
+
+`python scripts/deploy_studionet.py --verify`: deployed and repository sha256 equal, byte-identical, 25 schema methods.
+
+## Toolchain
+
+| Tool | Version |
+|---|---|
+| Python | 3.12.2 |
+| genlayer-py | 0.16.3 |
+| genlayer-test (Direct Mode) | 0.29.2 |
+| genvm-linter | 0.11.0, GenVM bundle v0.3.0-rc7 |
+
+`genvm-lint check contracts/evidence_receipt.py --json`: lint ok (3 checks), validation ok, 25 methods (17 view, 8 write). One notice, I200: a newer py-genlayer runner (`1zr6nqk5...`) is available. The contract stays on the runner this repository has deployed and run live; the newer runner was not tested here.
+
+## Disposable diagnostic deployment
+
+| Address | Source commit | Purpose | Record |
+|---|---|---|---|
+| `0x0C001C39156FE013bcAb3681cA6fF782B9461421` | `e5f47a1` | diagnostic pass 1: every catalogue case verified once, per-node readings recorded; then the AP04 re-run | `deploy/diagnostics/deployment_0x0c001c39.json`, `cases_0x0c001c39.json`, `cases_0x0c001c39_ap04.json` |
+
+It is never the deployment of record. What it showed and what changed in response, and the fresh-reader audit that followed (seven defects, all fixed before the deployment of record): [`CONSENSUS.md`](CONSENSUS.md#live-diagnostic-findings).
+
+## Live run
+
+LIVE_FACTS_PENDING
