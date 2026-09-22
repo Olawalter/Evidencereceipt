@@ -71,16 +71,16 @@ def warp(direct_vm, timestamp: str):
 
 # -- policies and requests -----------------------------------------------------------
 
-def policy(name: str, **overrides) -> dict:
-    data = copy.deepcopy(POLICIES[name])
+def policy(which: str, **overrides) -> dict:
+    data = copy.deepcopy(POLICIES[which])
     data.update(overrides)
     return data
 
 
-def create_policy(contract, direct_vm, name: str = "certification", owner: str = "owner",
+def create_policy(contract, direct_vm, which: str = "certification", owner: str = "owner",
                   **overrides) -> str:
     as_sender(direct_vm, owner)
-    return contract.create_policy(json.dumps(policy(name, **overrides)))
+    return contract.create_policy(json.dumps(policy(which, **overrides)))
 
 
 def policy_hash(contract, policy_id: str) -> str:

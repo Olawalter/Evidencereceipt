@@ -957,15 +957,25 @@ def _day_tokens(day: int) -> list:
             str(day) + "th"]
 
 
+MONTHS = ("january", "february", "march", "april", "may", "june", "july", "august",
+          "september", "october", "november", "december")
+
+
+def _month_tokens(month: int) -> list:
+    return [str(month), str(month).zfill(2), MONTHS[month - 1], MONTHS[month - 1][:3]]
+
+
 def _date_in_quotes(date: str, quotes: list) -> bool:
-    """A stated date is shown when one quote carries its year and its day."""
+    """A stated date is shown when one quote carries its year, its month and
+    its day - by number or by name."""
     if not _valid_date(date):
         return False
     year = date[0:4]
+    month = int(date[5:7])
     day = int(date[8:10])
     for q in quotes:
         words = _word_tokens(q["text"])
-        if year in words and any(t in words for t in _day_tokens(day)):
+        if year in words and any(t in words for t in _month_tokens(month))                 and any(t in words for t in _day_tokens(day)):
             return True
     return False
 
