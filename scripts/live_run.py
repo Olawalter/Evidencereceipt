@@ -390,7 +390,9 @@ def recheck_demo(ac: dict):
     rid = T["requests"]["LI04"]
     who = ac[CASES["LI04"]["requester"]]
     # on a resume the recheck already ran: use the receipt it replaced, as recorded
-    before = T.get("recheck", {}).get("replaced")         or ac["stranger"].read("get_request", [rid])["standing_id"]
+    before = T.get("recheck", {}).get("replaced")
+    if not before:
+        before = ac["stranger"].read("get_request", [rid])["standing_id"]
     T["recheck"] = {"replaced": before}
     save()
     step = who.write("recheck:LI04", "recheck", [rid])
@@ -403,7 +405,7 @@ def recheck_demo(ac: dict):
     save()
 
 
-def settle(ac: dict, keys=None):
+def settle(ac: dict, keys=None, suffix: str = ""):
     stranger = ac["stranger"]
     keys = keys or sorted(T["requests"])
     settle_at = []
@@ -417,7 +419,7 @@ def settle(ac: dict, keys=None):
     for k in keys:
         rid = T["requests"][k]
         if stranger.read("get_request", [rid])["status"] == "EVALUATED":
-            stranger.write("finalize:" + k, "finalize", [rid])
+            stranger.write("finalize:" + k + suffix, "finalize", [rid])
         final = stranger.read("get_latest_receipt", [rid])
         T.setdefault("finalized", {})[k] = {
             "found": final["found"], "verification_id": final.get("verification_id", ""),
@@ -436,7 +438,7 @@ def reverification(ac: dict):
     step = who.write("verify:CE01:v2", "verify", [rid])
     vid = ac["stranger"].read("get_request", [rid])["standing_id"]
     outcome(ac, "CE01:v2", vid, CASES["CE01"]["expected"], step["tx"])
-    settle(ac, ["CE01"])
+    settle(ac, ["CE01"], suffix=":v2")
     history = ac["stranger"].read("get_history", [rid])["items"]
     check(len(history) == 2 and [h["state"] for h in history] == ["FINALIZED", "FINALIZED"],
           f"history after re-verification: {history}")

@@ -1,8 +1,137 @@
 {
   "address": "0x3482865cce66361bc356A0ea6F79EA7Fd3653664",
+  "finalized": {
+    "AD01": {
+      "final_result": "INCONCLUSIVE",
+      "found": true,
+      "state": "FINALIZED",
+      "verification_id": "VE-000001"
+    },
+    "AD02": {
+      "final_result": "INCONCLUSIVE",
+      "found": true,
+      "state": "FINALIZED",
+      "verification_id": "VE-000002"
+    },
+    "AD03": {
+      "final_result": "INCONCLUSIVE",
+      "found": true,
+      "state": "FINALIZED",
+      "verification_id": "VE-000003"
+    },
+    "AD04": {
+      "final_result": "INCONCLUSIVE",
+      "found": true,
+      "state": "FINALIZED",
+      "verification_id": "VE-000004"
+    },
+    "AD05": {
+      "final_result": "INCONCLUSIVE",
+      "found": true,
+      "state": "FINALIZED",
+      "verification_id": "VE-000005"
+    },
+    "AD06": {
+      "final_result": "SUPPORTED",
+      "found": true,
+      "state": "FINALIZED",
+      "verification_id": "VE-000006"
+    },
+    "AD07": {
+      "final_result": "NOT_SUPPORTED",
+      "found": true,
+      "state": "FINALIZED",
+      "verification_id": "VE-000007"
+    },
+    "AD08": {
+      "final_result": "CONTRADICTED",
+      "found": true,
+      "state": "FINALIZED",
+      "verification_id": "VE-000008"
+    },
+    "AP01": {
+      "final_result": "SUPPORTED",
+      "found": true,
+      "state": "FINALIZED",
+      "verification_id": "VE-000009"
+    },
+    "AP02": {
+      "final_result": "CONTRADICTED",
+      "found": true,
+      "state": "FINALIZED",
+      "verification_id": "VE-000010"
+    },
+    "AP03": {
+      "final_result": "SUPPORTED",
+      "found": true,
+      "state": "FINALIZED",
+      "verification_id": "VE-000011"
+    },
+    "AP04": {
+      "final_result": "SUPPORTED",
+      "found": true,
+      "state": "FINALIZED",
+      "verification_id": "VE-000012"
+    },
+    "CE01": {
+      "final_result": "SUPPORTED",
+      "found": true,
+      "state": "FINALIZED",
+      "verification_id": "VE-000013"
+    },
+    "CE01:dynamic": {
+      "final_result": "SUPPORTED",
+      "found": true,
+      "state": "FINALIZED",
+      "verification_id": "VE-000021"
+    },
+    "CE02": {
+      "final_result": "CONTRADICTED",
+      "found": true,
+      "state": "FINALIZED",
+      "verification_id": "VE-000014"
+    },
+    "CE03": {
+      "final_result": "CONTRADICTED",
+      "found": true,
+      "state": "FINALIZED",
+      "verification_id": "VE-000015"
+    },
+    "CE04": {
+      "final_result": "NOT_SUPPORTED",
+      "found": true,
+      "state": "FINALIZED",
+      "verification_id": "VE-000016"
+    },
+    "LI01": {
+      "final_result": "SUPPORTED",
+      "found": true,
+      "state": "FINALIZED",
+      "verification_id": "VE-000017"
+    },
+    "LI02": {
+      "final_result": "INCONCLUSIVE",
+      "found": true,
+      "state": "FINALIZED",
+      "verification_id": "VE-000018"
+    },
+    "LI03": {
+      "final_result": "PARTIALLY_SUPPORTED",
+      "found": true,
+      "state": "FINALIZED",
+      "verification_id": "VE-000019"
+    },
+    "LI04": {
+      "final_result": "UNAVAILABLE",
+      "found": true,
+      "state": "FINALIZED",
+      "verification_id": "VE-000022"
+    }
+  },
   "network": "studionet",
   "notes": [
-    "the first attempt at the finalize-inside-window refusal went to CE02 after its window had closed; the contract finalized CE02 correctly and the run stopped on the script's own check. The step is kept under its true name (finalize:CE02); the script now picks a request whose window is open."
+    "the first attempt at the finalize-inside-window refusal went to CE02 after its window had closed; the contract finalized CE02 correctly and the run stopped on the script's own check. The step is kept under its true name (finalize:CE02); the script now picks a request whose window is open.",
+    "no request had an open recheck window when the refusals ran; the finalize-inside-window refusal is covered by the Direct Mode suite only"
   ],
   "outcomes": {
     "AD01": {
@@ -830,6 +959,64 @@
       "tx": "0x72e15c1c2bfb5e228ec272a42d6aeeabcc00cb7ec87355902701924873266f60",
       "verification_id": "VE-000021"
     },
+    "CE01:v2": {
+      "components": [
+        [
+          "certifier",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "entity",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "standard",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "scope",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "validity",
+          "EXPLICIT",
+          "PANEL"
+        ]
+      ],
+      "content_digest": "0b501c5ca8e6b988ca2b4e2bc7ab53e41d9f10e013b29c41dcd82378924d176d",
+      "decided_by": "PANEL",
+      "evidence_found": true,
+      "expected": [
+        "SUPPORTED",
+        "DIRECT",
+        "SUPPORT_MET"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "NOT_REQUIRED",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [],
+      "observed": [
+        "SUPPORTED",
+        "DIRECT",
+        "SUPPORT_MET"
+      ],
+      "record_digest": "573672144616b3e452dfa82863821295ebe3fc4e1aa28e3325816bef93fd77da",
+      "relevant_excerpt": "Meridian Certification Registry ... Organisation Northwind Analytics Ltd ... Standard ISO/IEC 27001:2022 information security management ... Scope Design and operation of cloud data analytics services ... Status Valid until 2027-06-30",
+      "request_id": "VR-000013",
+      "source_shape": "MATCHES",
+      "source_status": "RETRIEVED",
+      "tx": "0x48961102dcc37b58b1e1cb1c44bba940afdf184ace5ab5bf7c57cc64d9f71332",
+      "verification_id": "VE-000023"
+    },
     "CE02": {
       "components": [
         [
@@ -1304,8 +1491,18 @@
   },
   "raw_base": "https://raw.githubusercontent.com/Olawalter/Evidencereceipt/de4dda6/fixtures/",
   "recheck": {
-    "replaced": "VE-000020"
+    "replaced": "VE-000020",
+    "standing": "VE-000022"
   },
+  "refusals": [
+    "refuse:stranger_verifies",
+    "refuse:verify_twice",
+    "refuse:duplicate_request",
+    "refuse:invalid_policy_version",
+    "refuse:private_network_url",
+    "refuse:non_https_url",
+    "refuse:stranger_retires_policy"
+  ],
   "requests": {
     "AD01": "VR-000001",
     "AD02": "VR-000002",
@@ -1382,6 +1579,244 @@
         "AGREE"
       ]
     },
+    "finalize:AD01": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "finalize",
+      "returned": "{'readable': '\"VE-000001\"'}",
+      "status": "FINALIZED",
+      "step": "finalize:AD01",
+      "tx": "0x7c17f18fde64c7bc904792b311c3d9a400db0ba21189c4e96299ea83cdf74e76",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "finalize:AD02": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "finalize",
+      "returned": "{'readable': '\"VE-000002\"'}",
+      "status": "FINALIZED",
+      "step": "finalize:AD02",
+      "tx": "0x235eb1ef8cbb5e3b8eeb397f65401e574a3a65624d81bc8eea142d662e9852f8",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "finalize:AD03": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "finalize",
+      "returned": "{'readable': '\"VE-000003\"'}",
+      "status": "FINALIZED",
+      "step": "finalize:AD03",
+      "tx": "0x54a7495b24849194d7e0dec3bbbdb1a4a3d5a7bd1ce26e189f1452d8695c18be",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "finalize:AD04": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "finalize",
+      "returned": "{'readable': '\"VE-000004\"'}",
+      "status": "FINALIZED",
+      "step": "finalize:AD04",
+      "tx": "0x1e63acf9970f575cd77cc4c407b1e150195ab013b556ea011433a465245a22f6",
+      "votes": [
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "finalize:AD05": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "finalize",
+      "returned": "{'readable': '\"VE-000005\"'}",
+      "status": "FINALIZED",
+      "step": "finalize:AD05",
+      "tx": "0xf5b404e7779545872e1a7ac7d78ca41fd453cf3235c865918588ed00221e9cb7",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "finalize:AD06": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "finalize",
+      "returned": "{'readable': '\"VE-000006\"'}",
+      "status": "FINALIZED",
+      "step": "finalize:AD06",
+      "tx": "0xeafa314302abc7743ff90b70ad8a791526ef28c9a54c545f98f87cd9859e3a7b",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "finalize:AD07": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "finalize",
+      "returned": "{'readable': '\"VE-000007\"'}",
+      "status": "FINALIZED",
+      "step": "finalize:AD07",
+      "tx": "0x9d840de3a339d2ae5398be1015d3fdc82bed89844d119d66922556d3e68d561b",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "finalize:AD08": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "finalize",
+      "returned": "{'readable': '\"VE-000008\"'}",
+      "status": "FINALIZED",
+      "step": "finalize:AD08",
+      "tx": "0x7a5a1bcbe17c5bcfaf9d9befd9777a307ec2201038e1a21f3d0bef637fb98588",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "finalize:AP01": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "finalize",
+      "returned": "{'readable': '\"VE-000009\"'}",
+      "status": "FINALIZED",
+      "step": "finalize:AP01",
+      "tx": "0xf91575e5bd6d0c3b4b1a8db15ab6ad823a31d6eab854ae3a023b05695419331e",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE"
+      ]
+    },
+    "finalize:AP02": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "finalize",
+      "returned": "{'readable': '\"VE-000010\"'}",
+      "status": "FINALIZED",
+      "step": "finalize:AP02",
+      "tx": "0xd6ea7f1a289e7faf05779a308749bb5ef6b7e66f7e994db91095fe68fab43667",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "finalize:AP03": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "finalize",
+      "returned": "{'readable': '\"VE-000011\"'}",
+      "status": "FINALIZED",
+      "step": "finalize:AP03",
+      "tx": "0xc2a78ddf1fffd6969117b7f32db99250be1e9f9c8c11020eba3c47c94925f461",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "finalize:AP04": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "finalize",
+      "returned": "{'readable': '\"VE-000012\"'}",
+      "status": "FINALIZED",
+      "step": "finalize:AP04",
+      "tx": "0x2ba5e79e101fbe77c80980135fb75823efe6b3722d7f06f096662bdcaf610d99",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE"
+      ]
+    },
+    "finalize:CE01": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "finalize",
+      "returned": "{'readable': '\"VE-000013\"'}",
+      "status": "FINALIZED",
+      "step": "finalize:CE01",
+      "tx": "0xcbba0bac8facc4c4a4932beaa40c9736dac235cb3fa6a77aa7e15a8aac7d3b61",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "finalize:CE01:dynamic": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "finalize",
+      "returned": "{'readable': '\"VE-000021\"'}",
+      "status": "FINALIZED",
+      "step": "finalize:CE01:dynamic",
+      "tx": "0x485fb2a95f60faf19dacdad04bfb2df2d65cf67bf5c5472927cd6aac65409e97",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
     "finalize:CE02": {
       "accepted": true,
       "actor": "stranger",
@@ -1397,6 +1832,108 @@
         "AGREE",
         "AGREE",
         "IDLE",
+        "AGREE"
+      ]
+    },
+    "finalize:CE03": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "finalize",
+      "returned": "{'readable': '\"VE-000015\"'}",
+      "status": "FINALIZED",
+      "step": "finalize:CE03",
+      "tx": "0xbd316b9789375134c37e517760107c4e5d068d06b083c15089d1585882cc86be",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "finalize:CE04": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "finalize",
+      "returned": "{'readable': '\"VE-000016\"'}",
+      "status": "FINALIZED",
+      "step": "finalize:CE04",
+      "tx": "0x1c7ff4b3aac5d4351cfac9f6c06ffb6bbfc175df5b085dc09c5be31c43379d61",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "finalize:LI01": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "finalize",
+      "returned": "{'readable': '\"VE-000017\"'}",
+      "status": "FINALIZED",
+      "step": "finalize:LI01",
+      "tx": "0x98cc1bb69ce3ccb19df7f343fffb9fe19ba67ccbcbe99b5e0c5b2e98e7c38228",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "finalize:LI02": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "finalize",
+      "returned": "{'readable': '\"VE-000018\"'}",
+      "status": "FINALIZED",
+      "step": "finalize:LI02",
+      "tx": "0xe4d439b38b48dcf90b0b2a93e850b13b80a3d500400664c4bf1cc203611f6e6a",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "finalize:LI03": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "finalize",
+      "returned": "{'readable': '\"VE-000019\"'}",
+      "status": "FINALIZED",
+      "step": "finalize:LI03",
+      "tx": "0x20da0e2b1a1bb99422acf863dc1c3b0df12af23d5807df198fbb3da062142403",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "finalize:LI04": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "SUCCESS",
+      "method": "finalize",
+      "returned": "{'readable': '\"VE-000022\"'}",
+      "status": "FINALIZED",
+      "step": "finalize:LI04",
+      "tx": "0xd20a84fa2f3cc5ad6f05cdf338c96bceb678e663b0342c40a5a4672fe716f8cb",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
         "AGREE"
       ]
     },
@@ -1500,6 +2037,23 @@
         "IDLE",
         "AGREE",
         "IDLE"
+      ]
+    },
+    "refuse:stranger_retires_policy": {
+      "accepted": true,
+      "actor": "stranger",
+      "leader_execution": "ERROR",
+      "method": "retire_policy",
+      "returned": "[EXPECTED] only the policy owner retires it",
+      "status": "FINALIZED",
+      "step": "refuse:stranger_retires_policy",
+      "tx": "0x30a1ec1debc08f224f66a7432c7cc114d2495b6ec3402e8da450d67cc2a6d194",
+      "votes": [
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
       ]
     },
     "refuse:stranger_verifies": {
@@ -1893,6 +2447,23 @@
         "AGREE"
       ]
     },
+    "reverify:CE01": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "request_reverification",
+      "returned": "{'readable': '\"REVERIFY_REQUESTED\"'}",
+      "status": "FINALIZED",
+      "step": "reverify:CE01",
+      "tx": "0xc70023f5917cb7cbc37aa9f1f7e39a43a55c8c1f4a4a1e08e8358003e9871c42",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
     "verify:AD01": {
       "accepted": true,
       "actor": "bob",
@@ -2129,6 +2700,23 @@
         "AGREE",
         "IDLE",
         "AGREE"
+      ]
+    },
+    "verify:CE01:v2": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000023\"'}",
+      "status": "FINALIZED",
+      "step": "verify:CE01:v2",
+      "tx": "0x48961102dcc37b58b1e1cb1c44bba940afdf184ace5ab5bf7c57cc64d9f71332",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
       ]
     },
     "verify:CE02": {
