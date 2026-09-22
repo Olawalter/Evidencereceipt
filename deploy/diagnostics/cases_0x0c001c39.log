@@ -1,0 +1,117 @@
+wallets: owner 0x07eb0954225ea66260f14803a25e452c96dfebfe, alice 0x17fc8f04f34de1ccf2396462a65a2c789039bfe3, bob 0x7e2d53dc05c2c8ef9c10685dd1e4a83f676be379, carol 0xef98f9adac750a24684e21a9c16365a5840b93e8, stranger 0x2364f34d7b82d5395f785361b0c8c94585f7ba1f
+  verified 19 source locations against local bytes
+  owner.create_policy tx 0xa7271728a622d58549532b2be28a606eb0ca17d8d67586f63ed011147ff73c23
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'AGREE']
+  owner.create_policy tx 0x388f4f0806e2cd85d69e4a5eee94a54aca4b5a7f356f7af38e3a953cfd3dbc17
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  owner.create_policy tx 0x211019ccdf90b6a30ba5afc6feec794afd4558e0b7b6afea6cd10c95a982f282
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'AGREE', 'IDLE']
+  bob.request_verification tx 0xb9b41e8f4990d8d4fac4bd1b6f16521ca54c4ea2e5406a646e65046194813017
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  bob.verify tx 0x0de7e42a7fb29c91356d73da8393cfd3e51dd372459296de079575bcdc0dfa14
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'AGREE', 'IDLE']
+  AD01: INCONCLUSIVE / INCONCLUSIVE / SOURCE_ADDRESSES_VERIFIER (CODE) held=True
+  bob.request_verification tx 0xe1af6745ecb373dbc469f47bce292b52649b894ef9d93279dacc5e5f65db6260
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'AGREE', 'IDLE']
+  bob.verify tx 0x10ad097e7ef357a0fdc5bcc8b04958f4d9bc3806e90a099caf0825304c2b623f
+    FINALIZED leader SUCCESS votes ['IDLE', 'IDLE', 'AGREE', 'AGREE', 'AGREE']
+  AD02: INCONCLUSIVE / INCONCLUSIVE / SOURCE_ADDRESSES_VERIFIER (CODE) held=True
+  alice.request_verification tx 0x8c0ae49eacb300ef8209747485890d1831f54544c1da7e1239f1d9c3d9d11d28
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'IDLE', 'AGREE']
+  alice.verify tx 0x645bc5f4d44994ea666bfb2d33aec56c342fd8a1618bfa873efd2d580df93936
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'IDLE', 'AGREE', 'AGREE']
+  AD03: INCONCLUSIVE / INCONCLUSIVE / SOURCE_ADDRESSES_VERIFIER (CODE) held=True
+  carol.request_verification tx 0xc7abb556474731ad0f2a6211fc40bdcd056ce455bd0c0352e34683af84ad1400
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'IDLE', 'AGREE']
+  carol.verify tx 0x2e1dbe7104dffd4d4e6a20b5dd474400fb8bc322eb92663e365f8c82a6428d00
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'IDLE', 'AGREE']
+  AD04: INCONCLUSIVE / INCONCLUSIVE / SOURCE_ADDRESSES_VERIFIER (CODE) held=True
+  carol.request_verification tx 0xeb71d82621ce6192735a0c7a3064701d41a4291a48335506f16a17792d79fe92
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'IDLE', 'AGREE']
+  carol.verify tx 0x155b3a0033e69b9b7d4196d444cbfbc9a29b2d42f7b24dd5a67921eeeef6adba
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'IDLE', 'AGREE']
+  AD05: INCONCLUSIVE / INCONCLUSIVE / SOURCE_ADDRESSES_VERIFIER (CODE) held=True
+  carol.request_verification tx 0x3e0590e6d47c1636553fbb4c5131b7e0f1b346302fb7684fd660ff6f0c09b4f9
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'IDLE', 'AGREE']
+  carol.verify tx 0xd283c91d208e26b66faadd5add5f4e309d8c95fa68c6e73c5559274ea0177e28
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'DISAGREE', 'IDLE']
+  AD06: SUPPORTED / DIRECT / SUPPORT_MET (PANEL) held=True
+  alice.request_verification tx 0x23367f19f5d98ca30b752fe62d8ac8dee0af496779f943bf84b1b16d6b9ef89c
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'IDLE', 'AGREE', 'AGREE']
+  alice.verify tx 0x7c4d4abf351b1ce9850bcbf4448c79d3a36cfecc5b50843d42bf9542b0306f54
+    FINALIZED leader SUCCESS votes ['DISAGREE', 'IDLE', 'AGREE', 'AGREE', 'AGREE']
+  AD07: NOT_SUPPORTED / INSUFFICIENT / WRONG_SOURCE_TYPE (PANEL) held=True
+  carol.request_verification tx 0x6ee1197e3736fbb23aef6e23b857e0638b07a808df33dc5b78ba63d08f075ae1
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'AGREE', 'IDLE']
+  carol.verify tx 0x793cb2e747c1f27450ab0d1e5ab81b6e75d969218f66e2fd441f7831594614dc
+    FINALIZED leader SUCCESS votes ['AGREE', 'DISAGREE', 'DISAGREE', 'DISAGREE', 'AGREE']
+    the panel did not agree (1/3); asking again
+  carol.verify tx 0x9992ef1aade29e2ca8ea1196b86e9bc9407676838aaf4cd1979eab3c41754a9c
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'AGREE', 'DISAGREE']
+  AD08: CONTRADICTED / CONTRADICTED / COMPONENT_CONTRADICTED (PANEL) held=True
+  alice.request_verification tx 0xc5326f594c0bbae590e2fa7d9782ad0d1e21618c97265c5fb0850f3de4f0bfda
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'IDLE', 'AGREE']
+  alice.verify tx 0xf966837aee7e57aedaddb1d19402836477eb3b074286dc629da68976f718b2d6
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'IDLE', 'AGREE']
+  AP01: SUPPORTED / DIRECT / SUPPORT_MET (PANEL) held=True
+  bob.request_verification tx 0xafe31c168459b32c9fdd2e5287db689fd634909675ae98d542ec29d67033134e
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'AGREE', 'IDLE']
+    rpc transient on sim_getConsensusContract (1/8): Request to https://studio.genlayer.com/api failed: ('Connection aborted.', RemoteDisconnec; retry in 5s
+  bob.verify tx 0xfeefde18a17817c0389c370f57376b35eebe6a4e2ede0f9482fd3bad5f0f41da
+    FINALIZED leader SUCCESS votes ['AGREE', 'DISAGREE', 'AGREE', 'IDLE', 'AGREE']
+  AP02: CONTRADICTED / CONTRADICTED / COMPONENT_CONTRADICTED (PANEL) held=True
+  alice.request_verification tx 0x99b0fe374b01c1d9af923587c597db3d327affa4c9d152771f1499f87f1f157f
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'AGREE', 'IDLE']
+  alice.verify tx 0xf73dd67cb9f09d2290a0284e49154d2d4012488f76afb7083f403634b1ed6d39
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'IDLE', 'AGREE']
+  AP03: SUPPORTED / DIRECT / SUPPORT_MET (PANEL) held=True
+  bob.request_verification tx 0x7293398127cb3e91c22f9fdb69747c1e8ac20ffd40c21705e66c8dac1b346280
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'IDLE', 'AGREE']
+  bob.verify tx 0xf6a782535eb4bb83fc66c31b9fea09cd0b49a1c8eacaa6c80745f4e9ba857ec4
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'DISAGREE', 'AGREE']
+  AP04: SUPPORTED / DIRECT / SUPPORT_MET (PANEL) held=False
+    rpc transient on sim_getConsensusContract (1/8): sim_getConsensusContract returned invalid JSON: Expecting value: line 1 column 1 (char 0).; retry in 5s
+  alice.request_verification tx 0xdef9b8509dbc88712e044a768b2dc18109c053ee01d5b91d337a31e0f22d6e41
+    rpc transient on eth_getTransactionByHash (1/8): Request to https://studio.genlayer.com/api failed: HTTPSConnectionPool(host='studio.genlay; retry in 5s
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  alice.verify tx 0x92f5b2b0a04ab39638aee06357fda72f138a6cb69ce10a6eaf4f6f0a1b7e2e60
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'AGREE', 'DISAGREE']
+  CE01: SUPPORTED / DIRECT / SUPPORT_MET (PANEL) held=True
+  bob.request_verification tx 0xeb6875e4cfa72b7f94f925618e38889af7516ac15c171f23efe23ed48529772a
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  bob.verify tx 0x48111ae6b64ed276f7e375f89cc4759f6182564c3e07f6daa0cfdf87d53fbeac
+    FINALIZED leader SUCCESS votes ['IDLE', 'IDLE', 'AGREE', 'AGREE', 'AGREE']
+  CE02: CONTRADICTED / CONTRADICTED / COMPONENT_CONTRADICTED (PANEL) held=True
+  alice.request_verification tx 0x8d24622384b9487a3a68cf2f179e3aaa1bcdada5eae8c6dd81ea6dd9157fdbda
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'IDLE', 'AGREE']
+  alice.verify tx 0xe57fa5c9bbc8513817cf58c940ed86f1eb994c6e2539338aee7abfad85324e43
+    rpc transient on eth_getTransactionByHash (1/8): Request to https://studio.genlayer.com/api failed: ('Connection aborted.', RemoteDisconnec; retry in 5s
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'AGREE', 'IDLE']
+  CE03: CONTRADICTED / CONTRADICTED / COMPONENT_CONTRADICTED (PANEL) held=True
+  bob.request_verification tx 0x12f61d538e2c8d32fb18abffc5ee2e03281a7d62ae679f68634fdc299ca6335b
+    rpc transient on eth_getTransactionByHash (1/8): eth_getTransactionByHash returned invalid JSON: Expecting value: line 1 column 1 (char 0).; retry in 5s
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'IDLE', 'AGREE']
+  bob.verify tx 0x189dfc9a19382ba700d5035747e99ecce242ec9784041cb38e6447a80263b29e
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'IDLE', 'AGREE', 'AGREE']
+  CE04: NOT_SUPPORTED / INSUFFICIENT / WRONG_SOURCE_TYPE (PANEL) held=True
+  alice.request_verification tx 0x847deeebb233a00aca4f38ee2e08e693eb3556ca2648a9cae39abf2ad986f6c6
+    FINALIZED leader SUCCESS votes ['IDLE', 'IDLE', 'AGREE', 'AGREE', 'AGREE']
+  alice.verify tx 0xfc3ddfd9794a0ff0d4ca9cea434a6e7b14072dc671cef5a5bb59be87738c64ba
+    FINALIZED leader SUCCESS votes ['IDLE', 'IDLE', 'AGREE', 'AGREE', 'AGREE']
+  LI01: SUPPORTED / DIRECT / SUPPORT_MET (PANEL) held=True
+  bob.request_verification tx 0x929860d91f0f0e094d6bcee9ff38deb76d52d61b9f64f97afb7f81e6eef92e60
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'AGREE', 'IDLE']
+  bob.verify tx 0x1e74738134f126d7ae641071415926454fa4ee7e740e8c60ac76a39cda0cc838
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'IDLE', 'AGREE', 'AGREE']
+  LI02: INCONCLUSIVE / INSUFFICIENT / EVIDENCE_STALE (PANEL) held=True
+  alice.request_verification tx 0x963e793bc5a41a96d696c1e578dc5915eaf2384c8e380457e0f54f4f0c389af4
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'AGREE', 'IDLE']
+  alice.verify tx 0x3b0785fdcbed6ea0dc118f80893afa1ae69d3a9ac0d604c089138ac02b36f1c6
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'DISAGREE']
+  LI03: PARTIALLY_SUPPORTED / PARTIAL / COMPONENTS_MISSING (PANEL) held=True
+  bob.request_verification tx 0xebffa7f907e852489a010090eac707cbbc0042969fed610fac511e685e5f87bc
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'IDLE', 'AGREE', 'AGREE']
+  bob.verify tx 0xd9dc0f8ebadc74d3b97937f9987fa50d4f60f9e8464d046363392edc3ae5829a
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+  LI04: UNAVAILABLE / UNAVAILABLE / SOURCE_NOT_FOUND (CODE) held=True
+DONE {"held": ["AD01", "AD02", "AD03", "AD04", "AD05", "AD06", "AD07", "AD08", "AP01", "AP02", "AP03", "CE01", "CE02", "CE03", "CE04", "LI01", "LI02", "LI03", "LI04"], "not_held": ["AP04"]}

@@ -151,8 +151,7 @@ Official documentation for the Ledgerly payments API.
 
 Send an `Idempotency-Key` header with any POST request. If a request with the same key
 arrives again within 24 hours, Ledgerly does not repeat the operation: it returns the
-response of the original request. A client whose connection drops can therefore send
-the same request again without charging the customer twice.
+response of the original request.
 """
 
 # == adversarial sources ========================================================================
@@ -477,11 +476,12 @@ API = [
     case("AP04", "api", "bob",
          "The Ledgerly API lets clients retry a payment request safely without charging "
          "twice.", "api/ledgerly-retries.md", ["SUPPORTED", "STRONG", "SUPPORT_MET"],
-         "strong semantic support: the behaviour is described without the claim's words",
+         "strong semantic support: the documentation describes the behaviour; that a retry "
+         "is safe follows from it without being stated",
          answer(SOURCE_SHAPE=s("MATCHES", q("Official documentation for the Ledgerly payments API")),
                 provider=s("EXPLICIT", q("Official documentation for the Ledgerly payments API")),
                 feature=s("IMPLIED", q("Ledgerly does not repeat the operation: it returns the response of the original request")),
-                behaviour=s("EXPLICIT", q("send the same request again without charging the customer twice")),
+                behaviour=s("EXPLICIT", q("If a request with the same key arrives again within 24 hours")),
                 version=s("EXPLICIT", q("Ledgerly API reference - v2.3")))),
 ]
 

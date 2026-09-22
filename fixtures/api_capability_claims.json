@@ -240,7 +240,7 @@
       "quotes": [
        {
         "evidence_id": "S1",
-        "text": "send the same request again without charging the customer twice"
+        "text": "If a request with the same key arrives again within 24 hours"
        }
       ],
       "state": "EXPLICIT"
@@ -288,7 +288,7 @@
     "STRONG",
     "SUPPORT_MET"
    ],
-   "notes": "strong semantic support: the behaviour is described without the claim's words",
+   "notes": "strong semantic support: the documentation describes the behaviour; that a retry is safe follows from it without being stated",
    "policy": "api",
    "requester": "bob",
    "source": "api/ledgerly-retries.md",

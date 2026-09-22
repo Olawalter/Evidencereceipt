@@ -1,5 +1,6 @@
 {
   "address": "0x0C001C39156FE013bcAb3681cA6fF782B9461421",
+  "finished_at": "2026-09-22T09:35:25Z",
   "network": "studionet",
   "outcomes": {
     "AD01": {
@@ -237,11 +238,946 @@
       "source_status": "RETRIEVED",
       "tx": "0x2e1dbe7104dffd4d4e6a20b5dd474400fb8bc322eb92663e365f8c82a6428d00",
       "verification_id": "VE-000004"
+    },
+    "AD05": {
+      "components": [
+        [
+          "provider",
+          "UNCLEAR",
+          "CODE"
+        ],
+        [
+          "feature",
+          "UNCLEAR",
+          "CODE"
+        ],
+        [
+          "behaviour",
+          "UNCLEAR",
+          "CODE"
+        ],
+        [
+          "version",
+          "UNCLEAR",
+          "CODE"
+        ]
+      ],
+      "content_digest": "d254bd9b84138d71773df27d51da298fdc07e6ac2375bb5432f88967318bc936",
+      "decided_by": "CODE",
+      "evidence_found": false,
+      "expected": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "SOURCE_ADDRESSES_VERIFIER"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "NOT_REQUIRED",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [
+        "BODY"
+      ],
+      "observed": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "SOURCE_ADDRESSES_VERIFIER"
+      ],
+      "record_digest": "202132bddc58fe9d18a387f51afa0b53bf0a7cb2932813207b07c0f348cec321",
+      "relevant_excerpt": "",
+      "request_id": "VR-000005",
+      "source_shape": "UNCLEAR",
+      "source_status": "RETRIEVED",
+      "tx": "0x155b3a0033e69b9b7d4196d444cbfbc9a29b2d42f7b24dd5a67921eeeef6adba",
+      "verification_id": "VE-000005"
+    },
+    "AD06": {
+      "components": [
+        [
+          "certifier",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "entity",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "standard",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "scope",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "validity",
+          "EXPLICIT",
+          "PANEL"
+        ]
+      ],
+      "content_digest": "70319cdf09b83cf3e91b34525f8915d9952570be117e59e35a7d111ccbd22729",
+      "decided_by": "PANEL",
+      "evidence_found": true,
+      "expected": [
+        "SUPPORTED",
+        "DIRECT",
+        "SUPPORT_MET"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "NOT_REQUIRED",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [],
+      "observed": [
+        "SUPPORTED",
+        "DIRECT",
+        "SUPPORT_MET"
+      ],
+      "record_digest": "3857631f69e1e941d2cd437c9f4cf3eb5d73d5505767fa4b88c76c1ece04a96b",
+      "relevant_excerpt": "Meridian Certification is an accredited certification body. This register lists every certificate it has issued. ... Organisation Juniper Health Systems Ltd ... Standard ISO/IEC 27001:2022 information security management ... Scope Hosting and support of hospital scheduling software ... Status Valid until 2028-01-31",
+      "request_id": "VR-000006",
+      "source_shape": "MATCHES",
+      "source_status": "RETRIEVED",
+      "tx": "0xd283c91d208e26b66faadd5add5f4e309d8c95fa68c6e73c5559274ea0177e28",
+      "verification_id": "VE-000006"
+    },
+    "AD07": {
+      "components": [
+        [
+          "certifier",
+          "ABSENT",
+          "PANEL"
+        ],
+        [
+          "entity",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "standard",
+          "ABSENT",
+          "PANEL"
+        ],
+        [
+          "scope",
+          "ABSENT",
+          "PANEL"
+        ],
+        [
+          "validity",
+          "ABSENT",
+          "PANEL"
+        ]
+      ],
+      "content_digest": "29497cbf99225226db6ec43f41b409249d0ec36d043f147531a08b87be6af1bd",
+      "decided_by": "PANEL",
+      "evidence_found": true,
+      "expected": [
+        "NOT_SUPPORTED",
+        "INSUFFICIENT",
+        "WRONG_SOURCE_TYPE"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "NOT_REQUIRED",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [],
+      "observed": [
+        "NOT_SUPPORTED",
+        "INSUFFICIENT",
+        "WRONG_SOURCE_TYPE"
+      ],
+      "record_digest": "91d4715170b3799239b2b40d2c90868efa75c59308438edefe4d1a3faa753781",
+      "relevant_excerpt": "Sunday Kitchen",
+      "request_id": "VR-000007",
+      "source_shape": "MISMATCH",
+      "source_status": "RETRIEVED",
+      "tx": "0x7c4d4abf351b1ce9850bcbf4448c79d3a36cfecc5b50843d42bf9542b0306f54",
+      "verification_id": "VE-000007"
+    },
+    "AD08": {
+      "components": [
+        [
+          "certifier",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "entity",
+          "CONTRADICTED",
+          "PANEL"
+        ],
+        [
+          "standard",
+          "ABSENT",
+          "PANEL"
+        ],
+        [
+          "scope",
+          "ABSENT",
+          "PANEL"
+        ],
+        [
+          "validity",
+          "ABSENT",
+          "PANEL"
+        ]
+      ],
+      "content_digest": "b6ea9941b2fb468317986b6fc9ad3b1e9792aacab339e62cb4ed362342269d26",
+      "decided_by": "PANEL",
+      "evidence_found": true,
+      "expected": [
+        "CONTRADICTED",
+        "CONTRADICTED",
+        "COMPONENT_CONTRADICTED"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "NOT_REQUIRED",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [],
+      "observed": [
+        "CONTRADICTED",
+        "CONTRADICTED",
+        "COMPONENT_CONTRADICTED"
+      ],
+      "record_digest": "20f3695ea7198b03b53cbc1fd5146988599ee048ca22a63bfadf72cc4f81e8e6",
+      "relevant_excerpt": "Meridian Certification is an accredited certification body. ... Northwind Analytics Ltd: no certificate on record. Meridian has never issued a certificate to this organisation.",
+      "request_id": "VR-000008",
+      "source_shape": "MATCHES",
+      "source_status": "RETRIEVED",
+      "tx": "0x9992ef1aade29e2ca8ea1196b86e9bc9407676838aaf4cd1979eab3c41754a9c",
+      "verification_id": "VE-000008"
+    },
+    "AP01": {
+      "components": [
+        [
+          "provider",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "feature",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "behaviour",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "version",
+          "EXPLICIT",
+          "PANEL"
+        ]
+      ],
+      "content_digest": "55e05c5fb4f1b94668f4bf038487056caa24159c8812a32ac2df9da4c57793c3",
+      "decided_by": "PANEL",
+      "evidence_found": true,
+      "expected": [
+        "SUPPORTED",
+        "DIRECT",
+        "SUPPORT_MET"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "NOT_REQUIRED",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [],
+      "observed": [
+        "SUPPORTED",
+        "DIRECT",
+        "SUPPORT_MET"
+      ],
+      "record_digest": "0950d904527dd0c3fed2435cf48ae4293f2478386149553b569f72770a004fd9",
+      "relevant_excerpt": "Ledgerly API reference - v2.3 Official documentation for the Ledgerly payments API. ... Ledgerly sends a signed webhook for every settled payment. ... Each delivery carries a `Ledgerly-Signature` header computed with your endpoint secret, so you can verify that the event came from Ledgerly.",
+      "request_id": "VR-000009",
+      "source_shape": "MATCHES",
+      "source_status": "RETRIEVED",
+      "tx": "0xf966837aee7e57aedaddb1d19402836477eb3b074286dc629da68976f718b2d6",
+      "verification_id": "VE-000009"
+    },
+    "AP02": {
+      "components": [
+        [
+          "provider",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "feature",
+          "CONTRADICTED",
+          "PANEL"
+        ],
+        [
+          "behaviour",
+          "CONTRADICTED",
+          "PANEL"
+        ],
+        [
+          "version",
+          "EXPLICIT",
+          "PANEL"
+        ]
+      ],
+      "content_digest": "a608f4be0c8f324c47b0e13c3cc9530c21db14660fd6864729369d5cdee49e55",
+      "decided_by": "PANEL",
+      "evidence_found": true,
+      "expected": [
+        "CONTRADICTED",
+        "CONTRADICTED",
+        "COMPONENT_CONTRADICTED"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "NOT_REQUIRED",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [],
+      "observed": [
+        "CONTRADICTED",
+        "CONTRADICTED",
+        "COMPONENT_CONTRADICTED"
+      ],
+      "record_digest": "2021da63cf795079bff8e815c0a5d1a8f5a9786fda08d4d72916fac595d53132",
+      "relevant_excerpt": "Official documentation for the Ledgerly payments API. ... Streaming exports are planned for v3.0 and are not available in the current release.",
+      "request_id": "VR-000010",
+      "source_shape": "MATCHES",
+      "source_status": "RETRIEVED",
+      "tx": "0xfeefde18a17817c0389c370f57376b35eebe6a4e2ede0f9482fd3bad5f0f41da",
+      "verification_id": "VE-000010"
+    },
+    "AP03": {
+      "components": [
+        [
+          "provider",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "feature",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "behaviour",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "version",
+          "EXPLICIT",
+          "PANEL"
+        ]
+      ],
+      "content_digest": "604a665e5e0a314d6aa022a1a9fbf470cf36f66bd8630b890c4618a615132651",
+      "decided_by": "PANEL",
+      "evidence_found": true,
+      "expected": [
+        "SUPPORTED",
+        "DIRECT",
+        "SUPPORT_MET"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "NOT_REQUIRED",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [],
+      "observed": [
+        "SUPPORTED",
+        "DIRECT",
+        "SUPPORT_MET"
+      ],
+      "record_digest": "3b9e7be12fa1d1d03c150b8828c0e4ed6387d2b8a73a900c2e4b7dcee0c0e0d8",
+      "relevant_excerpt": "\"provider\": \"Ledgerly\" ... \"idempotency_keys\": { \"supported\": true ... \"applies_to\": \"all POST requests\"",
+      "request_id": "VR-000011",
+      "source_shape": "MATCHES",
+      "source_status": "RETRIEVED",
+      "tx": "0xf73dd67cb9f09d2290a0284e49154d2d4012488f76afb7083f403634b1ed6d39",
+      "verification_id": "VE-000011"
+    },
+    "AP04": {
+      "components": [
+        [
+          "provider",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "feature",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "behaviour",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "version",
+          "EXPLICIT",
+          "PANEL"
+        ]
+      ],
+      "content_digest": "25be76eef49aa62c8e7fe7dd455a56f3f03e2db76ce3e01e2b701229bd14507c",
+      "decided_by": "PANEL",
+      "evidence_found": true,
+      "expected": [
+        "SUPPORTED",
+        "STRONG",
+        "SUPPORT_MET"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "NOT_REQUIRED",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": false,
+      "http_status": 200,
+      "markers": [],
+      "nodes": [
+        {
+          "mode": "leader",
+          "model": "policy:prd-gpt-5-4",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-mistral",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": null,
+          "stdout": "",
+          "vote": "idle"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-gemini",
+          "stdout": "[DISAGREE] consequence: support_level mine='STRONG' theirs='DIRECT'\n[MINE] SUPPORTED STRONG SUPPORT_MET SOURCE_SHAPE=MATCHES provider=EXPLICIT feature=IMPLIED behaviour=EXPLICIT version=EXPLICIT\n",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": "openai/gpt-5.4",
+          "stdout": "",
+          "vote": "agree"
+        }
+      ],
+      "observed": [
+        "SUPPORTED",
+        "DIRECT",
+        "SUPPORT_MET"
+      ],
+      "record_digest": "290150511a30d1c1573864363891a59f3fd2683fffa64c12afc2eb8fbcfbb681",
+      "relevant_excerpt": "Official documentation for the Ledgerly payments API. ... ## Idempotent requests ... If a request with the same key arrives again within 24 hours, Ledgerly does not repeat the operation: it returns the response of the original request.",
+      "request_id": "VR-000012",
+      "source_shape": "MATCHES",
+      "source_status": "RETRIEVED",
+      "tx": "0xf6a782535eb4bb83fc66c31b9fea09cd0b49a1c8eacaa6c80745f4e9ba857ec4",
+      "verification_id": "VE-000012"
+    },
+    "CE01": {
+      "components": [
+        [
+          "certifier",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "entity",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "standard",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "scope",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "validity",
+          "EXPLICIT",
+          "PANEL"
+        ]
+      ],
+      "content_digest": "0b501c5ca8e6b988ca2b4e2bc7ab53e41d9f10e013b29c41dcd82378924d176d",
+      "decided_by": "PANEL",
+      "evidence_found": true,
+      "expected": [
+        "SUPPORTED",
+        "DIRECT",
+        "SUPPORT_MET"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "NOT_REQUIRED",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [],
+      "observed": [
+        "SUPPORTED",
+        "DIRECT",
+        "SUPPORT_MET"
+      ],
+      "record_digest": "3cff6ef48259aafe14328975ab45672a38415f1e6b4f8e21bcf33f12dd2ae1a6",
+      "relevant_excerpt": "Meridian Certification is an accredited certification body. ... Organisation Northwind Analytics Ltd ... Standard ISO/IEC 27001:2022 information security management ... Scope Design and operation of cloud data analytics services ... Status Valid until 2027-06-30",
+      "request_id": "VR-000013",
+      "source_shape": "MATCHES",
+      "source_status": "RETRIEVED",
+      "tx": "0x92f5b2b0a04ab39638aee06357fda72f138a6cb69ce10a6eaf4f6f0a1b7e2e60",
+      "verification_id": "VE-000013"
+    },
+    "CE02": {
+      "components": [
+        [
+          "certifier",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "entity",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "standard",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "scope",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "validity",
+          "CONTRADICTED",
+          "PANEL"
+        ]
+      ],
+      "content_digest": "39b7a86dbe16798c0b46ac30f6e51a9ffcd5fced4acab6205b45e786f9d73d34",
+      "decided_by": "PANEL",
+      "evidence_found": true,
+      "expected": [
+        "CONTRADICTED",
+        "CONTRADICTED",
+        "COMPONENT_CONTRADICTED"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "NOT_REQUIRED",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [],
+      "observed": [
+        "CONTRADICTED",
+        "CONTRADICTED",
+        "COMPONENT_CONTRADICTED"
+      ],
+      "record_digest": "e0d998081eb2a571f376700e291dedffaf618f039d95ed622242baaf7cfbd404",
+      "relevant_excerpt": "Meridian Certification is an accredited certification body. This register lists every certificate it has issued. ... Organisation Harbor Logistics GmbH ... Standard ISO 9001:2015 quality management ... Scope Freight forwarding and warehousing ... Status Expired on 2025-11-30. The certificate was withdrawn and is no longer valid.",
+      "request_id": "VR-000014",
+      "source_shape": "MATCHES",
+      "source_status": "RETRIEVED",
+      "tx": "0x48111ae6b64ed276f7e375f89cc4759f6182564c3e07f6daa0cfdf87d53fbeac",
+      "verification_id": "VE-000014"
+    },
+    "CE03": {
+      "components": [
+        [
+          "certifier",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "entity",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "standard",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "scope",
+          "CONTRADICTED",
+          "PANEL"
+        ],
+        [
+          "validity",
+          "EXPLICIT",
+          "PANEL"
+        ]
+      ],
+      "content_digest": "30a33f4bacf789c04c78b70cb43216ef43dea44cf544ab77bbd48f700d98df99",
+      "decided_by": "PANEL",
+      "evidence_found": true,
+      "expected": [
+        "CONTRADICTED",
+        "CONTRADICTED",
+        "COMPONENT_CONTRADICTED"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "NOT_REQUIRED",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [],
+      "observed": [
+        "CONTRADICTED",
+        "CONTRADICTED",
+        "COMPONENT_CONTRADICTED"
+      ],
+      "record_digest": "27984004cacf7eaa7bc6bc28e7decba3c8309fda127cfb24cf80e419c209927a",
+      "relevant_excerpt": "Meridian Certification is an accredited certification body. This register lists every certificate it has issued. ... Organisation Orchid Foods BV ... Standard ISO 22000:2018 food safety management ... Scope Packaging of dry goods. Frozen meal production is excluded from the scope of this certificate. ... Status Valid until 2027-02-28",
+      "request_id": "VR-000015",
+      "source_shape": "MATCHES",
+      "source_status": "RETRIEVED",
+      "tx": "0xe57fa5c9bbc8513817cf58c940ed86f1eb994c6e2539338aee7abfad85324e43",
+      "verification_id": "VE-000015"
+    },
+    "CE04": {
+      "components": [
+        [
+          "certifier",
+          "ABSENT",
+          "PANEL"
+        ],
+        [
+          "entity",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "standard",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "scope",
+          "ABSENT",
+          "PANEL"
+        ],
+        [
+          "validity",
+          "ABSENT",
+          "PANEL"
+        ]
+      ],
+      "content_digest": "cc9eeaa7c3d646bf18fe49984bcd15217ead0cd3658f2e7f720a57af349618a4",
+      "decided_by": "PANEL",
+      "evidence_found": true,
+      "expected": [
+        "NOT_SUPPORTED",
+        "INSUFFICIENT",
+        "WRONG_SOURCE_TYPE"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "NOT_REQUIRED",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [],
+      "observed": [
+        "NOT_SUPPORTED",
+        "INSUFFICIENT",
+        "WRONG_SOURCE_TYPE"
+      ],
+      "record_digest": "1bf5d722913b772049369dd1ae14ad607a7a4e3444e89847a5480467ad8119b1",
+      "relevant_excerpt": "Why teams trust Northwind Analytics ... We are proud to be ISO 27001 certified!",
+      "request_id": "VR-000016",
+      "source_shape": "MISMATCH",
+      "source_status": "RETRIEVED",
+      "tx": "0x189dfc9a19382ba700d5035747e99ecce242ec9784041cb38e6447a80263b29e",
+      "verification_id": "VE-000016"
+    },
+    "LI01": {
+      "components": [
+        [
+          "authority",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "entity",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "licence",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "service_scope",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "status",
+          "EXPLICIT",
+          "PANEL"
+        ]
+      ],
+      "content_digest": "a4c0972bc88cba3eabfe40e6596fca0238f4b1d7b166d84cfb431aba555a2f47",
+      "decided_by": "PANEL",
+      "evidence_found": true,
+      "expected": [
+        "SUPPORTED",
+        "DIRECT",
+        "SUPPORT_MET"
+      ],
+      "freshness": {
+        "max_age_seconds": 31536000,
+        "outcome": "CURRENT",
+        "required": true,
+        "stated_date": "2026-08-14"
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [],
+      "observed": [
+        "SUPPORTED",
+        "DIRECT",
+        "SUPPORT_MET"
+      ],
+      "record_digest": "23eeecceefe1aafeccf0940ba6d4b031f58732b1aeecbe63a589b622ba74ee9e",
+      "relevant_excerpt": "Financial Services Authority of Arcadia - Public Register ... Firm BrightPay Ltd ... Licence type Electronic money institution ... Issuing electronic money and providing payment services ... Status Active",
+      "request_id": "VR-000017",
+      "source_shape": "MATCHES",
+      "source_status": "RETRIEVED",
+      "tx": "0xfc3ddfd9794a0ff0d4ca9cea434a6e7b14072dc671cef5a5bb59be87738c64ba",
+      "verification_id": "VE-000017"
+    },
+    "LI02": {
+      "components": [
+        [
+          "authority",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "entity",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "licence",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "service_scope",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "status",
+          "EXPLICIT",
+          "PANEL"
+        ]
+      ],
+      "content_digest": "f9cec01b2652a958b2a504b61aa7e70a5aea1b2d0163649a602b2f1a812b3ae8",
+      "decided_by": "PANEL",
+      "evidence_found": true,
+      "expected": [
+        "INCONCLUSIVE",
+        "INSUFFICIENT",
+        "EVIDENCE_STALE"
+      ],
+      "freshness": {
+        "max_age_seconds": 31536000,
+        "outcome": "STALE",
+        "required": true,
+        "stated_date": "2022-03-02"
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [],
+      "observed": [
+        "INCONCLUSIVE",
+        "INSUFFICIENT",
+        "EVIDENCE_STALE"
+      ],
+      "record_digest": "8f4beda5f73838b9505cc534f0057838c052d9c13f816058be0828d0246b660c",
+      "relevant_excerpt": "Financial Services Authority of Arcadia - Public Register ... Firm CoinVault Exchange Ltd ... Licence number VASP-0142 Licence type Virtual asset service provider ... Permitted activities Operating a virtual asset exchange ... Status Active",
+      "request_id": "VR-000018",
+      "source_shape": "MATCHES",
+      "source_status": "RETRIEVED",
+      "tx": "0x1e74738134f126d7ae641071415926454fa4ee7e740e8c60ac76a39cda0cc838",
+      "verification_id": "VE-000018"
+    },
+    "LI03": {
+      "components": [
+        [
+          "authority",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "entity",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "licence",
+          "ABSENT",
+          "PANEL"
+        ],
+        [
+          "service_scope",
+          "ABSENT",
+          "PANEL"
+        ],
+        [
+          "status",
+          "ABSENT",
+          "PANEL"
+        ]
+      ],
+      "content_digest": "b4b7dea0af88c37ef3907e5329cec85492934dfebf53287e06f9421b72e723ac",
+      "decided_by": "PANEL",
+      "evidence_found": true,
+      "expected": [
+        "PARTIALLY_SUPPORTED",
+        "PARTIAL",
+        "COMPONENTS_MISSING"
+      ],
+      "freshness": {
+        "max_age_seconds": 31536000,
+        "outcome": "CURRENT",
+        "required": true,
+        "stated_date": "2026-07-30"
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [],
+      "observed": [
+        "PARTIALLY_SUPPORTED",
+        "PARTIAL",
+        "COMPONENTS_MISSING"
+      ],
+      "record_digest": "e5e1c0c8da6f86b36a0bd0964027f9563d1b4b70048b6dec4730fe8d22117571",
+      "relevant_excerpt": "Financial Services Authority of Arcadia Public Register - firm details ... Firm QuickLoan Services Ltd",
+      "request_id": "VR-000019",
+      "source_shape": "MATCHES",
+      "source_status": "RETRIEVED",
+      "tx": "0x3b0785fdcbed6ea0dc118f80893afa1ae69d3a9ac0d604c089138ac02b36f1c6",
+      "verification_id": "VE-000019"
+    },
+    "LI04": {
+      "components": [
+        [
+          "authority",
+          "UNCLEAR",
+          "CODE"
+        ],
+        [
+          "entity",
+          "UNCLEAR",
+          "CODE"
+        ],
+        [
+          "licence",
+          "UNCLEAR",
+          "CODE"
+        ],
+        [
+          "service_scope",
+          "UNCLEAR",
+          "CODE"
+        ],
+        [
+          "status",
+          "UNCLEAR",
+          "CODE"
+        ]
+      ],
+      "content_digest": "",
+      "decided_by": "CODE",
+      "evidence_found": false,
+      "expected": [
+        "UNAVAILABLE",
+        "UNAVAILABLE",
+        "SOURCE_NOT_FOUND"
+      ],
+      "freshness": {
+        "max_age_seconds": 31536000,
+        "outcome": "UNDATED",
+        "required": true,
+        "stated_date": ""
+      },
+      "held": true,
+      "http_status": 404,
+      "markers": [],
+      "observed": [
+        "UNAVAILABLE",
+        "UNAVAILABLE",
+        "SOURCE_NOT_FOUND"
+      ],
+      "record_digest": "ee04fc813a44976b2c5d04793188afa41f4cede402d3ec92f521502f0541e5e4",
+      "relevant_excerpt": "",
+      "request_id": "VR-000020",
+      "source_shape": "UNCLEAR",
+      "source_status": "NOT_FOUND",
+      "tx": "0xd9dc0f8ebadc74d3b97937f9987fa50d4f60f9e8464d046363392edc3ae5829a",
+      "verification_id": "VE-000020"
     }
   },
-  "pending": {
-    "request:AD05": "0xeb71d82621ce6192735a0c7a3064701d41a4291a48335506f16a17792d79fe92"
-  },
+  "pending": {},
   "phase": "cases",
   "policies": {
     "api": "EP-000001",
@@ -249,11 +1185,78 @@
     "license": "EP-000003"
   },
   "raw_base": "https://raw.githubusercontent.com/Olawalter/Evidencereceipt/138c1d3/fixtures/",
+  "rejected_rounds": [
+    {
+      "accepted": false,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "nodes": [
+        {
+          "mode": "leader",
+          "model": "openai/gpt-5.4",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-deepseek",
+          "stdout": "[DISAGREE] consequence: evidence_found mine=True theirs=False\n[MINE] CONTRADICTED CONTRADICTED COMPONENT_CONTRADICTED SOURCE_SHAPE=MATCHES certifier=EXPLICIT entity=CONTRADICTED standard=ABSENT scope=ABSENT validity=ABSENT\n",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-glm",
+          "stdout": "[DISAGREE] consequence: evidence_found mine=True theirs=False\n[MINE] CONTRADICTED CONTRADICTED COMPONENT_CONTRADICTED SOURCE_SHAPE=MATCHES certifier=EXPLICIT entity=CONTRADICTED standard=ABSENT scope=ABSENT validity=CONTRADICTED\n",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-gemini",
+          "stdout": "[DISAGREE] consequence: evidence_found mine=True theirs=False\n[MINE] CONTRADICTED CONTRADICTED COMPONENT_CONTRADICTED SOURCE_SHAPE=MATCHES certifier=EXPLICIT entity=CONTRADICTED standard=ABSENT scope=ABSENT validity=CONTRADICTED\n",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-gpt-5-4",
+          "stdout": "",
+          "vote": "agree"
+        }
+      ],
+      "returned": "{'readable': '\"VE-000008\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AD08",
+      "tx": "0x793cb2e747c1f27450ab0d1e5ab81b6e75d969218f66e2fd441f7831594614dc",
+      "votes": [
+        "AGREE",
+        "DISAGREE",
+        "DISAGREE",
+        "DISAGREE",
+        "AGREE"
+      ]
+    }
+  ],
   "requests": {
     "AD01": "VR-000001",
     "AD02": "VR-000002",
     "AD03": "VR-000003",
-    "AD04": "VR-000004"
+    "AD04": "VR-000004",
+    "AD05": "VR-000005",
+    "AD06": "VR-000006",
+    "AD07": "VR-000007",
+    "AD08": "VR-000008",
+    "AP01": "VR-000009",
+    "AP02": "VR-000010",
+    "AP03": "VR-000011",
+    "AP04": "VR-000012",
+    "CE01": "VR-000013",
+    "CE02": "VR-000014",
+    "CE03": "VR-000015",
+    "CE04": "VR-000016",
+    "LI01": "VR-000017",
+    "LI02": "VR-000018",
+    "LI03": "VR-000019",
+    "LI04": "VR-000020"
   },
   "started_at": "2026-09-22T08:52:19Z",
   "steps": {
@@ -376,6 +1379,278 @@
         "AGREE"
       ]
     },
+    "request:AD05": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000005\"'}",
+      "status": "FINALIZED",
+      "step": "request:AD05",
+      "tx": "0xeb71d82621ce6192735a0c7a3064701d41a4291a48335506f16a17792d79fe92",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "request:AD06": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000006\"'}",
+      "status": "FINALIZED",
+      "step": "request:AD06",
+      "tx": "0x3e0590e6d47c1636553fbb4c5131b7e0f1b346302fb7684fd660ff6f0c09b4f9",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "request:AD07": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000007\"'}",
+      "status": "FINALIZED",
+      "step": "request:AD07",
+      "tx": "0x23367f19f5d98ca30b752fe62d8ac8dee0af496779f943bf84b1b16d6b9ef89c",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "request:AD08": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000008\"'}",
+      "status": "FINALIZED",
+      "step": "request:AD08",
+      "tx": "0x6ee1197e3736fbb23aef6e23b857e0638b07a808df33dc5b78ba63d08f075ae1",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "request:AP01": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000009\"'}",
+      "status": "FINALIZED",
+      "step": "request:AP01",
+      "tx": "0xc5326f594c0bbae590e2fa7d9782ad0d1e21618c97265c5fb0850f3de4f0bfda",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "request:AP02": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000010\"'}",
+      "status": "FINALIZED",
+      "step": "request:AP02",
+      "tx": "0xafe31c168459b32c9fdd2e5287db689fd634909675ae98d542ec29d67033134e",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "request:AP03": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000011\"'}",
+      "status": "FINALIZED",
+      "step": "request:AP03",
+      "tx": "0x99b0fe374b01c1d9af923587c597db3d327affa4c9d152771f1499f87f1f157f",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "request:AP04": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000012\"'}",
+      "status": "FINALIZED",
+      "step": "request:AP04",
+      "tx": "0x7293398127cb3e91c22f9fdb69747c1e8ac20ffd40c21705e66c8dac1b346280",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "request:CE01": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000013\"'}",
+      "status": "FINALIZED",
+      "step": "request:CE01",
+      "tx": "0xdef9b8509dbc88712e044a768b2dc18109c053ee01d5b91d337a31e0f22d6e41",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "request:CE02": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000014\"'}",
+      "status": "FINALIZED",
+      "step": "request:CE02",
+      "tx": "0xeb6875e4cfa72b7f94f925618e38889af7516ac15c171f23efe23ed48529772a",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "request:CE03": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000015\"'}",
+      "status": "FINALIZED",
+      "step": "request:CE03",
+      "tx": "0x8d24622384b9487a3a68cf2f179e3aaa1bcdada5eae8c6dd81ea6dd9157fdbda",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "request:CE04": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000016\"'}",
+      "status": "FINALIZED",
+      "step": "request:CE04",
+      "tx": "0x12f61d538e2c8d32fb18abffc5ee2e03281a7d62ae679f68634fdc299ca6335b",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "request:LI01": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000017\"'}",
+      "status": "FINALIZED",
+      "step": "request:LI01",
+      "tx": "0x847deeebb233a00aca4f38ee2e08e693eb3556ca2648a9cae39abf2ad986f6c6",
+      "votes": [
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "request:LI02": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000018\"'}",
+      "status": "FINALIZED",
+      "step": "request:LI02",
+      "tx": "0x929860d91f0f0e094d6bcee9ff38deb76d52d61b9f64f97afb7f81e6eef92e60",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "request:LI03": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000019\"'}",
+      "status": "FINALIZED",
+      "step": "request:LI03",
+      "tx": "0x963e793bc5a41a96d696c1e578dc5915eaf2384c8e380457e0f54f4f0c389af4",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "request:LI04": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000020\"'}",
+      "status": "FINALIZED",
+      "step": "request:LI04",
+      "tx": "0xebffa7f907e852489a010090eac707cbbc0042969fed610fac511e685e5f87bc",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
     "verify:AD01": {
       "accepted": true,
       "actor": "bob",
@@ -443,6 +1718,304 @@
         "IDLE",
         "AGREE"
       ]
+    },
+    "verify:AD05": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000005\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AD05",
+      "tx": "0x155b3a0033e69b9b7d4196d444cbfbc9a29b2d42f7b24dd5a67921eeeef6adba",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "verify:AD06": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000006\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AD06",
+      "tx": "0xd283c91d208e26b66faadd5add5f4e309d8c95fa68c6e73c5559274ea0177e28",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "DISAGREE",
+        "IDLE"
+      ]
+    },
+    "verify:AD07": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000007\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AD07",
+      "tx": "0x7c4d4abf351b1ce9850bcbf4448c79d3a36cfecc5b50843d42bf9542b0306f54",
+      "votes": [
+        "DISAGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "verify:AD08": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000008\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AD08",
+      "tx": "0x9992ef1aade29e2ca8ea1196b86e9bc9407676838aaf4cd1979eab3c41754a9c",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "DISAGREE"
+      ]
+    },
+    "verify:AP01": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000009\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AP01",
+      "tx": "0xf966837aee7e57aedaddb1d19402836477eb3b074286dc629da68976f718b2d6",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "verify:AP02": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000010\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AP02",
+      "tx": "0xfeefde18a17817c0389c370f57376b35eebe6a4e2ede0f9482fd3bad5f0f41da",
+      "votes": [
+        "AGREE",
+        "DISAGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "verify:AP03": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000011\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AP03",
+      "tx": "0xf73dd67cb9f09d2290a0284e49154d2d4012488f76afb7083f403634b1ed6d39",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "verify:AP04": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000012\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AP04",
+      "tx": "0xf6a782535eb4bb83fc66c31b9fea09cd0b49a1c8eacaa6c80745f4e9ba857ec4",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "DISAGREE",
+        "AGREE"
+      ]
+    },
+    "verify:CE01": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000013\"'}",
+      "status": "FINALIZED",
+      "step": "verify:CE01",
+      "tx": "0x92f5b2b0a04ab39638aee06357fda72f138a6cb69ce10a6eaf4f6f0a1b7e2e60",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "DISAGREE"
+      ]
+    },
+    "verify:CE02": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000014\"'}",
+      "status": "FINALIZED",
+      "step": "verify:CE02",
+      "tx": "0x48111ae6b64ed276f7e375f89cc4759f6182564c3e07f6daa0cfdf87d53fbeac",
+      "votes": [
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "verify:CE03": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000015\"'}",
+      "status": "FINALIZED",
+      "step": "verify:CE03",
+      "tx": "0xe57fa5c9bbc8513817cf58c940ed86f1eb994c6e2539338aee7abfad85324e43",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "verify:CE04": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000016\"'}",
+      "status": "FINALIZED",
+      "step": "verify:CE04",
+      "tx": "0x189dfc9a19382ba700d5035747e99ecce242ec9784041cb38e6447a80263b29e",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "verify:LI01": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000017\"'}",
+      "status": "FINALIZED",
+      "step": "verify:LI01",
+      "tx": "0xfc3ddfd9794a0ff0d4ca9cea434a6e7b14072dc671cef5a5bb59be87738c64ba",
+      "votes": [
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "verify:LI02": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000018\"'}",
+      "status": "FINALIZED",
+      "step": "verify:LI02",
+      "tx": "0x1e74738134f126d7ae641071415926454fa4ee7e740e8c60ac76a39cda0cc838",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "verify:LI03": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000019\"'}",
+      "status": "FINALIZED",
+      "step": "verify:LI03",
+      "tx": "0x3b0785fdcbed6ea0dc118f80893afa1ae69d3a9ac0d604c089138ac02b36f1c6",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "DISAGREE"
+      ]
+    },
+    "verify:LI04": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000020\"'}",
+      "status": "FINALIZED",
+      "step": "verify:LI04",
+      "tx": "0xd9dc0f8ebadc74d3b97937f9987fa50d4f60f9e8464d046363392edc3ae5829a",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE"
+      ]
     }
+  },
+  "summary": {
+    "held": [
+      "AD01",
+      "AD02",
+      "AD03",
+      "AD04",
+      "AD05",
+      "AD06",
+      "AD07",
+      "AD08",
+      "AP01",
+      "AP02",
+      "AP03",
+      "CE01",
+      "CE02",
+      "CE03",
+      "CE04",
+      "LI01",
+      "LI02",
+      "LI03",
+      "LI04"
+    ],
+    "not_held": [
+      "AP04"
+    ]
   }
 }
