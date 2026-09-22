@@ -389,7 +389,10 @@ def recheck_demo(ac: dict):
     refused; the replaced receipt stays readable."""
     rid = T["requests"]["LI04"]
     who = ac[CASES["LI04"]["requester"]]
-    before = ac["stranger"].read("get_request", [rid])["standing_id"]
+    # on a resume the recheck already ran: use the receipt it replaced, as recorded
+    before = T.get("recheck", {}).get("replaced")         or ac["stranger"].read("get_request", [rid])["standing_id"]
+    T["recheck"] = {"replaced": before}
+    save()
     step = who.write("recheck:LI04", "recheck", [rid])
     after = ac["stranger"].read("get_request", [rid])["standing_id"]
     outcome(ac, "LI04:recheck", after, CASES["LI04"]["expected"], step["tx"])

@@ -1304,8 +1304,7 @@
   },
   "raw_base": "https://raw.githubusercontent.com/Olawalter/Evidencereceipt/de4dda6/fixtures/",
   "recheck": {
-    "replaced": "VE-000020",
-    "standing": "VE-000022"
+    "replaced": "VE-000020"
   },
   "requests": {
     "AD01": "VR-000001",
