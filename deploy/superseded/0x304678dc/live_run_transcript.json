@@ -1,0 +1,907 @@
+{
+  "address": "0x304678dc938eb0c0b3FC98026422ca4f89f0fBc1",
+  "fatal": "verify:AD08: the panel did not agree after 3 rounds",
+  "network": "studionet",
+  "outcomes": {
+    "AD01": {
+      "components": [
+        [
+          "certifier",
+          "",
+          ""
+        ],
+        [
+          "entity",
+          "",
+          ""
+        ],
+        [
+          "standard",
+          "",
+          ""
+        ],
+        [
+          "scope",
+          "",
+          ""
+        ],
+        [
+          "validity",
+          "",
+          ""
+        ]
+      ],
+      "content_digest": "c59497fd1ce89757f522d7d565c2cd6892ba0e7f334858f4c63bc16a479ff2a6",
+      "decided_by": "CODE",
+      "evidence_found": false,
+      "expected": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "SOURCE_ADDRESSES_VERIFIER"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [
+        "BODY"
+      ],
+      "observed": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "SOURCE_ADDRESSES_VERIFIER"
+      ],
+      "record_digest": "50b3819ee25cdf8c95de14cef696f8fe04366a0e52417ed1c9801b44979f9ea6",
+      "relevant_excerpt": "",
+      "request_id": "VR-000001",
+      "source_shape": "UNCLEAR",
+      "source_status": "RETRIEVED",
+      "tx": "0x76cc2908d711366546f1e04527eddd7e20d4c7eeecfe328bc4abb45ea466f5a8",
+      "verification_id": "VE-000001"
+    },
+    "AD02": {
+      "components": [
+        [
+          "provider",
+          "",
+          ""
+        ],
+        [
+          "feature",
+          "",
+          ""
+        ],
+        [
+          "behaviour",
+          "",
+          ""
+        ],
+        [
+          "version",
+          "",
+          ""
+        ]
+      ],
+      "content_digest": "acca2b4caae0970687ad0579db8f625d28f75c9eb42bb48828a523eb218a0682",
+      "decided_by": "CODE",
+      "evidence_found": false,
+      "expected": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "SOURCE_ADDRESSES_VERIFIER"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [
+        "BODY"
+      ],
+      "observed": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "SOURCE_ADDRESSES_VERIFIER"
+      ],
+      "record_digest": "a32edd5fc8374bcf0bf9db31d2baa219bf23e2d4b74d1c0c9d3cc3c6c287b674",
+      "relevant_excerpt": "",
+      "request_id": "VR-000002",
+      "source_shape": "UNCLEAR",
+      "source_status": "RETRIEVED",
+      "tx": "0x958ac29a943d7fd56b8bf90e3f7b81f69b67e6c4a5076dde61c9489bb8804820",
+      "verification_id": "VE-000002"
+    },
+    "AD03": {
+      "components": [
+        [
+          "certifier",
+          "",
+          ""
+        ],
+        [
+          "entity",
+          "",
+          ""
+        ],
+        [
+          "standard",
+          "",
+          ""
+        ],
+        [
+          "scope",
+          "",
+          ""
+        ],
+        [
+          "validity",
+          "",
+          ""
+        ]
+      ],
+      "content_digest": "3a451f9035b53db474d9df5ab32a0c68e01c8e5e47022e4ea867dae6f05bee1a",
+      "decided_by": "CODE",
+      "evidence_found": false,
+      "expected": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "SOURCE_ADDRESSES_VERIFIER"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [
+        "BODY",
+        "TITLE"
+      ],
+      "observed": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "SOURCE_ADDRESSES_VERIFIER"
+      ],
+      "record_digest": "29dc5b49940bc0e4191d0151327cf5bae012455376f8125fafcbb72c4e56419a",
+      "relevant_excerpt": "",
+      "request_id": "VR-000003",
+      "source_shape": "UNCLEAR",
+      "source_status": "RETRIEVED",
+      "tx": "0x01800a2cd46d843ee5055c1335a6deed083e3b5a14e5475cd7eb070dd47a92e4",
+      "verification_id": "VE-000003"
+    },
+    "AD04": {
+      "components": [
+        [
+          "certifier",
+          "",
+          ""
+        ],
+        [
+          "entity",
+          "",
+          ""
+        ],
+        [
+          "standard",
+          "",
+          ""
+        ],
+        [
+          "scope",
+          "",
+          ""
+        ],
+        [
+          "validity",
+          "",
+          ""
+        ]
+      ],
+      "content_digest": "61e64e4b7b331491696184993dbb02e256e575e8e7343a635fa3b44b968bba94",
+      "decided_by": "CODE",
+      "evidence_found": false,
+      "expected": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "SOURCE_ADDRESSES_VERIFIER"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [
+        "META"
+      ],
+      "observed": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "SOURCE_ADDRESSES_VERIFIER"
+      ],
+      "record_digest": "6d478ce793b2b2a3793f77f36c98994d87154cfad21ed5aaaaf7d6c97eedfd46",
+      "relevant_excerpt": "",
+      "request_id": "VR-000004",
+      "source_shape": "UNCLEAR",
+      "source_status": "RETRIEVED",
+      "tx": "0x577a7a9719306f328374107c0035ac59b6ca95a101bae254ba1df064d5360d08",
+      "verification_id": "VE-000004"
+    },
+    "AD05": {
+      "components": [
+        [
+          "provider",
+          "",
+          ""
+        ],
+        [
+          "feature",
+          "",
+          ""
+        ],
+        [
+          "behaviour",
+          "",
+          ""
+        ],
+        [
+          "version",
+          "",
+          ""
+        ]
+      ],
+      "content_digest": "d254bd9b84138d71773df27d51da298fdc07e6ac2375bb5432f88967318bc936",
+      "decided_by": "CODE",
+      "evidence_found": false,
+      "expected": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "SOURCE_ADDRESSES_VERIFIER"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [
+        "BODY"
+      ],
+      "observed": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "SOURCE_ADDRESSES_VERIFIER"
+      ],
+      "record_digest": "482fddfdb4f52e5c39af0e4174c9ba17780585c5032f55b6aa1ed04e061c71a0",
+      "relevant_excerpt": "",
+      "request_id": "VR-000005",
+      "source_shape": "UNCLEAR",
+      "source_status": "RETRIEVED",
+      "tx": "0xdbad7d14d42cc3197a7e40bafe8bbaece2201b6556b110dd1dcfc72d7c02bd46",
+      "verification_id": "VE-000005"
+    },
+    "AD06": {
+      "components": [
+        [
+          "certifier",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "entity",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "standard",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "scope",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "validity",
+          "EXPLICIT",
+          "PANEL"
+        ]
+      ],
+      "content_digest": "70319cdf09b83cf3e91b34525f8915d9952570be117e59e35a7d111ccbd22729",
+      "decided_by": "PANEL",
+      "evidence_found": true,
+      "expected": [
+        "SUPPORTED",
+        "DIRECT",
+        "SUPPORT_MET"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "NOT_REQUIRED",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [],
+      "observed": [
+        "SUPPORTED",
+        "DIRECT",
+        "SUPPORT_MET"
+      ],
+      "record_digest": "91b4c0b788956b623bd33110041278deacca5cd5ca1632326e4394a23fd0e3f4",
+      "relevant_excerpt": "Meridian Certification Registry Meridian Certification is an accredited certification body. ... Organisation Juniper Health Systems Ltd ... Standard ISO/IEC 27001:2022 information security management ... Scope Hosting and support of hospital scheduling software ... Status Valid until 2028-01-31",
+      "request_id": "VR-000006",
+      "source_shape": "MATCHES",
+      "source_status": "RETRIEVED",
+      "tx": "0x01914a1692d6c121182e96cd5d59bd450a1964bc66565bfe7652817c84b45f33",
+      "verification_id": "VE-000006"
+    },
+    "AD07": {
+      "components": [
+        [
+          "certifier",
+          "",
+          ""
+        ],
+        [
+          "entity",
+          "",
+          ""
+        ],
+        [
+          "standard",
+          "",
+          ""
+        ],
+        [
+          "scope",
+          "",
+          ""
+        ],
+        [
+          "validity",
+          "",
+          ""
+        ]
+      ],
+      "content_digest": "29497cbf99225226db6ec43f41b409249d0ec36d043f147531a08b87be6af1bd",
+      "decided_by": "PANEL",
+      "evidence_found": false,
+      "expected": [
+        "NOT_SUPPORTED",
+        "INSUFFICIENT",
+        "WRONG_SOURCE_TYPE"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": true,
+      "http_status": 200,
+      "markers": [],
+      "observed": [
+        "NOT_SUPPORTED",
+        "INSUFFICIENT",
+        "WRONG_SOURCE_TYPE"
+      ],
+      "record_digest": "a712dc9dbb80c38281c1c4b915f64b283dec5a1b4689e9c4a4b68ff91e0599e9",
+      "relevant_excerpt": "",
+      "request_id": "VR-000007",
+      "source_shape": "MISMATCH",
+      "source_status": "RETRIEVED",
+      "tx": "0x989ebefcd3a865cdc45c18d3dea04e7c4d6f639d8cecb37332c67193ba21deaf",
+      "verification_id": "VE-000007"
+    }
+  },
+  "pending": {},
+  "phase": "full",
+  "policies": {
+    "api": "EP-000001",
+    "certification": "EP-000002",
+    "license": "EP-000003"
+  },
+  "raw_base": "https://raw.githubusercontent.com/Olawalter/Evidencereceipt/0dd8f3a/fixtures/",
+  "rejected_rounds": [
+    {
+      "accepted": false,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "nodes": [
+        {
+          "mode": "leader",
+          "model": "openai/gpt-5.4",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-grok",
+          "stdout": "[DISAGREE] consequence: contradicted_components mine=['entity', 'scope', 'standard', 'validity'] theirs=['certifier', 'entity']\n[MINE] CONTRADICTED CONTRADICTED COMPONENT_CONTRADICTED SOURCE_SHAPE=MATCHES certifier=EXPLICIT entity=CONTRADICTED standard=CONTRADICTED scope=CONTRADICTED validity=CONTRADICTED\n",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-gpt-5-4",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-deepseek",
+          "stdout": "[DISAGREE] consequence: contradicted_components mine=['entity'] theirs=['certifier', 'entity']\n[MINE] CONTRADICTED CONTRADICTED COMPONENT_CONTRADICTED SOURCE_SHAPE=MATCHES certifier=EXPLICIT entity=CONTRADICTED standard=ABSENT scope=ABSENT validity=ABSENT\n",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-gemini",
+          "stdout": "[DISAGREE] consequence: contradicted_components mine=['entity', 'validity'] theirs=['certifier', 'entity']\n[MINE] CONTRADICTED CONTRADICTED COMPONENT_CONTRADICTED SOURCE_SHAPE=MATCHES certifier=EXPLICIT entity=CONTRADICTED standard=ABSENT scope=ABSENT validity=CONTRADICTED\n",
+          "vote": "disagree"
+        }
+      ],
+      "returned": "{'readable': '\"VE-000008\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AD08",
+      "tx": "0x56b3c2d9ee40efa0c923f0ee0002755a87e7365e4b3b63a466a80fc95a892379",
+      "votes": [
+        "AGREE",
+        "DISAGREE",
+        "AGREE",
+        "DISAGREE",
+        "DISAGREE"
+      ]
+    },
+    {
+      "accepted": false,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "nodes": [
+        {
+          "mode": "leader",
+          "model": "policy:prd-glm",
+          "stdout": "",
+          "vote": "idle"
+        },
+        {
+          "mode": "validator",
+          "model": "google/gemini-3-flash-preview",
+          "stdout": "[DISAGREE] consequence: contradicted_components mine=['entity', 'validity'] theirs=['entity', 'scope', 'standard', 'validity']\n[MINE] CONTRADICTED CONTRADICTED COMPONENT_CONTRADICTED SOURCE_SHAPE=MATCHES certifier=EXPLICIT entity=CONTRADICTED standard=ABSENT scope=ABSENT validity=CONTRADICTED\n",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": null,
+          "stdout": "",
+          "vote": "idle"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-gpt-oss",
+          "stdout": "[DISAGREE] consequence: contradicted_components mine=['entity', 'validity'] theirs=['entity', 'scope', 'standard', 'validity']\n[MINE] CONTRADICTED CONTRADICTED COMPONENT_CONTRADICTED SOURCE_SHAPE=MATCHES certifier=EXPLICIT entity=CONTRADICTED standard=ABSENT scope=ABSENT validity=CONTRADICTED\n",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-gemini",
+          "stdout": "[DISAGREE] consequence: contradicted_components mine=['entity'] theirs=['entity', 'scope', 'standard', 'validity']\n[MINE] CONTRADICTED CONTRADICTED COMPONENT_CONTRADICTED SOURCE_SHAPE=MATCHES certifier=EXPLICIT entity=CONTRADICTED standard=ABSENT scope=ABSENT validity=ABSENT\n",
+          "vote": "disagree"
+        }
+      ],
+      "returned": "{'readable': '\"VE-000008\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AD08",
+      "tx": "0x4d5180f4bdf08df5c6e2ebb1f8e9f48f53a5e33374cc894257049a8e29584455",
+      "votes": [
+        "IDLE",
+        "DISAGREE",
+        "IDLE",
+        "DISAGREE",
+        "DISAGREE"
+      ]
+    },
+    {
+      "accepted": false,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "nodes": [
+        {
+          "mode": "leader",
+          "model": "policy:prd-gpt-5-4",
+          "stdout": "",
+          "vote": "idle"
+        },
+        {
+          "mode": "validator",
+          "model": null,
+          "stdout": "",
+          "vote": "idle"
+        },
+        {
+          "mode": "validator",
+          "model": "openai/gpt-5.4",
+          "stdout": "[DISAGREE] consequence: contradicted_components mine=['certifier', 'entity', 'validity'] theirs=['certifier', 'entity']\n[MINE] CONTRADICTED CONTRADICTED COMPONENT_CONTRADICTED SOURCE_SHAPE=MATCHES certifier=CONTRADICTED entity=CONTRADICTED standard=ABSENT scope=ABSENT validity=CONTRADICTED\n",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-mistral",
+          "stdout": "[DOWNGRADE] SOURCE_SHAPE MATCHES: support rule not met; raw [{'evidence_id': 'S1', 'text': 'Meridian Certification Registry - search results ... This register lists every certificate it has issued.'}]\n[DISAGREE] consequence: contradicted_components mine=[] theirs=['certifier', 'entity']\n[MINE] INCONCLUSIVE INSUFFICIENT SOURCE_TYPE_UNCLEAR SOURCE_SHAPE=UNCLEAR certifier=EXPLICIT entity=CONTRADICTED standard=CONTRADICTED scope=CONTRADICTED validity=CONTRADICTED\n",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-gemini",
+          "stdout": "[DISAGREE] consequence: contradicted_components mine=['entity', 'validity'] theirs=['certifier', 'entity']\n[MINE] CONTRADICTED CONTRADICTED COMPONENT_CONTRADICTED SOURCE_SHAPE=MATCHES certifier=EXPLICIT entity=CONTRADICTED standard=ABSENT scope=ABSENT validity=CONTRADICTED\n",
+          "vote": "disagree"
+        }
+      ],
+      "returned": "{'readable': '\"VE-000008\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AD08",
+      "tx": "0x2a0728ccfcbaec565e25b3bf8a7241efa2e7e7fa41f699e0817bbeb855fdc2a5",
+      "votes": [
+        "IDLE",
+        "IDLE",
+        "DISAGREE",
+        "DISAGREE",
+        "DISAGREE"
+      ]
+    }
+  ],
+  "requests": {
+    "AD01": "VR-000001",
+    "AD02": "VR-000002",
+    "AD03": "VR-000003",
+    "AD04": "VR-000004",
+    "AD05": "VR-000005",
+    "AD06": "VR-000006",
+    "AD07": "VR-000007",
+    "AD08": "VR-000008"
+  },
+  "started_at": "2026-09-22T09:58:23Z",
+  "steps": {
+    "create:api": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "create_policy",
+      "returned": "{'readable': '\"EP-000001\"'}",
+      "status": "FINALIZED",
+      "step": "create:api",
+      "tx": "0xb9efbf3230ba7501893f283f9a0323b174d1110662f012c93918d8690d78d32b",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "create:certification": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "create_policy",
+      "returned": "{'readable': '\"EP-000002\"'}",
+      "status": "FINALIZED",
+      "step": "create:certification",
+      "tx": "0xddcb81d1ae158e920c55e9a971533c635f0b79cf0e4cc5320908126f655d2c05",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "create:license": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "create_policy",
+      "returned": "{'readable': '\"EP-000003\"'}",
+      "status": "FINALIZED",
+      "step": "create:license",
+      "tx": "0x120faeff80bbace75e1f860b5048802b7c6e0f4ad9f4065d52e55eb89575cd48",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "request:AD01": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000001\"'}",
+      "status": "FINALIZED",
+      "step": "request:AD01",
+      "tx": "0x35218861e670a29d4e206a6af3690477fbe273964c194029f55712a5d57a222a",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE"
+      ]
+    },
+    "request:AD02": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000002\"'}",
+      "status": "FINALIZED",
+      "step": "request:AD02",
+      "tx": "0xebd4475db98c0647c9020d6c2bf5381d5ca955992b2793da6d1fb2f4dd34845f",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "request:AD03": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000003\"'}",
+      "status": "FINALIZED",
+      "step": "request:AD03",
+      "tx": "0x30e9e23866b81ef145bffd492f68575b4185fdcf683dc1ec07f03052f4b9fa5c",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "request:AD04": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000004\"'}",
+      "status": "FINALIZED",
+      "step": "request:AD04",
+      "tx": "0xc032663f111333daa5b4b17c41beb0accf72ce796f209f86ea1274b2607c6013",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "request:AD05": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000005\"'}",
+      "status": "FINALIZED",
+      "step": "request:AD05",
+      "tx": "0x5d82036a3a163e52e568ce1e41abe70910bef610df0322a79d83d885331fa3af",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "request:AD06": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000006\"'}",
+      "status": "FINALIZED",
+      "step": "request:AD06",
+      "tx": "0x34ab28a189579aa987e67b6ffa6a9efb609c6c7109af8fc23b8b01aeb8b3a281",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "request:AD07": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000007\"'}",
+      "status": "FINALIZED",
+      "step": "request:AD07",
+      "tx": "0x8095a46dac52b0568e437304bb3fb5f72adccc9d06c325e535d830c3efa812b5",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "request:AD08": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000008\"'}",
+      "status": "FINALIZED",
+      "step": "request:AD08",
+      "tx": "0xbc06976a6a3030808728ee5aef86c1561c574b5429cd18014fa09c4a8df9df20",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "verify:AD01": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000001\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AD01",
+      "tx": "0x76cc2908d711366546f1e04527eddd7e20d4c7eeecfe328bc4abb45ea466f5a8",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "verify:AD02": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000002\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AD02",
+      "tx": "0x958ac29a943d7fd56b8bf90e3f7b81f69b67e6c4a5076dde61c9489bb8804820",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "verify:AD03": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000003\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AD03",
+      "tx": "0x01800a2cd46d843ee5055c1335a6deed083e3b5a14e5475cd7eb070dd47a92e4",
+      "votes": [
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "verify:AD04": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000004\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AD04",
+      "tx": "0x577a7a9719306f328374107c0035ac59b6ca95a101bae254ba1df064d5360d08",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "verify:AD05": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000005\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AD05",
+      "tx": "0xdbad7d14d42cc3197a7e40bafe8bbaece2201b6556b110dd1dcfc72d7c02bd46",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "verify:AD06": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000006\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AD06",
+      "tx": "0x01914a1692d6c121182e96cd5d59bd450a1964bc66565bfe7652817c84b45f33",
+      "votes": [
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "verify:AD07": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000007\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AD07",
+      "tx": "0x989ebefcd3a865cdc45c18d3dea04e7c4d6f639d8cecb37332c67193ba21deaf",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE"
+      ]
+    },
+    "verify:AD08": {
+      "accepted": false,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000008\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AD08",
+      "tx": "0x2a0728ccfcbaec565e25b3bf8a7241efa2e7e7fa41f699e0817bbeb855fdc2a5",
+      "votes": [
+        "IDLE",
+        "IDLE",
+        "DISAGREE",
+        "DISAGREE",
+        "DISAGREE"
+      ]
+    }
+  }
+}

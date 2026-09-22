@@ -1372,8 +1372,10 @@ def _derive(ctx: dict, payload: dict) -> dict:
         NOT_REQUIRED if not ctx["policy"]["freshness_required"] else UNDATED, "")
     freshness_decides = reason in ("EVIDENCE_STALE", "FRESHNESS_UNVERIFIABLE") \
         or (reason in COMPONENT_DECIDED and reason != "COMPONENT_CONTRADICTED")
-    # every required component matters when the outcome rests on all of them; a
-    # contradiction rests only on which components are contradicted
+    # every required component matters when the outcome rests on all of them. A
+    # contradiction rests on there being one: which components a page contradicts
+    # is a reading honest models split on (a page saying an organisation holds no
+    # certificate bears on several at once), so it is recorded, not compared
     all_compared = reason in COMPONENT_DECIDED and reason != "COMPONENT_CONTRADICTED"
     consequence = {
         "final_result": final, "support_level": support, "reason_code": reason,
@@ -1385,8 +1387,6 @@ def _derive(ctx: dict, payload: dict) -> dict:
         if ctx["stability"] == "STABLE" else "",
         "required_components": {c: _collapse(s) for c, s in states.items()}
         if all_compared else {},
-        "contradicted_components": sorted(c for c, s in states.items() if s == CONTRADICTED)
-        if reason == "COMPONENT_CONTRADICTED" else [],
         "freshness": outcome if freshness_decides else "",
     }
     return {"consequence": consequence, "freshness_outcome": outcome, "stated_date": stated,
@@ -1613,18 +1613,22 @@ class EvidenceReceipt(gl.Contract):
         outcome = _derive(ctx, payload)
         c = outcome["consequence"]
         policy = ctx["policy"]
-        # a component reading is stored only when validators compared it: every
-        # required one when the outcome rested on all of them, the contradicted ones
-        # when a contradiction decided it; optional readings, never compared, are
-        # stored with compared false when the components decided the outcome
+        # a component reading is compared only when the outcome rested on every
+        # required component. Under a contradiction the leader's contradicted readings
+        # are kept - their quotes were grounded by every validator in its own
+        # retrieval - and marked compared false; optional readings are never
+        # compared; after an earlier reason decided the outcome none is stored
         decisive = c["reason_code"] in COMPONENT_DECIDED
-        compared = set(c["required_components"].keys()) | set(c["contradicted_components"])
+        contradiction = c["reason_code"] == "COMPONENT_CONTRADICTED"
+        compared = set(c["required_components"].keys())
         components = []
         for comp in policy["components"]:
             f = _finding_of(payload, comp["component_id"])
             cid = comp["component_id"]
-            keep = decisive and (cid in compared or not comp["required"]) \
-                and not (c["reason_code"] == "COMPONENT_CONTRADICTED" and cid not in compared)
+            if contradiction:
+                keep = comp["required"] and f["state"] == CONTRADICTED
+            else:
+                keep = decisive
             components.append({"component_id": cid, "required": comp["required"],
                                "compared": cid in compared,
                                "state": f["state"] if keep else "",

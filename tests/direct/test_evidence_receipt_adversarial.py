@@ -368,13 +368,28 @@ def test_a_contradiction_compares_only_which_components_are_contradicted(court, 
     assert validate(direct_vm, mod, leader) is True
 
 
-def test_a_different_contradicted_component_is_a_disagreement(court, direct_vm, mod):
+def test_which_components_a_contradiction_touches_is_not_compared(court, direct_vm, mod):
+    """AD08 on the deployment of record: every validator read CONTRADICTED and
+    they split on which components the page contradicts - three rounds running.
+    Only the outcome is compared."""
     policy_id = create_policy(court, direct_vm, "certification")
     rid = request(court, direct_vm, policy_id, "AD08")
     verify(court, direct_vm, rid, answer_for("AD08"))
     leader = captured_payload(direct_vm)
     answer = answer_for("AD08")
     answer["subjects"]["validity"] = {"state": "ABSENT", "quotes": []}
+    stage(direct_vm, answer)
+    assert validate(direct_vm, mod, leader) is True
+
+
+def test_a_contradiction_against_a_supported_reading_is_a_disagreement(court, direct_vm, mod):
+    policy_id = create_policy(court, direct_vm, "certification")
+    rid = request(court, direct_vm, policy_id, "CE02")
+    verify(court, direct_vm, rid, answer_for("CE02"))
+    leader = captured_payload(direct_vm)
+    answer = answer_for("CE02")
+    answer["subjects"]["validity"] = {"state": "EXPLICIT", "quotes": [
+        {"evidence_id": "S1", "text": "Freight forwarding and warehousing"}]}
     stage(direct_vm, answer)
     assert validate(direct_vm, mod, leader) is False
 
@@ -384,7 +399,7 @@ def test_a_contradicted_receipt_stores_only_the_compared_components(court, direc
     rid = request(court, direct_vm, policy_id, "CE02")
     receipt = verify(court, direct_vm, rid, answer_for("CE02"))
     stored = {c["component_id"]: (c["state"], c["compared"]) for c in receipt["components"]}
-    assert stored["validity"] == ("CONTRADICTED", True)
+    assert stored["validity"] == ("CONTRADICTED", False)
     assert stored["entity"] == ("", False) and stored["certifier"] == ("", False)
     assert receipt["evidence_found"] is False
 
@@ -404,5 +419,5 @@ def test_a_contradiction_stores_no_optional_reading(court, direct_vm):
     rid = request(court, direct_vm, policy_id, "AP02")
     receipt = verify(court, direct_vm, rid, answer_for("AP02"))
     stored = {c["component_id"]: (c["state"], c["compared"]) for c in receipt["components"]}
-    assert stored["feature"] == ("CONTRADICTED", True)
+    assert stored["feature"] == ("CONTRADICTED", False)
     assert stored["version"] == ("", False) and stored["provider"] == ("", False)

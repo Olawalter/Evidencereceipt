@@ -76,7 +76,6 @@ side's findings:
 | `evidence_found` | when every required component is compared |
 | `content_digest` | for a STABLE source |
 | `required_components` (each collapsed to PRESENT, ABSENT, CONTRADICTED, UNCLEAR) | when the outcome rests on all of them: absent, missing, unclear, below the minimum, met |
-| `contradicted_components` | when a contradiction decided the outcome |
 | `freshness` (CURRENT, STALE, UNDATED) | when freshness or the components decided the outcome |
 
 ## Allowed nondeterminism, and what the receipt stores
@@ -91,12 +90,17 @@ The receipt stores only what the validators agreed on or could check:
 
 - for a DYNAMIC source the digest, raw hash, byte count, title and content
   type are left empty - nothing about them was agreed;
-- a component reading and its quotes are stored only when validators compared
-  it (`compared`): every required one when the outcome rested on all of them,
-  the contradicted ones when a contradiction decided it; optional readings,
-  never compared, are stored with `compared` false; after an earlier reason
-  decided the outcome - the wrong kind of source, stale evidence - no reading
-  is stored (`components_decisive` false);
+- component readings are compared (`compared` true) only when the outcome
+  rested on every required component; optional readings are stored with
+  `compared` false;
+- under a contradiction validators agree that one exists, not on which
+  components it touches - a page saying an organisation holds no certificate
+  bears on several at once, and honest models list them differently. The
+  leader's contradicted readings are kept, their quotes grounded by every
+  validator in its own retrieval, and marked `compared` false; other readings
+  are not stored;
+- after an earlier reason decided the outcome - the wrong kind of source,
+  stale evidence - no reading is stored (`components_decisive` false);
 - the freshness outcome and stated date are stored only when freshness was
   compared.
 
@@ -168,6 +172,15 @@ scan undoes soft hyphens, zero-width joiners, split tags and numeric entities;
 re-verification respects the open-request limit; `max_age_seconds` must be the
 integer 0 when freshness is off.
 
-The comparison refinement and the audit fixes came after pass 1 and are
+**A first deployment of record, superseded** -
+`0x304678dc938eb0c0b3FC98026422ca4f89f0fBc1`, from commit `168192e`, carried
+the comparison above, which compared exactly which required components a
+contradiction touched. Its live run stopped at AD08: every validator read
+CONTRADICTED, three rounds running, and they split on the set - the entity
+alone, the entity and its validity, or all four. The set is now recorded and
+not compared; only the outcome is. That deployment and its partial transcript
+are kept under `deploy/superseded/0x304678dc/`.
+
+The comparison refinements and the audit fixes came after pass 1 and are
 exercised by the Direct Mode suite; the live run of record exercises them on
 the deployment of record.
