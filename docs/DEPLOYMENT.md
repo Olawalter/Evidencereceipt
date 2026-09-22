@@ -76,15 +76,15 @@ and `verify(request_id)` again, then `get_history(request_id)`.
 |---|---|
 | Network | GenLayer StudioNet, chain id 61999 |
 | RPC | `https://studio.genlayer.com/api` |
-| Contract | `0x304678dc938eb0c0b3FC98026422ca4f89f0fBc1` |
-| Explorer | https://explorer-studio.genlayer.com/address/0x304678dc938eb0c0b3FC98026422ca4f89f0fBc1 |
-| Deployment transaction | `0xa957b233268e5b3ed39e2c3c7bf0476fcccf0330946750f039aa789a3d59616a` |
-| Deployed at | 2026-09-22T09:57:56Z |
-| Receipt | status FINALIZED, leader execution SUCCESS, votes AGREE, AGREE, AGREE, AGREE, AGREE |
-| Source commit | `168192e6d449d41cc7d522f947fc5593a0e0ac87` |
-| Source blob | `50ae5563bee388b7a28ef9fb1a65290547e582a0` |
-| Source sha256 | `2181846c160d0a9c11b1e2ad9a379d35d8216c0d71476515bf538c96b4b99ede` |
-| Deployed source sha256 (`gen_getContractCode`) | `2181846c160d0a9c11b1e2ad9a379d35d8216c0d71476515bf538c96b4b99ede` - byte-identical |
+| Contract | `0x3482865cce66361bc356A0ea6F79EA7Fd3653664` |
+| Explorer | https://explorer-studio.genlayer.com/address/0x3482865cce66361bc356A0ea6F79EA7Fd3653664 |
+| Deployment transaction | `0x5164d44efc2bf6a7cfdf6e111995bce0e8908abd7d020f169eeec8b27d7bc70e` |
+| Deployed at | 2026-09-22T10:32:00Z |
+| Receipt | status FINALIZED, leader execution SUCCESS, votes AGREE, AGREE, AGREE, IDLE, IDLE |
+| Source commit | `82a3bd72bae8e6e47ba55c58d77589b41392f7bc` |
+| Source blob | `0a134a438ad684db9478f5ffac46e2037c38e148` |
+| Source sha256 | `8f05ac4880ded2cc7299c6bf4df4ce8e971a5208b7b8dca38f914548d5ed1bf7` |
+| Deployed source sha256 (`gen_getContractCode`) | `8f05ac4880ded2cc7299c6bf4df4ce8e971a5208b7b8dca38f914548d5ed1bf7` - byte-identical |
 | Deployer (public address) | `0x1d9bc5438Add9e713224051CE27BE620Fb1FFdE7` |
 | Runner | `py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6` |
 

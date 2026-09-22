@@ -10,15 +10,15 @@ consumable by other contracts and agents. It does not prove universal truth.
 
 **Repository** - https://github.com/Olawalter/Evidencereceipt
 
-**StudioNet address** - `0x304678dc938eb0c0b3FC98026422ca4f89f0fBc1`
+**StudioNet address** - `0x3482865cce66361bc356A0ea6F79EA7Fd3653664`
 
-**Explorer** - https://explorer-studio.genlayer.com/address/0x304678dc938eb0c0b3FC98026422ca4f89f0fBc1
+**Explorer** - https://explorer-studio.genlayer.com/address/0x3482865cce66361bc356A0ea6F79EA7Fd3653664
 
-**Deployment transaction** - `0xa957b233268e5b3ed39e2c3c7bf0476fcccf0330946750f039aa789a3d59616a`, FINALIZED, leader execution SUCCESS, votes AGREE x5
+**Deployment transaction** - `0x5164d44efc2bf6a7cfdf6e111995bce0e8908abd7d020f169eeec8b27d7bc70e`, FINALIZED, leader execution SUCCESS, votes AGREE, AGREE, AGREE, IDLE, IDLE
 
 **Signer** - `0x1d9bc5438Add9e713224051CE27BE620Fb1FFdE7`
 
-**Deployed source** - `contracts/evidence_receipt.py` at commit `168192e`, sha256 `2181846c160d0a9c11b1e2ad9a379d35d8216c0d71476515bf538c96b4b99ede`, https://github.com/Olawalter/Evidencereceipt/blob/168192e6d449d41cc7d522f947fc5593a0e0ac87/contracts/evidence_receipt.py - byte-identical on chain (`gen_getContractCode`)
+**Deployed source** - `contracts/evidence_receipt.py` at commit `82a3bd7`, sha256 `8f05ac4880ded2cc7299c6bf4df4ce8e971a5208b7b8dca38f914548d5ed1bf7`, https://github.com/Olawalter/Evidencereceipt/blob/82a3bd72bae8e6e47ba55c58d77589b41392f7bc/contracts/evidence_receipt.py - byte-identical on chain (`gen_getContractCode`)
 
 ## Why GenLayer is required
 
