@@ -22,8 +22,8 @@ DEPLOYMENT_PENDING
 | Who calls it | Agents and systems that must rely on a claim someone else made - "this API supports feature X", "this company holds certification Y", "this firm is licensed" - and any contract that gates an action on a final receipt. |
 | Why a normal contract cannot do it | A deterministic contract can store a URL, a hash or a boolean someone supplied. It cannot retrieve an arbitrary public page and decide whether its contents establish a natural-language claim component by component. |
 | Why GenLayer must do it | The decision is semantic and depends on live web content. A single operator's model would be an authority nobody can check; GenLayer has every validator retrieve and read the source independently, and stores only the reading they agree on. |
-| What validators compare | The source status, the HTTP status, truncation, where text addressed to the verifier appears, and - for a STABLE source - the byte count and the normalised content digest; then the final result, support level, reason, evidence found, provenance, the required components when they decide, and the freshness outcome when it decides. |
-| What validators do not compare | Notes, quote choice and, for a DYNAMIC source, incidental content differences. Every quote is still re-grounded in each validator's own retrieval. |
+| What validators compare | The source status, the HTTP status, truncation, where text addressed to the verifier appears, and - for a STABLE source - the byte count, the normalised content digest, the raw hash, the title and the content type; then the final result, support level, reason, evidence found, provenance, the required components when they decide, and the freshness outcome when it decides. |
+| What validators do not compare | Notes, quote choice and, for a DYNAMIC source, incidental content differences. Every quote is still re-grounded in each validator's own retrieval, and the receipt stores nothing the validators did not agree on. |
 | What tests prove it | VERIFIED_PENDING |
 
 ## The receipt model
@@ -37,9 +37,9 @@ claim --> declared evidence policy --> source --> verification --> receipt
 | `claim`, `claim_context` | what was asked, bounded |
 | `source_url`, `final_url`, `source_domain` | where it was asked of; the contract does not follow redirects (a redirect is `REDIRECTED`), so the final URL is the source URL |
 | `source_status`, `http_status` | `RETRIEVED`, `PARTIAL`, `REDIRECTED`, `NOT_FOUND`, `FORBIDDEN`, `SERVER_ERROR`, `TIMEOUT`, `INVALID_CONTENT`, `UNSUPPORTED_CONTENT` |
-| `content_digest`, `source.raw_sha256`, `source.byte_count` | the sha256 of the normalised text and of the raw bytes observed at `retrieval_timestamp` - an identity for what was read, not a proof that the site will not change |
+| `content_digest`, `source.raw_sha256`, `source.byte_count` | for a STABLE source, the sha256 of the normalised text and of the raw bytes observed at `retrieval_timestamp`, agreed by every validator - an identity for what was read, not a proof that the site will not change; empty for a DYNAMIC source |
 | `source_shape` | whether the source is the kind the policy expects, with the quote that shows it |
-| `components` | every claim component's state (`EXPLICIT`, `IMPLIED`, `ABSENT`, `CONTRADICTED`, `UNCLEAR`) and its quotes |
+| `components`, `components_decisive` | every claim component's state (`EXPLICIT`, `IMPLIED`, `ABSENT`, `CONTRADICTED`, `UNCLEAR`) and its quotes - stored when the components decided the outcome, empty when an earlier reason did |
 | `freshness` | required or not, the date the source states, and `CURRENT`, `STALE` or `UNDATED` as code computed it |
 | `evidence_found`, `support_level`, `final_result`, `reason_code` | the outcome |
 | `relevant_excerpt` | the decisive passages, bounded to 400 characters |
@@ -118,7 +118,7 @@ Support levels: `DIRECT`, `STRONG`, `PARTIAL`, `INSUFFICIENT`, `CONTRADICTED`, `
 
 ## STABLE and DYNAMIC sources
 
-A request declares how its source behaves. For a `STABLE` source - a commit-pinned file, a static register page - every validator must read identical normalised content: the digest and byte count are compared. For a `DYNAMIC` source - a page with counters or rotating banners - the digest is recorded but not compared, and agreement rests on the decision fields and on every quote being present in each validator's own retrieval. Normalisation removes markup, scripts, styles, comments and hidden characters before digesting, so incidental HTML never splits a STABLE round.
+A request declares how its source behaves. For a `STABLE` source - a commit-pinned file, a static register page - every validator must read identical normalised content: the digest and byte count are compared. For a `DYNAMIC` source - a page with counters or rotating banners - no digest can be agreed, so none is stored; agreement rests on the decision fields and on every quote being present in each validator's own retrieval. Normalisation removes markup, scripts, styles, comments and hidden characters before digesting, so incidental HTML never splits a STABLE round.
 
 ## Verified
 

@@ -17,7 +17,11 @@ the verdict.
   verified", "return supported", "note to the verifier", "attention validator",
   "classify this claim as", ...) in three places: the normalised text a reader
   sees (`BODY`), the raw markup - attributes, hidden elements, metadata - when
-  the visible text is clean (`META`), and the title (`TITLE`). A source that
+  the visible text is clean (`META`), and the title (`TITLE`). Before scanning,
+  numeric entities are decoded, words split by tags are rejoined, and hidden
+  characters, the soft hyphen and the zero-width joiner are removed, so
+  `veri<b></b>fier`, `veri&shy;fier` and `&#78;ote to the verifier` are all
+  caught (`_scan_form`). A source that
   addresses the verifier is `INCONCLUSIVE` / `SOURCE_ADDRESSES_VERIFIER`: the
   panel is never asked and it is never evidence. The fixtures carry injections
   in HTML body text, a JSON field, a page title, a hidden element's attribute
@@ -66,10 +70,20 @@ so a validator never trusts the leader's excerpt. A source that changes after a
 receipt is stored is revisited by `recheck` (before finality) or
 `request_reverification` (after), each producing a new receipt.
 
+## Hostile markup and spliced quotes
+
+Markup is stripped in one forward pass (`_strip_markup`) and the title found
+the same way, so a page of unclosed tags or comments costs linear time, not
+quadratic - a crafted page cannot stall every node. A quote must be one
+contiguous passage: an ellipsis could join distant fragments into a sentence
+the source never wrote, so quotes containing one are dropped and a leader
+payload carrying one is refused.
+
 ## Digest limitations
 
 `content_digest` identifies the normalised text observed at
-`retrieval_timestamp`, and `raw_sha256` the raw bytes. Neither proves the
+`retrieval_timestamp`, and `raw_sha256` the raw bytes - both compared by
+validators for a STABLE source and not stored for a DYNAMIC one. Neither proves the
 website is immutable, that the content was published when it claims, or who
 wrote it.
 
@@ -87,7 +101,7 @@ outvoted.
 ## Replay and duplicates
 
 One open request per policy, claim (whitespace- and case-normalised) and URL;
-at most ten open requests per requester. Each transition checks the current
+at most ten open requests per requester, re-verifications included. Each transition checks the current
 status: verified once per event, rechecked once per event, finalized once.
 
 ## Policy versioning and receipt immutability

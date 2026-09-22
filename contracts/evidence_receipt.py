@@ -103,6 +103,8 @@ INVALID_CONTENT = "INVALID_CONTENT"
 UNSUPPORTED_CONTENT = "UNSUPPORTED_CONTENT"
 SOURCE_STATUSES = (RETRIEVED, PARTIAL_SOURCE, REDIRECTED, NOT_FOUND, FORBIDDEN, SERVER_ERROR,
                    TIMEOUT, INVALID_CONTENT, UNSUPPORTED_CONTENT, "INCONCLUSIVE")
+# statuses retrieval can produce; INCONCLUSIVE is listed for completeness and never emitted
+EMITTED_STATUSES = SOURCE_STATUSES[:-1]
 READABLE = (RETRIEVED, PARTIAL_SOURCE)
 
 DIRECT = "DIRECT"
@@ -597,7 +599,7 @@ def _parse_policy(text) -> tuple:
         if not _int_in(policy["max_age_seconds"], 86400, MAX_AGE_CAP):
             return ("max_age_seconds must be an integer from 86400 to " + str(MAX_AGE_CAP)
                     + " when freshness is required", None)
-    elif policy["max_age_seconds"] != 0:
+    elif not _is_int(policy["max_age_seconds"]) or policy["max_age_seconds"] != 0:
         return ("max_age_seconds must be 0 when freshness is not required", None)
     for key in ("verification_window_seconds", "finality_delay_seconds"):
         if not _int_in(policy[key], MIN_WINDOW, MAX_WINDOW):
@@ -815,14 +817,72 @@ def _looks_html(text: str, content_type: str) -> bool:
     return "<html" in head or "<!doctype html" in head or "<body" in head
 
 
-def _strip_markup(text: str) -> str:
-    text = re.sub("<!--.*?-->", " ", text, flags=re.DOTALL)
-    text = re.sub("<(script|style|noscript|template)[^>]*>.*?</(script|style|noscript|template)[^>]*>",
-                  " ", text, flags=re.DOTALL | re.IGNORECASE)
-    text = re.sub("<[^>]*>", " ", text)
+RAW_TAGS = ("script", "style", "noscript", "template")
+
+
+def _strip_markup(text: str, joiner: str = " ") -> str:
+    """Remove comments, raw-text elements and tags in one forward pass - linear
+    in the length of the page whatever its markup, so hostile HTML cannot make
+    every node spend quadratic time. A '<' that no '>' ever follows is text."""
+    lower = text.lower()
+    n = len(text)
+    out = []
+    i = 0
+    closed = True                  # some '>' still follows the current position
+    while i < n:
+        j = text.find("<", i)
+        if j < 0 or not closed:
+            out.append(text[i:])
+            break
+        out.append(text[i:j])
+        if text.startswith("<!--", j):
+            k = text.find("-->", j + 4)
+            i = n if k < 0 else k + 3
+            out.append(joiner)
+            continue
+        raw = ""
+        for tag in RAW_TAGS:
+            after = j + 1 + len(tag)
+            if lower.startswith("<" + tag, j) and (after >= n or not lower[after].isalnum()):
+                raw = tag
+                break
+        if raw != "":
+            close = lower.find("</" + raw, j)
+            k = -1 if close < 0 else text.find(">", close)
+            i = n if k < 0 else k + 1
+            out.append(joiner)
+            continue
+        k = text.find(">", j + 1)
+        if k < 0:
+            closed = False
+            out.append(text[j:])
+            break
+        out.append(joiner)
+        i = k + 1
+    text = "".join(out)
     for entity, char in ENTITIES:
         text = text.replace(entity, char)
     return text
+
+
+def _decode_numeric(text: str) -> str:
+    """&#NNN; and &#xHH; entities, decoded for the marker scan."""
+    def one(found):
+        try:
+            value = int(found.group(2), 16) if found.group(1) else int(found.group(2))
+            return chr(value) if 0 < value < 0x110000 else " "
+        except Exception:
+            return " "
+    return re.sub("&#([xX]?)([0-9a-fA-F]{1,7});", one, text)
+
+
+def _scan_form(text: str) -> str:
+    """The form the marker scan reads: numeric entities decoded and every
+    character that can split a word invisibly removed - hidden characters, the
+    soft hyphen and the zero-width joiner."""
+    text = _decode_numeric(text)
+    return "".join(ch for ch in text if ch not in HIDDEN_CHARACTERS
+                   and ch not in (chr(0xFEFF), chr(0xAD), chr(0x200D)))
 
 
 def _normalize(text: str, html: bool) -> str:
@@ -839,10 +899,15 @@ def _normalize(text: str, html: bool) -> str:
 def _title_of(text: str, html: bool) -> str:
     if not html:
         return ""
-    found = re.search("<title[^>]*>(.*?)</title[^>]*>", text, flags=re.DOTALL | re.IGNORECASE)
-    if found is None:
+    lower = text.lower()
+    start = lower.find("<title")
+    if start < 0:
         return ""
-    return _clean_title(_normalize(found.group(1), True))
+    open_end = text.find(">", start)
+    close = -1 if open_end < 0 else lower.find("</title", open_end)
+    if close < 0:
+        return ""
+    return _clean_title(_normalize(text[open_end + 1:close], True))
 
 
 def _clean_title(value: str) -> str:
@@ -908,12 +973,13 @@ def _markers(source: dict, panel_text, raw_text) -> list:
     if source["status"] not in READABLE:
         return []
     found = []
-    body_hit = _evaluator_hits(panel_text)
+    joined = " ".join(_scan_form(_strip_markup(raw_text, "")).split())
+    body_hit = _evaluator_hits(_scan_form(panel_text)) or _evaluator_hits(joined)
     if body_hit:
         found.append(MARK_BODY)
-    if not body_hit and _evaluator_hits(raw_text):
+    if not body_hit and _evaluator_hits(_scan_form(raw_text)):
         found.append(MARK_META)
-    if _evaluator_hits(source["title"]):
+    if _evaluator_hits(_scan_form(source["title"])):
         found.append(MARK_TITLE)
     return found
 
@@ -981,6 +1047,12 @@ def _date_in_quotes(date: str, quotes: list) -> bool:
     return False
 
 
+def _spliced(text: str) -> bool:
+    """A quote is one contiguous passage. Parts joined by an ellipsis could be
+    assembled from distant places to say what the source does not."""
+    return "..." in text or chr(0x2026) in text
+
+
 def _support_met(subject_id: str, state: str, quotes: list, date: str) -> bool:
     """A finding that bears on the claim shows its basis in the source; a
     stated date is shown in a quote; only FRESHNESS carries a date."""
@@ -1018,6 +1090,8 @@ def _normalize_finding(subject_id: str, entry, eligible: list, texts: dict) -> d
         if isinstance(rq, str):
             rq = {"text": rq}
         if not isinstance(rq, dict) or not isinstance(rq.get("text"), str):
+            continue
+        if _spliced(rq["text"]):
             continue
         grounded = _ground_quote(rq["text"], _evidence_ref(rq.get("evidence_id")),
                                  eligible, texts)
@@ -1098,7 +1172,7 @@ def _node_round(ctx: dict) -> tuple:
 def _valid_source(s) -> bool:
     if not isinstance(s, dict) or sorted(s.keys()) != sorted(SOURCE_KEYS):
         return False
-    if s["status"] not in SOURCE_STATUSES or not _int_in(s["http_status"], 0, 999):
+    if s["status"] not in EMITTED_STATUSES or not _int_in(s["http_status"], 0, 999):
         return False
     if not isinstance(s["content_type"], str) or len(s["content_type"]) > CONTENT_TYPE_CAP:
         return False
@@ -1144,7 +1218,7 @@ def _valid_finding(f, subject_id: str, eligible: list, texts, panel_state: str) 
         if len(q["text"]) < QUOTE_MIN or len(q["text"]) > QUOTE_CAP \
                 or q["text"] != q["text"].strip():
             return False
-        if q in seen or not _quote_grounded(q, eligible, texts):
+        if q in seen or _spliced(q["text"]) or not _quote_grounded(q, eligible, texts):
             return False
         seen.append(q)
     return _support_met(subject_id, f["state"], f["quotes"], f["date"])
@@ -1327,7 +1401,7 @@ def _evidence_difference(ctx: dict, own: dict, theirs: dict) -> str:
         return "markers mine=" + repr(own["markers"]) + " theirs=" + repr(theirs["markers"])
     keys = ["status", "http_status", "truncated"]
     if ctx["stability"] == "STABLE":
-        keys = keys + ["byte_count", "content_digest"]
+        keys = keys + ["byte_count", "content_digest", "raw_sha256", "title", "content_type"]
     for key in keys:
         if own["source"][key] != theirs["source"][key]:
             return "source " + key + " mine=" + repr(own["source"][key]) + " theirs=" \
@@ -1533,12 +1607,24 @@ class EvidenceReceipt(gl.Contract):
         outcome = _derive(ctx, payload)
         c = outcome["consequence"]
         policy = ctx["policy"]
+        # component readings are consensus-backed only when they decided the outcome;
+        # otherwise the leader's readings are not stored as if they were
+        decisive = c["reason_code"] in COMPONENT_DECIDED
         components = []
         for comp in policy["components"]:
             f = _finding_of(payload, comp["component_id"])
             components.append({"component_id": comp["component_id"],
-                               "required": comp["required"], "state": f["state"],
-                               "by": f["by"], "quotes": f["quotes"], "note": f["note"]})
+                               "required": comp["required"],
+                               "state": f["state"] if decisive else "",
+                               "by": f["by"] if decisive else "",
+                               "quotes": f["quotes"] if decisive else [],
+                               "note": f["note"] if decisive else ""})
+        # a DYNAMIC source's record beyond its status was not compared: it is not stored
+        source = dict(payload["source"])
+        if ctx["stability"] == "DYNAMIC":
+            source.update(byte_count=0, raw_sha256="", content_digest="", title="",
+                          content_type="")
+        fresh_decides = c["freshness"] != ""
         shape = _finding_of(payload, SUBJECT_SHAPE)
         record = {
             "receipt_version": RECEIPT_VERSION, "verification_id": ctx["subject_id"],
@@ -1550,20 +1636,20 @@ class EvidenceReceipt(gl.Contract):
             "source_domain": str(req.source_domain), "stability": ctx["stability"],
             "request_commitment": ctx["request_commitment"],
             "retrieval_timestamp": ctx["now"], "submitted_by": str(req.submitted_by),
-            "source": payload["source"], "source_status": c["source_status"],
+            "source": source, "source_status": c["source_status"],
             "http_status": payload["source"]["http_status"],
-            "content_digest": payload["source"]["content_digest"],
+            "content_digest": source["content_digest"], "components_decisive": decisive,
             "provenance_match": c["provenance_match"], "markers": payload["markers"],
             "panel_state": payload["panel_state"],
             "source_shape": {"state": shape["state"], "quotes": shape["quotes"]},
             "components": components,
             "freshness": {"required": policy["freshness_required"],
                           "max_age_seconds": policy["max_age_seconds"],
-                          "outcome": outcome["freshness_outcome"],
-                          "stated_date": outcome["stated_date"]},
+                          "outcome": outcome["freshness_outcome"] if fresh_decides else "",
+                          "stated_date": outcome["stated_date"] if fresh_decides else ""},
             "evidence_found": c["evidence_found"], "support_level": c["support_level"],
             "final_result": c["final_result"], "reason_code": c["reason_code"],
-            "relevant_excerpt": outcome["relevant_excerpt"],
+            "relevant_excerpt": outcome["relevant_excerpt"] if decisive else "",
         }
         record["record_digest"] = _sha256_hex(_canonical(record))
         return record
@@ -1752,6 +1838,10 @@ class EvidenceReceipt(gl.Contract):
         if holder is not None and str(holder) != "":
             self._fail("duplicate verification: request " + str(holder)
                        + " is already open for this claim and source")
+        count = self.open_counts.get(str(req.submitted_by))
+        if count is not None and int(count) >= MAX_OPEN_PER_REQUESTER:
+            self._fail("the requester already has " + str(MAX_OPEN_PER_REQUESTER)
+                       + " open requests")
         now = self._now()
         spec = self._definition(self.policies.get(str(req.policy_id)))
         req.status = REQ_REVERIFY

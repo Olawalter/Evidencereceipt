@@ -61,8 +61,9 @@ Each component is judged separately:
 | `UNCLEAR` | the source is ambiguous | no |
 
 A component mentioned for a different entity, product or version does not
-establish it for the claim. A finding whose required quote is missing, or whose
-quote does not occur in the retrieved text, falls back to `UNCLEAR`.
+establish it for the claim. A quote is one contiguous passage of the source. A
+finding whose required quote is missing, spliced with an ellipsis, or absent
+from the retrieved text falls back to `UNCLEAR`.
 
 ## Source status
 

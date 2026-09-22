@@ -1,0 +1,197 @@
+{
+  "address": "0x0C001C39156FE013bcAb3681cA6fF782B9461421",
+  "finished_at": "2026-09-22T09:40:44Z",
+  "network": "studionet",
+  "outcomes": {
+    "AP04": {
+      "components": [
+        [
+          "provider",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "feature",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "behaviour",
+          "EXPLICIT",
+          "PANEL"
+        ],
+        [
+          "version",
+          "EXPLICIT",
+          "PANEL"
+        ]
+      ],
+      "content_digest": "838ae2e46deb2d50d6205c5fe78c3ee242544d7680493ebe3de4fde5c36d8a2c",
+      "decided_by": "PANEL",
+      "evidence_found": true,
+      "expected": [
+        "SUPPORTED",
+        "STRONG",
+        "SUPPORT_MET"
+      ],
+      "freshness": {
+        "max_age_seconds": 0,
+        "outcome": "NOT_REQUIRED",
+        "required": false,
+        "stated_date": ""
+      },
+      "held": false,
+      "http_status": 200,
+      "markers": [],
+      "nodes": [
+        {
+          "mode": "leader",
+          "model": "policy:prd-sonnet",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-deepseek",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-gpt-oss",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-gemma",
+          "stdout": "[DOWNGRADE] version EXPLICIT: support rule not met; raw [{'evidence_id': 'S1', 'text': 'v2.3'}]\n[DISAGREE] consequence: support_level mine='STRONG' theirs='DIRECT'\n[MINE] SUPPORTED STRONG SUPPORT_MET SOURCE_SHAPE=MATCHES provider=EXPLICIT feature=IMPLIED behaviour=EXPLICIT version=UNCLEAR\n",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": null,
+          "stdout": "",
+          "vote": "idle"
+        }
+      ],
+      "observed": [
+        "SUPPORTED",
+        "DIRECT",
+        "SUPPORT_MET"
+      ],
+      "record_digest": "1aa729548d9de5727a610561d9724be7f5bba803b995e825000d0c09bf3e391d",
+      "relevant_excerpt": "# Ledgerly API reference - v2.3 Official documentation for the Ledgerly payments API. ... Send an `Idempotency-Key` header with any POST request. If a request with the same key arrives again within 24 hours, Ledgerly does not repeat the operation: it returns the response of the original request. ... If a request with the same key arrives again within 24 hours, Ledgerly does not repeat the",
+      "request_id": "VR-000021",
+      "source_shape": "MATCHES",
+      "source_status": "RETRIEVED",
+      "tx": "0x8049a10f0ac1b9fecc04dfe84247dc70e934731974c286b06813756f1013224a",
+      "verification_id": "VE-000021"
+    }
+  },
+  "pending": {},
+  "phase": "cases",
+  "policies": {
+    "api": "EP-000004",
+    "certification": "EP-000005",
+    "license": "EP-000006"
+  },
+  "raw_base": "https://raw.githubusercontent.com/Olawalter/Evidencereceipt/9980895/fixtures/",
+  "requests": {
+    "AP04": "VR-000021"
+  },
+  "started_at": "2026-09-22T09:36:07Z",
+  "steps": {
+    "create:api": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "create_policy",
+      "returned": "{'readable': '\"EP-000004\"'}",
+      "status": "FINALIZED",
+      "step": "create:api",
+      "tx": "0xed03f430c2f4f93703bc6f58099361a8e092dd09bbba46be0188910649eacfa1",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "create:certification": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "create_policy",
+      "returned": "{'readable': '\"EP-000005\"'}",
+      "status": "FINALIZED",
+      "step": "create:certification",
+      "tx": "0x5ca61312a1cb218cbebcc92ad09e091c181adcb149fe00f452e6c8ec4d8d1308",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE"
+      ]
+    },
+    "create:license": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "create_policy",
+      "returned": "{'readable': '\"EP-000006\"'}",
+      "status": "FINALIZED",
+      "step": "create:license",
+      "tx": "0x9856ddc7f5b9f29433fd9eb68c27d91d8e7d8cb228a49040265d43298abbebe3",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "request:AP04": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "request_verification",
+      "returned": "{'readable': '\"VR-000021\"'}",
+      "status": "FINALIZED",
+      "step": "request:AP04",
+      "tx": "0x9a1777c77ab1401292da83897e62dd75c5e65831e03ae7f25a7b5d51dc5ea329",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE"
+      ]
+    },
+    "verify:AP04": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "verify",
+      "returned": "{'readable': '\"VE-000021\"'}",
+      "status": "FINALIZED",
+      "step": "verify:AP04",
+      "tx": "0x8049a10f0ac1b9fecc04dfe84247dc70e934731974c286b06813756f1013224a",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "DISAGREE",
+        "IDLE"
+      ]
+    }
+  },
+  "summary": {
+    "held": [],
+    "not_held": [
+      "AP04"
+    ]
+  }
+}

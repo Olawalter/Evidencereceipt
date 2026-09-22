@@ -89,7 +89,7 @@ Agreement on live content. Two validators can retrieve different bytes from the
 same URL - counters, banners, a deploy between requests. The design separates
 what must be identical from what may differ: normalisation removes incidental
 markup before digesting; a requester declares a source STABLE (digest compared)
-or DYNAMIC (digest recorded, decision fields compared, every quote re-grounded
+or DYNAMIC (no digest stored, decision fields compared, every quote re-grounded
 in each validator's own retrieval). The second risk is honest model variance on
 components; the comparison is kept to what changes the result, and the live
 diagnostic pass on a disposable deployment is where it is measured

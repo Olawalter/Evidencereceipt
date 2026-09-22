@@ -477,3 +477,22 @@ def test_a_date_written_in_words_is_recognised(mod):
     assert mod._date_in_quotes("2026-08-14", quotes) is True
     assert mod._date_in_quotes("2026-09-14", quotes) is False
     assert mod._date_in_quotes("2026-08-04", quotes) is False
+
+
+def test_max_age_must_be_the_integer_zero_without_freshness(court, direct_vm):
+    as_sender(direct_vm, "owner")
+    for value in (False, 0.0):
+        with direct_vm.expect_revert("max_age_seconds must be 0"):
+            court.create_policy(json.dumps(policy("certification", max_age_seconds=value)))
+
+
+def test_re_verification_respects_the_open_request_limit(court, direct_vm):
+    policy_id = create_policy(court, direct_vm, "certification")
+    rid, _receipt = run_case(court, direct_vm, "CE01", policy_id)
+    finalize_after_window(court, direct_vm, rid)
+    warp(direct_vm, later(3700))
+    for i in range(10):
+        request(court, direct_vm, policy_id, "CE01", claim="Open claim " + str(i) + ".")
+    as_sender(direct_vm, "alice")
+    with direct_vm.expect_revert("already has 10 open requests"):
+        court.request_reverification(rid)

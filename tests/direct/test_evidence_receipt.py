@@ -28,7 +28,8 @@ def test_code_decided_case_never_asks_the_panel(court, direct_vm, case_id):
     receipt = verify(court, direct_vm, request_id, None)
     assert outcome(receipt) == c["expected"]
     assert receipt["panel_state"] == "SKIPPED"
-    assert all(x["by"] == "CODE" for x in receipt["components"])
+    assert receipt["components_decisive"] is False
+    assert all(x["state"] == "" and x["quotes"] == [] for x in receipt["components"])
 
 
 def test_a_supported_receipt_carries_its_evidence_and_identity(court, direct_vm):

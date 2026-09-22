@@ -54,14 +54,17 @@ status, digests, byte count, title and truncation are mutually consistent; a
 marker list in canonical order that only a readable source can carry; the code
 reason recomputed from the source record and markers; one finding per subject,
 in order; clean notes; a date only on a `DATED` freshness finding and only when
-its quote carries that date; every quote grounded; every support rule met. Any
-deviation refuses the payload.
+its quote carries that date's year, month and day; every quote one contiguous
+passage (no ellipsis) grounded in the validator's own text; every support rule
+met. Any deviation refuses the payload. Internal consistency is all the gate can
+check; agreement on the values is the comparison below.
 
 ## Consensus-critical fields
 
 **What was retrieved** (`_evidence_difference`): the source status, the HTTP
 status, truncation, the markers, the panel state and the code reason - and, for
-a `STABLE` source, the byte count and the normalised content digest.
+a `STABLE` source, the byte count, the normalised content digest, the raw sha256,
+the title and the content type.
 
 **What it leads to** (`_consequence_difference`), derived by code from each
 side's findings:
@@ -74,13 +77,24 @@ side's findings:
 | `required_components` (each collapsed to PRESENT, ABSENT, CONTRADICTED, UNCLEAR) | when the outcome was decided at the component step (`COMPONENT_DECIDED`) |
 | `freshness` (CURRENT, STALE, UNDATED) | when freshness or the components decided the outcome |
 
-## Allowed nondeterminism
+## Allowed nondeterminism, and what the receipt stores
 
 Notes, quote choice, the exact date text, the difference between EXPLICIT and
 IMPLIED where it does not change the support level, optional components, and -
-for a DYNAMIC source - the digest, byte count and incidental content are
-recorded and not compared. A DYNAMIC source still has to carry every quote the
-leader cites in each validator's own retrieval.
+for a DYNAMIC source - the source record beyond its status are not compared. A
+DYNAMIC source still has to carry every quote the leader cites in each
+validator's own retrieval.
+
+The receipt stores only what the validators agreed on or could check:
+
+- for a DYNAMIC source the digest, raw hash, byte count, title and content
+  type are left empty - nothing about them was agreed;
+- component readings, their quotes and the excerpt are stored only when the
+  components decided the outcome (`components_decisive`); after an earlier
+  reason decided it - the wrong kind of source, stale evidence - they are left
+  empty rather than stored as if validators had agreed on them;
+- the freshness outcome and stated date are stored only when freshness was
+  compared.
 
 ## Equivalence strategy
 
