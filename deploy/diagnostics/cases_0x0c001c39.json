@@ -1,0 +1,68 @@
+{
+  "address": "0x0C001C39156FE013bcAb3681cA6fF782B9461421",
+  "network": "studionet",
+  "pending": {
+    "request:AD01": "0xb9b41e8f4990d8d4fac4bd1b6f16521ca54c4ea2e5406a646e65046194813017"
+  },
+  "phase": "cases",
+  "policies": {
+    "api": "EP-000001",
+    "certification": "EP-000002",
+    "license": "EP-000003"
+  },
+  "raw_base": "https://raw.githubusercontent.com/Olawalter/Evidencereceipt/138c1d3/fixtures/",
+  "started_at": "2026-09-22T08:52:19Z",
+  "steps": {
+    "create:api": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "create_policy",
+      "returned": "{'readable': '\"EP-000001\"'}",
+      "status": "FINALIZED",
+      "step": "create:api",
+      "tx": "0xa7271728a622d58549532b2be28a606eb0ca17d8d67586f63ed011147ff73c23",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "create:certification": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "create_policy",
+      "returned": "{'readable': '\"EP-000002\"'}",
+      "status": "FINALIZED",
+      "step": "create:certification",
+      "tx": "0x388f4f0806e2cd85d69e4a5eee94a54aca4b5a7f356f7af38e3a953cfd3dbc17",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "create:license": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "create_policy",
+      "returned": "{'readable': '\"EP-000003\"'}",
+      "status": "FINALIZED",
+      "step": "create:license",
+      "tx": "0x211019ccdf90b6a30ba5afc6feec794afd4558e0b7b6afea6cd10c95a982f282",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    }
+  }
+}

@@ -975,7 +975,8 @@ def _date_in_quotes(date: str, quotes: list) -> bool:
     day = int(date[8:10])
     for q in quotes:
         words = _word_tokens(q["text"])
-        if year in words and any(t in words for t in _month_tokens(month))                 and any(t in words for t in _day_tokens(day)):
+        if year in words and any(t in words for t in _month_tokens(month)) and any(
+                t in words for t in _day_tokens(day)):
             return True
     return False
 
