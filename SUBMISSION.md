@@ -59,7 +59,7 @@ agree on.
 | `python scripts/deploy_studionet.py --verify` | byte-identical, 25 schema methods |
 | `python -m pytest tests/integration -q` | 6 passed, 1 skipped (the opt-in live write) |
 | CI (`.github/workflows/ci.yml`) | green on every pushed commit |
-| Clean clone | CLEAN_CLONE_PENDING |
+| Clean clone | install, ruff, fixture check, 206 Direct Mode tests and the GenVM lint pass on a fresh clone of `f2951a1`; no `.data/` is committed, in the tree or the history |
 | `python scripts/preflight.py` | every check passes |
 
 ## Live evidence

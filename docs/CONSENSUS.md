@@ -156,10 +156,11 @@ under GenVM.
 One round (AD08) did not reach a majority on its first attempt: the validators
 agreed on the contradiction and split on `evidence_found` and on whether the
 certifier line counted as present - states that cannot change a contradicted
-outcome. The comparison changed in response: a contradiction now compares
-which required components are contradicted (`contradicted_components`), every
-required component is compared only when the outcome rests on all of them, and
-`evidence_found` is compared and stored only then.
+outcome. The comparison changed in response: every required component is
+compared only when the outcome rests on all of them, and `evidence_found` is
+compared and stored only then. A contradiction was at first made to compare the
+set of contradicted components; the live run below showed that still too
+strict, and a contradiction now compares only the outcome.
 
 **Fresh-reader audit** - after the pass, an independent read of the contract
 found seven defects, all fixed before the deployment of record and pinned by

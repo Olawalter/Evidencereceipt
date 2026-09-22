@@ -33,7 +33,7 @@ EXTERNAL = {"gen_getContractCode", "gen_getContractSchema", "run_nondet_unsafe",
             "response_format", "consensus_max_rotations", "read_contract", "create_client",
             "EVIDENCE_RECEIPT_LIVE_WRITES", "raw_base",
             # names documents use for request states and receipt fields
-            "REVERIFY_REQUESTED", "raw_sha256"}
+            "REVERIFY_REQUESTED", "raw_sha256", "service_scope"}
 ADDRESS = re.compile(r"0x[0-9a-fA-F]{40}(?![0-9a-fA-F])")
 
 

@@ -132,7 +132,7 @@ A request declares how its source behaves. For a `STABLE` source - a commit-pinn
 | `python scripts/deploy_studionet.py --verify` | byte-identical, 25 schema methods |
 | `python -m pytest tests/integration -q` | 6 passed, 1 skipped (the opt-in live write) |
 | CI (`.github/workflows/ci.yml`) | green on every pushed commit |
-| Clean clone | CLEAN_CLONE_PENDING |
+| Clean clone | install, ruff, fixture check, 206 Direct Mode tests and the GenVM lint pass on a fresh clone of `f2951a1`; no `.data/` is committed, in the tree or the history |
 | `python scripts/preflight.py` | every check passes |
 
 The live run of record on `0x3482865cce66361bc356A0ea6F79EA7Fd3653664`: 78 transactions from 2026-09-22T10:32:48Z to 2026-09-22T12:33:27Z, none of them a rejected round (`deploy/live_run_transcript.json`, `deploy/live_run.log`). Sources were served from `https://raw.githubusercontent.com/Olawalter/Evidencereceipt/de4dda6/fixtures/` and read as STABLE, except `CE01:dynamic`, the same source read as DYNAMIC.
